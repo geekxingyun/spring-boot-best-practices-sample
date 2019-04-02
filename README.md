@@ -8,6 +8,9 @@ Spring Boot 2.x最佳实践手册代码库
 |[spring-boot-with-spring-kafka-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-spring-kafka-sample)|[3. Spring Boot 2.x最佳实践之Spring for Apache Kafka集成](https://blog.csdn.net/hadues/article/details/88974967)|
 |[spring-boot-with-ibm-mq-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-ibm-mq-sample)|待续|
 
+---
+
+> 交流即分享，分享才能进步！不对之处，还请各位前辈多多指教。  by 星云
 
 ---
 # 关于我
@@ -27,7 +30,7 @@ Spring Boot 2.x最佳实践手册代码库
 > 联系方式：fairy_xingyun@hotmail.com   
 
 ```
-> 交流即分享，分享才能进步！不对之处，还请各位前辈多多指教。  by 星云
+
 
 <h2>感谢赞赏，微信二维码</h2>
 <p><img src="https://img2018.cnblogs.com/blog/622489/201812/622489-20181215164147325-217176189.png" alt="" width="303" height="282"></p>
