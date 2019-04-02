@@ -4,7 +4,7 @@ Spring Boot 2.x最佳实践手册代码库
 
 大家好，我是仓库维护者星云，该仓库致力于Spring Boot 集成各种技术的最佳实践,欢迎各位关注~
 
-推荐使用我精心配置的[settings.xml](https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/resources/share_pom/settings.xml)
+推荐使用我精心配置的[settings.xml](https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/resources/share/settings.xml)
 
 |项目名称|项目简介|
 |---|---|
@@ -41,7 +41,7 @@ Spring Boot 2.x最佳实践手册代码库
 
 # 免费加入我的知识星球
 
-<p><a href="https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/resources/images/my_world.png"> <img src"https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/resources/images/my_world.png"><a><p>
+<p><a href="https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/resources/images/my_world.png?raw=true"> <img src="https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/resources/images/my_world.png?raw=true"><a><p>
 
 # 赞助支持
 
