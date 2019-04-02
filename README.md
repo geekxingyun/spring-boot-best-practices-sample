@@ -30,6 +30,11 @@ Spring Boot 2.x最佳实践手册代码库
 
 [星云微博](https://weibo.com/xingyunsky)
 
+<p>免费加入知识星球和我交流分析技术</p>
+<p>
+  <img src="https://images2018.cnblogs.com/blog/622489/201806/622489-20180609224407148-908998030.png">
+ </p>
+
 # 联系我
 
 > QQ：2864438285　
