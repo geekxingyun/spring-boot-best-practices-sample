@@ -18,8 +18,6 @@ Spring Boot 2.x最佳实践手册代码库
 ---
 # 关于我
 
-[星云个人主页](http://www.520geek.cn)
-
 [星云CSDN博客](https://blog.csdn.net/hadues)
 
 [星云博客园](http://www.cnblogs.com/xingyunblog)
@@ -27,6 +25,8 @@ Spring Boot 2.x最佳实践手册代码库
 [星云阿里云栖博客](https://yq.aliyun.com/u/xingyunsky)
 
 [星云GitHub](https://github.com/geekxingyun)
+
+[星云GitHub Page](http://www.520geek.cn)
 
 [星云微博](https://weibo.com/xingyunsky)
 
