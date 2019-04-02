@@ -37,12 +37,6 @@ Spring Boot 2.x最佳实践手册代码库
 > 
 > Email：fairy_xingyun@hotmail.com   
 
-<div align="left">
-<p>免费加入星球，技术交流分享<p>
-<p><img border="0"  src="https://images2018.cnblogs.com/blog/622489/201806/622489-20180609224407148-908998030.png">
- 
- </p>
-</div>
 
 # 赞助支持
 
