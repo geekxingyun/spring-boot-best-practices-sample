@@ -32,16 +32,15 @@ Spring Boot 2.x最佳实践手册代码库
 
 [星云微博](https://weibo.com/xingyunsky)
 
+# 免费加入我的知识星球
+
+<p><a href="https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/resources/images/my_world.png?raw=true"> <img src="https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/resources/images/my_world.png?raw=true" width="253" height="340"><a><p>
 
 # 联系我
 
 > QQ：2864438285　
 > 
 > Email：fairy_xingyun@hotmail.com   
-
-# 免费加入我的知识星球
-
-<p><a href="https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/resources/images/my_world.png?raw=true"> <img src="https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/resources/images/my_world.png?raw=true" width="253" height="340"><a><p>
 
 # 赞助支持
 
