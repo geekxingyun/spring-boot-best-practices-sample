@@ -1,8 +1,5 @@
 # SpringBootBestPracticesSample
 Spring Boot 2.x最佳实践手册代码库
-|  |  |
-|--|--|
-|  |  |
 
 |项目名称|项目简介|
 |---|---|
