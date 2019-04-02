@@ -4,6 +4,8 @@ Spring Boot 2.x最佳实践手册代码库
 
 大家好，我是仓库维护者星云，该仓库致力于Spring Boot 集成各种技术的最佳实践,欢迎各位关注~
 
+推荐使用我精心配置的[settings.xml](https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/resources/share_pom/settings.xml)
+
 |项目名称|项目简介|
 |---|---|
 |[spring-boot-with-customize-banner-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-customize-banner-sample)|[1.Spring Boot 2.x最佳实践之自定义Banner](https://blog.csdn.net/hadues/article/details/88819151)|
