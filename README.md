@@ -12,7 +12,7 @@ Spring Boot 2.x最佳实践手册代码库
 |[spring-boot-with-slf4j-logback-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-slf4j-logback-sample)|[2. Spring Boot 2.x 最佳实践之日志使用SLF4J+Logback](https://blog.csdn.net/hadues/article/details/88884141)|
 |[spring-boot-with-configuration-processor-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-configuration-processor-sample)|[3. Spring Boot 2.x 最佳实践之自定义属性](https://xingyun.blog.csdn.net/article/details/89408533)
 |[spring-boot-with-spring-kafka-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-spring-kafka-sample)|[4. Spring Boot 2.x最佳实践之Spring for Apache Kafka集成](https://blog.csdn.net/hadues/article/details/88974967)|
-|[spring-boot-with-ibm-mq-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-ibm-mq-sample)|待续|
+
 ---
 
 > 交流即分享，分享才能进步！不对之处，还请各位前辈多多指教。  by 星云
