@@ -11,7 +11,11 @@ Spring Boot 2.x最佳实践手册代码库
 |[spring-boot-with-customize-banner-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-customize-banner-sample)|[1.Spring Boot 2.x最佳实践之自定义Banner](https://blog.csdn.net/hadues/article/details/88819151)|
 |[spring-boot-with-slf4j-logback-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-slf4j-logback-sample)|[2. Spring Boot 2.x 最佳实践之日志使用SLF4J+Logback](https://blog.csdn.net/hadues/article/details/88884141)|
 |[spring-boot-with-configuration-processor-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-configuration-processor-sample)|[3. Spring Boot 2.x 最佳实践之自定义属性](https://xingyun.blog.csdn.net/article/details/89408533)
-|[spring-boot-with-spring-kafka-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-spring-kafka-sample)|[4. Spring Boot 2.x最佳实践之Spring for Apache Kafka集成](https://blog.csdn.net/hadues/article/details/88974967)|
+|[spring-boot-with-configuration-processor-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-configuration-processor-sample)|[4. Spring Boot 2.x 最佳实践之自定义属性](https://xingyun.blog.csdn.net/article/details/89408533)|
+|[spring-boot-with-jsp-sample](hhttps://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-jsp-sample)|[5.Spring Boot 2.x 最佳实践之JSP集成](https://xingyun.blog.csdn.net/article/details/89413877)|
+|[spring-boot-with-swagger-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-swagger-sample)|[6. Spring Boot 2.x 最佳实践之Swagger集成](https://xingyun.blog.csdn.net/article/details/89420502)|
+|[spring-boot-with-spring-kafka-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-spring-kafka-sample)|[7. Spring Boot 2.x最佳实践之Spring for Apache Kafka集成](https://blog.csdn.net/hadues/article/details/88974967)|
+
 
 ---
 
