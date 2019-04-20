@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello Page</title>
+</head>
+<body>
+
+<h1>Result</h1>
+<p th:text="'username: ' + ${user.username}" />
+<p th:text="'password: ' + ${user.password}" />
+<a href="/">Submit another message</a>
+
+</body>
+</html>
