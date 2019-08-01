@@ -2,9 +2,11 @@ package com.xingyun.springbootwithmybatisannotationsample.dao.mapper;
 
 import com.xingyun.springbootwithmybatisannotationsample.model.business.UserInfo;
 import org.apache.ibatis.annotations.*;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 @Mapper
 public interface UserInfoMapper {
 
