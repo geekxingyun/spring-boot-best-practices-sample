@@ -1,8 +1,8 @@
-package com.xingyun.springbootwithmybatisannotationsample.controller.api;
+package com.xingyun.springbootwithmybatisxmlsample.controller.api;
 
-import com.xingyun.springbootwithmybatisannotationsample.model.AppResponse;
-import com.xingyun.springbootwithmybatisannotationsample.model.business.UserInfo;
-import com.xingyun.springbootwithmybatisannotationsample.service.IUserInfo;
+import com.xingyun.springbootwithmybatisxmlsample.model.AppResponse;
+import com.xingyun.springbootwithmybatisxmlsample.model.business.UserInfo;
+import com.xingyun.springbootwithmybatisxmlsample.service.IUserInfo;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
@@ -10,7 +10,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Slf4j
 @RestController
@@ -34,37 +36,52 @@ public class UserInfoController {
     })
     @PostMapping(value = "/userInfo")
     public AppResponse addUserInfo(
-                @RequestParam(value = "userInfoName")String userInfoName,
-                @RequestParam(value = "userInfoMobile")String userInfoMobile,
-                @RequestParam(value = "userInfoAge")Integer userInfoAge,
-                @RequestParam(value = "userInfoSex")Boolean userInfoSex){
+            @RequestParam(value = "userInfoName")String userInfoName,
+            @RequestParam(value = "userInfoMobile")String userInfoMobile,
+            @RequestParam(value = "userInfoAge")Integer userInfoAge,
+            @RequestParam(value = "userInfoSex")Boolean userInfoSex){
 
         userInfo.setUserInfoName(userInfoName);
         userInfo.setUserInfoMobile(userInfoMobile);
         userInfo.setUserInfoAge(userInfoAge);
         userInfo.setUserInfoSex(userInfoSex);
 
-        Integer effectLineCount=Integer.valueOf(0);
+        Map<String,Object> queryMap=new HashMap<>();
+        queryMap.put("userInfoName",userInfoName);
+        queryMap.put("userInfoMobile",null);
+        List<UserInfo> findUserInfoList=null;
         try {
-            effectLineCount=userInfoService.addUserInfo(userInfo);
+            findUserInfoList=userInfoService.findAllUserInfoByCondition(queryMap);
         } catch (Exception e) {
-            log.error("插入用户信息出错",e);
-            appResponse.setResponseCode(500);
-            appResponse.setResponseMessage("用户插入失败");
-            appResponse.setResponseData(null);
-            return appResponse;
+            log.error(e.getMessage(),e);
         }
-
-        if(0!=effectLineCount){
-            appResponse.setResponseCode(200);
-            appResponse.setResponseMessage("用户插入成功");
+        if(null!=findUserInfoList&&findUserInfoList.size()>0){
+            appResponse.setResponseCode(100);
+            appResponse.setResponseMessage("用户已存在");
             appResponse.setResponseData(null);
             return appResponse;
         }else{
-            appResponse.setResponseCode(500);
-            appResponse.setResponseMessage("用户插入失败");
-            appResponse.setResponseData(null);
-            return appResponse;
+            Integer effectLineCount=Integer.valueOf(0);
+            try {
+                effectLineCount=userInfoService.addUserInfo(userInfo);
+            } catch (Exception e) {
+                log.error("插入用户信息出错",e);
+                appResponse.setResponseCode(500);
+                appResponse.setResponseMessage("用户插入失败");
+                appResponse.setResponseData(null);
+                return appResponse;
+            }
+            if(0!=effectLineCount){
+                appResponse.setResponseCode(200);
+                appResponse.setResponseMessage("用户插入成功");
+                appResponse.setResponseData(null);
+                return appResponse;
+            }else{
+                appResponse.setResponseCode(100);
+                appResponse.setResponseMessage("用户插入失败");
+                appResponse.setResponseData(null);
+                return appResponse;
+            }
         }
     }
 
@@ -73,6 +90,7 @@ public class UserInfoController {
     @ApiImplicitParam(name = "userInfoId",required = true, defaultValue = "1",dataType = "Long",example = "1")
     @DeleteMapping(value = "/userInfo/{userInfoId}")
     public AppResponse removedUserInfo(@PathVariable(value = "userInfoId")Long userInfoId){
+
         UserInfo findUserInfo=null;
         try {
             findUserInfo=userInfoService.findUserInfoByUserInfoId(userInfoId);
@@ -80,7 +98,7 @@ public class UserInfoController {
             log.error("根据用户Id查询用户出错",e);
         }
         if(null==findUserInfo){
-            appResponse.setResponseCode(201);
+            appResponse.setResponseCode(100);
             appResponse.setResponseMessage("该用户不存在");
             appResponse.setResponseData(null);
             return appResponse;
@@ -101,7 +119,7 @@ public class UserInfoController {
                 appResponse.setResponseData(null);
                 return appResponse;
             }else{
-                appResponse.setResponseCode(201);
+                appResponse.setResponseCode(100);
                 appResponse.setResponseMessage("用户删除失败");
                 appResponse.setResponseData(null);
                 return appResponse;
@@ -119,11 +137,11 @@ public class UserInfoController {
     })
     @PutMapping(value = "/userInfo")
     public AppResponse modifyUserInfo(
-                                  @RequestParam(value = "userInfoId")Long userInfoId,
-                                  @RequestParam(value = "userInfoName")String userInfoName,
-                                  @RequestParam(value = "userInfoMobile")String userInfoMobile,
-                                  @RequestParam(value = "userInfoAge")Integer userInfoAge,
-                                  @RequestParam(value = "userInfoSex")Boolean userInfoSex
+            @RequestParam(value = "userInfoId")Long userInfoId,
+            @RequestParam(value = "userInfoName")String userInfoName,
+            @RequestParam(value = "userInfoMobile")String userInfoMobile,
+            @RequestParam(value = "userInfoAge")Integer userInfoAge,
+            @RequestParam(value = "userInfoSex")Boolean userInfoSex
     ){
 
         userInfo.setUserInfoId(userInfoId);
@@ -160,7 +178,7 @@ public class UserInfoController {
                 appResponse.setResponseData(null);
                 return appResponse;
             }else{
-                appResponse.setResponseCode(500);
+                appResponse.setResponseCode(100);
                 appResponse.setResponseMessage("修改用户信息失败");
                 appResponse.setResponseData(null);
                 return appResponse;
@@ -186,7 +204,7 @@ public class UserInfoController {
             appResponse.setResponseMessage("获取用户信息成功");
             appResponse.setResponseData(findUserInfo);
         }else{
-            appResponse.setResponseCode(201);
+            appResponse.setResponseCode(100);
             appResponse.setResponseMessage("未找到该用户");
             appResponse.setResponseData(null);
         }
@@ -212,7 +230,45 @@ public class UserInfoController {
             appResponse.setResponseData(userInfoList);
             return appResponse;
         }else{
-            appResponse.setResponseCode(201);
+            appResponse.setResponseCode(100);
+            appResponse.setResponseMessage("未找到相关用户信息");
+            appResponse.setResponseData(null);
+            return appResponse;
+        }
+    }
+
+    @ApiOperation(value="根据条件查看所有用户信息")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "userInfoName", value = "用户名称", defaultValue = "星云",example = "星云",required = true, dataType = "String"),
+            @ApiImplicitParam(name = "userInfoMobile", value = "用户手机号",defaultValue = "18317792386",example = "18317792386", dataType = "String"),
+    })
+    @GetMapping(value = "/userInfo.do")
+    public AppResponse findAllUserInfoByCondition(@RequestParam(value = "userInfoName")String userInfoName,
+            @RequestParam(value = "userInfoMobile",required = false)String userInfoMobile){
+        List<UserInfo> userInfoList;
+        Map<String,Object> queryMap=new HashMap<>();
+        queryMap.put("userInfoName",userInfoName);
+        if(null==userInfoMobile||"".equals(userInfoMobile)){
+            queryMap.put("userInfoMobile",null);
+        }else{
+            queryMap.put("userInfoMobile",userInfoMobile);
+        }
+        try {
+            userInfoList=userInfoService.findAllUserInfoByCondition(queryMap);
+        } catch (Exception e) {
+            log.error("根据条件获取所有用户信息出错:",e);
+            appResponse.setResponseCode(500);
+            appResponse.setResponseMessage("根据条件查看所有用户信息出错");
+            appResponse.setResponseData(null);
+            return appResponse;
+        }
+        if(null!=userInfoList&&userInfoList.size()>0){
+            appResponse.setResponseCode(200);
+            appResponse.setResponseMessage("根据条件查看所有用户信息成功");
+            appResponse.setResponseData(userInfoList);
+            return appResponse;
+        }else{
+            appResponse.setResponseCode(100);
             appResponse.setResponseMessage("未找到相关用户信息");
             appResponse.setResponseData(null);
             return appResponse;
