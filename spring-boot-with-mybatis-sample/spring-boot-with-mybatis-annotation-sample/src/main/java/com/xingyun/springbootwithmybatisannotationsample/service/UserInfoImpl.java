@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class UserInfoImpl implements IUserInfo {
@@ -36,5 +37,10 @@ public class UserInfoImpl implements IUserInfo {
     @Override
     public List<UserInfo> findAllUserInfo() {
         return userInfoMapper.selectAllUserInfo();
+    }
+
+    @Override
+    public List<UserInfo> findAllUserInfoByCondition(Map<String, Object> queryMap) {
+        return userInfoMapper.selectAllUserInfoByCondition(queryMap);
     }
 }

@@ -13,5 +13,6 @@ public class SpringMVCConfig extends WebMvcConfigurationSupport {
         //Swagger 静态资源处理
         registry.addResourceHandler("swagger-ui.html").addResourceLocations("classpath:/META-INF/resources/");
         registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
+        registry.addResourceHandler("/csrf/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
     }
 }

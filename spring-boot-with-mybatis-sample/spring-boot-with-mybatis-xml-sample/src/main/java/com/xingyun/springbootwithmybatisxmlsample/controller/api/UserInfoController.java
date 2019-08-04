@@ -29,26 +29,25 @@ public class UserInfoController {
 
     @ApiOperation(value="添加一个用户信息")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "userInfoName", value = "用户名称", defaultValue = "星云",required = true, dataType = "String"),
-            @ApiImplicitParam(name = "userInfoMobile", value = "用户手机号",defaultValue = "18317792386",required = true, dataType = "String"),
-            @ApiImplicitParam(name = "userInfoAge",value = "年龄",defaultValue="27",dataType = "Integer",dataTypeClass = Integer.class),
-            @ApiImplicitParam(name = "userInfoSex", value = "用户性别",defaultValue = "true",required = true, dataType = "Boolean"),
+            @ApiImplicitParam(dataType = "string",name = "userInfoAccount",value = "用户信息账号",example = "星云",defaultValue = "星云",required = true),
+            @ApiImplicitParam(dataType = "string",name = "userInfoPassword", value = "用户信息密码",example = "123456",defaultValue = "123456",required = true),
+            @ApiImplicitParam(dataType = "int",name = "userInfoAge",value = "年龄",example = "27",defaultValue="27",required = true),
+            @ApiImplicitParam(dataType = "boolean",name = "userInfoSex", value = "用户性别",example = "true",defaultValue = "true",required = true),
     })
     @PostMapping(value = "/userInfo")
     public AppResponse addUserInfo(
-            @RequestParam(value = "userInfoName")String userInfoName,
-            @RequestParam(value = "userInfoMobile")String userInfoMobile,
-            @RequestParam(value = "userInfoAge")Integer userInfoAge,
+            @RequestParam(value = "userInfoAccount")String userInfoAccount,
+            @RequestParam(value = "userInfoPassword")String userInfoPassword,
+            @RequestParam(value = "userInfoAge")Integer  userInfoAge,
             @RequestParam(value = "userInfoSex")Boolean userInfoSex){
 
-        userInfo.setUserInfoName(userInfoName);
-        userInfo.setUserInfoMobile(userInfoMobile);
+        userInfo.setUserInfoAccount(userInfoAccount);
+        userInfo.setUserInfoPassword(userInfoPassword);
         userInfo.setUserInfoAge(userInfoAge);
         userInfo.setUserInfoSex(userInfoSex);
 
         Map<String,Object> queryMap=new HashMap<>();
-        queryMap.put("userInfoName",userInfoName);
-        queryMap.put("userInfoMobile",null);
+        queryMap.put("userInfoAccount",userInfoAccount);
         List<UserInfo> findUserInfoList=null;
         try {
             findUserInfoList=userInfoService.findAllUserInfoByCondition(queryMap);
@@ -87,7 +86,7 @@ public class UserInfoController {
 
 
     @ApiOperation(value="删除一个用户信息")
-    @ApiImplicitParam(name = "userInfoId",required = true, defaultValue = "1",dataType = "Long",example = "1")
+    @ApiImplicitParam(dataType = "long",name = "userInfoId",value = "用户信息ID",example = "1",defaultValue = "0",required = true)
     @DeleteMapping(value = "/userInfo/{userInfoId}")
     public AppResponse removedUserInfo(@PathVariable(value = "userInfoId")Long userInfoId){
 
@@ -129,24 +128,24 @@ public class UserInfoController {
 
     @ApiOperation(value="修改一个用户信息")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "userInfoId", value = "用户Id", defaultValue = "2",required = true, dataType = "Long",example = "2"),
-            @ApiImplicitParam(name = "userInfoName", value = "用户名称", defaultValue = "星云",required = true, dataType = "String"),
-            @ApiImplicitParam(name = "userInfoMobile", value = "用户手机号",defaultValue = "18317792386",required = true, dataType = "String"),
-            @ApiImplicitParam(name = "userInfoAge",value = "年龄",defaultValue="27",dataType = "Integer",dataTypeClass = Integer.class),
-            @ApiImplicitParam(name = "userInfoSex", value = "用户性别",defaultValue = "true",required = true, dataType = "Boolean"),
+            @ApiImplicitParam(dataType = "Long",name = "userInfoId", value = "用户Id",example = "2",defaultValue = "2",required = true),
+            @ApiImplicitParam(dataType = "string",name = "userInfoAccount",value = "用户信息账号",example = "admin",defaultValue = "admin",required = true),
+            @ApiImplicitParam(dataType = "string",name = "userInfoPassword", value = "用户信息密码",example = "root",defaultValue = "root",required = true),
+            @ApiImplicitParam(dataType = "int",name = "userInfoAge",value = "年龄",example = "27",defaultValue="27",required = true),
+            @ApiImplicitParam(dataType = "boolean",name = "userInfoSex", value = "用户性别",example = "true",defaultValue = "true",required = true),
     })
     @PutMapping(value = "/userInfo")
     public AppResponse modifyUserInfo(
             @RequestParam(value = "userInfoId")Long userInfoId,
-            @RequestParam(value = "userInfoName")String userInfoName,
-            @RequestParam(value = "userInfoMobile")String userInfoMobile,
+            @RequestParam(value = "userInfoAccount")String userInfoAccount,
+            @RequestParam(value = "userInfoPassword")String userInfoPassword,
             @RequestParam(value = "userInfoAge")Integer userInfoAge,
             @RequestParam(value = "userInfoSex")Boolean userInfoSex
     ){
 
         userInfo.setUserInfoId(userInfoId);
-        userInfo.setUserInfoName(userInfoName);
-        userInfo.setUserInfoMobile(userInfoMobile);
+        userInfo.setUserInfoAccount(userInfoAccount);
+        userInfo.setUserInfoPassword(userInfoPassword);
         userInfo.setUserInfoAge(userInfoAge);
         userInfo.setUserInfoSex(userInfoSex);
 
@@ -187,7 +186,7 @@ public class UserInfoController {
     }
 
     @ApiOperation(value="查看某一用户信息")
-    @ApiImplicitParam(name = "userInfoId",required = true, dataType = "Long",example = "1")
+    @ApiImplicitParam(dataType = "Long",name = "userInfoId",value = "用户信息ID",example = "2",defaultValue = "2",required = true)
     @GetMapping(value = "/userInfo/{userInfoId}")
     public AppResponse findUserInfoByUserInfoId(@PathVariable(value = "userInfoId")Long userInfoId){
         UserInfo findUserInfo= null;
@@ -239,19 +238,19 @@ public class UserInfoController {
 
     @ApiOperation(value="根据条件查看所有用户信息")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "userInfoName", value = "用户名称", defaultValue = "星云",example = "星云",required = true, dataType = "String"),
-            @ApiImplicitParam(name = "userInfoMobile", value = "用户手机号",defaultValue = "18317792386",example = "18317792386", dataType = "String"),
+            @ApiImplicitParam(dataType = "string",name = "userInfoAccount", value = "用户信息账号",example = "星云",defaultValue = "星云",required = true),
+            @ApiImplicitParam(dataType = "string",name = "userInfoPassword", value = "用户信息密码",example = "123456",defaultValue = "123456",required = true),
     })
     @GetMapping(value = "/userInfo.do")
-    public AppResponse findAllUserInfoByCondition(@RequestParam(value = "userInfoName")String userInfoName,
-            @RequestParam(value = "userInfoMobile",required = false)String userInfoMobile){
+    public AppResponse findAllUserInfoByCondition(@RequestParam(value = "userInfoAccount")String userInfoAccount,
+                                                  @RequestParam(value = "userInfoPassword",required = false)String userInfoPassword){
         List<UserInfo> userInfoList;
         Map<String,Object> queryMap=new HashMap<>();
-        queryMap.put("userInfoName",userInfoName);
-        if(null==userInfoMobile||"".equals(userInfoMobile)){
-            queryMap.put("userInfoMobile",null);
+        queryMap.put("userInfoAccount",userInfoAccount);
+        if(null==userInfoPassword||"".equals(userInfoPassword)){
+            queryMap.put("userInfoPassword",null);
         }else{
-            queryMap.put("userInfoMobile",userInfoMobile);
+            queryMap.put("userInfoPassword",userInfoPassword);
         }
         try {
             userInfoList=userInfoService.findAllUserInfoByCondition(queryMap);

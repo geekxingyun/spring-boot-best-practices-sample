@@ -20,15 +20,15 @@
     -->
     <resultMap type="UserInfo" id="userInfoMap">
         <id column="USER_INFO_ID" property="userInfoId"/>
-        <result column="USER_INFO_NAME" property="userInfoName"/>
-        <result column="USER_INFO_MOBILE" property="userInfoMobile"/>
+        <result column="USER_INFO_ACCOUNT" property="userInfoAccount"/>
+        <result column="USER_INFO_PASSWORD" property="userInfoPassword"/>
         <result column="USER_INFO_AGE" property="userInfoAge"/>
         <result column="USER_INFO_SEX" property="userInfoSex"/>
     </resultMap>
 
     <!--    insert – 映射插入语句-->
     <insert id="insertUserInfo" parameterType="UserInfo" >
-        INSERT INTO t_user_info (USER_INFO_NAME,USER_INFO_MOBILE,USER_INFO_AGE,USER_INFO_SEX)VALUES(#{userInfoName},#{userInfoMobile},#{userInfoAge},#{userInfoSex});
+        INSERT INTO t_user_info (USER_INFO_ACCOUNT,USER_INFO_PASSWORD,USER_INFO_AGE,USER_INFO_SEX)VALUES(#{userInfoAccount},#{userInfoPassword},#{userInfoAge},#{userInfoSex});
     </insert>
 
     <!--    delete – 映射删除语句-->
@@ -38,13 +38,26 @@
 
     <!--    update – 映射更新语句-->
     <update id="updateUserInfo" parameterType="UserInfo" >
-        UPDATE t_user_info SET USER_INFO_NAME= #{userInfoName},USER_INFO_MOBILE= #{userInfoMobile},USER_INFO_AGE= #{userInfoAge},USER_INFO_SEX= #{userInfoSex} WHERE USER_INFO_ID= #{userInfoId}
+        UPDATE t_user_info
+        <set>
+            <if test="userInfoAccount!=null">
+                USER_INFO_ACCOUNT= #{userInfoAccount},
+            </if>
+            <if test="userInfoPassword!=null">
+                USER_INFO_PASSWORD= #{userInfoPassword},
+            </if>
+            <if test="userInfoAge!=null">
+                USER_INFO_AGE= #{userInfoAge},
+            </if>
+            <if test="userInfoSex!=null">
+                USER_INFO_SEX= #{userInfoSex},
+            </if>
+        </set>
+        WHERE USER_INFO_ID= #{userInfoId}
     </update>
 
     <!-- sql 可被其他语句引用的可重用语句块-->
-    <sql id="userInfoFieldSQLId">
-       USER_INFO_ID,USER_INFO_NAME,USER_INFO_MOBILE,USER_INFO_AGE,USER_INFO_SEX
-    </sql>
+    <sql id="userInfoFieldSQLId">USER_INFO_ID,USER_INFO_ACCOUNT,USER_INFO_PASSWORD,USER_INFO_AGE,USER_INFO_SEX</sql>
 
     <!--  select – 映射查询语句
          include 引用一个sql片段
@@ -78,19 +91,22 @@
         SELECT
         <include refid="userInfoFieldSQLId"/>
         FROM t_user_info
-        WHERE
-        USER_INFO_NAME = #{userInfoName}
-        <if test="null!=userInfoMobile and ''!=userInfoMobile ">
-            AND USER_INFO_MOBILE= #{userInfoMobile}
-        </if>
-        <if test="null!=userInfoAge and 0!=userInfoAge ">
-            AND USER_INFO_AGE= #{userInfoAge}
-        </if>
-        <if test="null!=userInfoSex ">
-            AND USER_INFO_SEX= #{userInfoSex}
-        </if>
-        <if test="null!=userInfoId and 0!=userInfoId ">
-            AND USER_INFO_ID= #{userInfoId}
-        </if>
+        <where>
+            <if test="userInfoAccount!=null and ''!=userInfoAccount">
+                AND USER_INFO_ACCOUNT = #{userInfoAccount}
+            </if>
+            <if test="null!=userInfoPassword and ''!=userInfoPassword ">
+                AND USER_INFO_PASSWORD= #{userInfoPassword}
+            </if>
+            <if test="null!=userInfoAge and 0!=userInfoAge ">
+                AND USER_INFO_AGE= #{userInfoAge}
+            </if>
+            <if test="null!=userInfoSex ">
+                AND USER_INFO_SEX= #{userInfoSex}
+            </if>
+            <if test="null!=userInfoId and 0L!=userInfoId ">
+                AND USER_INFO_ID= #{userInfoId}
+            </if>
+        </where>
     </select>
 </mapper>

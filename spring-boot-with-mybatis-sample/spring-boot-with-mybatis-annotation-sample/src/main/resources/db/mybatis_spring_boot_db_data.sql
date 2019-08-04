@@ -1,6 +1,6 @@
-INSERT INTO t_user_info ( t_user_info.USER_INFO_NAME, t_user_info.USER_INFO_MOBILE, t_user_info.USER_INFO_AGE, t_user_info.USER_INFO_SEX )
+INSERT INTO t_user_info ( USER_INFO_ACCOUNT, USER_INFO_PASSWORD, USER_INFO_AGE, USER_INFO_SEX )
 VALUES
-	( 'admin', '18619926007', 18, 1 );
-INSERT INTO t_user_info ( t_user_info.USER_INFO_NAME, t_user_info.USER_INFO_MOBILE, t_user_info.USER_INFO_AGE, t_user_info.USER_INFO_SEX )
+	( 'admin', '123456', 27, 1 );
+	INSERT INTO t_user_info ( USER_INFO_ACCOUNT, USER_INFO_PASSWORD, USER_INFO_AGE, USER_INFO_SEX )
 VALUES
-	( 'admin', '18619926007', 27, 0 );
+	( 'root', '654321', 28, 0 );

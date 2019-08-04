@@ -10,7 +10,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Slf4j
 @RestController
@@ -27,52 +29,67 @@ public class UserInfoController {
 
     @ApiOperation(value="添加一个用户信息")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "userInfoName", value = "用户名称", defaultValue = "星云",required = true, dataType = "String"),
-            @ApiImplicitParam(name = "userInfoMobile", value = "用户手机号",defaultValue = "18317792386",required = true, dataType = "String"),
-            @ApiImplicitParam(name = "userInfoAge",value = "年龄",defaultValue="27",dataType = "Integer",dataTypeClass = Integer.class),
-            @ApiImplicitParam(name = "userInfoSex", value = "用户性别",defaultValue = "true",required = true, dataType = "Boolean"),
+            @ApiImplicitParam(dataType = "string",name = "userInfoAccount",value = "用户信息账号",example = "星云",defaultValue = "星云",required = true),
+            @ApiImplicitParam(dataType = "string",name = "userInfoPassword", value = "用户信息密码",example = "123456",defaultValue = "123456",required = true),
+            @ApiImplicitParam(dataType = "int",name = "userInfoAge",value = "年龄",example = "27",defaultValue="27",required = true),
+            @ApiImplicitParam(dataType = "boolean",name = "userInfoSex", value = "用户性别",example = "true",defaultValue = "true",required = true),
     })
     @PostMapping(value = "/userInfo")
     public AppResponse addUserInfo(
-                @RequestParam(value = "userInfoName")String userInfoName,
-                @RequestParam(value = "userInfoMobile")String userInfoMobile,
-                @RequestParam(value = "userInfoAge")Integer userInfoAge,
-                @RequestParam(value = "userInfoSex")Boolean userInfoSex){
+            @RequestParam(value = "userInfoAccount")String userInfoAccount,
+            @RequestParam(value = "userInfoPassword")String userInfoPassword,
+            @RequestParam(value = "userInfoAge")Integer  userInfoAge,
+            @RequestParam(value = "userInfoSex")Boolean userInfoSex){
 
-        userInfo.setUserInfoName(userInfoName);
-        userInfo.setUserInfoMobile(userInfoMobile);
+        userInfo.setUserInfoAccount(userInfoAccount);
+        userInfo.setUserInfoPassword(userInfoPassword);
         userInfo.setUserInfoAge(userInfoAge);
         userInfo.setUserInfoSex(userInfoSex);
 
-        Integer effectLineCount=Integer.valueOf(0);
+        Map<String,Object> queryMap=new HashMap<>();
+        queryMap.put("userInfoAccount",userInfoAccount);
+        List<UserInfo> findUserInfoList=null;
         try {
-            effectLineCount=userInfoService.addUserInfo(userInfo);
+            findUserInfoList=userInfoService.findAllUserInfoByCondition(queryMap);
         } catch (Exception e) {
-            log.error("插入用户信息出错",e);
-            appResponse.setResponseCode(500);
-            appResponse.setResponseMessage("用户插入失败");
-            appResponse.setResponseData(null);
-            return appResponse;
+            log.error(e.getMessage(),e);
         }
-
-        if(0!=effectLineCount){
-            appResponse.setResponseCode(200);
-            appResponse.setResponseMessage("用户插入成功");
+        if(null!=findUserInfoList&&findUserInfoList.size()>0){
+            appResponse.setResponseCode(100);
+            appResponse.setResponseMessage("用户已存在");
             appResponse.setResponseData(null);
             return appResponse;
         }else{
-            appResponse.setResponseCode(500);
-            appResponse.setResponseMessage("用户插入失败");
-            appResponse.setResponseData(null);
-            return appResponse;
+            Integer effectLineCount=Integer.valueOf(0);
+            try {
+                effectLineCount=userInfoService.addUserInfo(userInfo);
+            } catch (Exception e) {
+                log.error("插入用户信息出错",e);
+                appResponse.setResponseCode(500);
+                appResponse.setResponseMessage("用户插入失败");
+                appResponse.setResponseData(null);
+                return appResponse;
+            }
+            if(0!=effectLineCount){
+                appResponse.setResponseCode(200);
+                appResponse.setResponseMessage("用户插入成功");
+                appResponse.setResponseData(null);
+                return appResponse;
+            }else{
+                appResponse.setResponseCode(100);
+                appResponse.setResponseMessage("用户插入失败");
+                appResponse.setResponseData(null);
+                return appResponse;
+            }
         }
     }
 
 
     @ApiOperation(value="删除一个用户信息")
-    @ApiImplicitParam(name = "userInfoId",required = true, defaultValue = "1",dataType = "Long",example = "1")
+    @ApiImplicitParam(dataType = "long",name = "userInfoId",value = "用户信息ID",example = "1",defaultValue = "0",required = true)
     @DeleteMapping(value = "/userInfo/{userInfoId}")
     public AppResponse removedUserInfo(@PathVariable(value = "userInfoId")Long userInfoId){
+
         UserInfo findUserInfo=null;
         try {
             findUserInfo=userInfoService.findUserInfoByUserInfoId(userInfoId);
@@ -80,7 +97,7 @@ public class UserInfoController {
             log.error("根据用户Id查询用户出错",e);
         }
         if(null==findUserInfo){
-            appResponse.setResponseCode(201);
+            appResponse.setResponseCode(100);
             appResponse.setResponseMessage("该用户不存在");
             appResponse.setResponseData(null);
             return appResponse;
@@ -101,7 +118,7 @@ public class UserInfoController {
                 appResponse.setResponseData(null);
                 return appResponse;
             }else{
-                appResponse.setResponseCode(201);
+                appResponse.setResponseCode(100);
                 appResponse.setResponseMessage("用户删除失败");
                 appResponse.setResponseData(null);
                 return appResponse;
@@ -111,24 +128,24 @@ public class UserInfoController {
 
     @ApiOperation(value="修改一个用户信息")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "userInfoId", value = "用户Id", defaultValue = "2",required = true, dataType = "Long",example = "2"),
-            @ApiImplicitParam(name = "userInfoName", value = "用户名称", defaultValue = "星云",required = true, dataType = "String"),
-            @ApiImplicitParam(name = "userInfoMobile", value = "用户手机号",defaultValue = "18317792386",required = true, dataType = "String"),
-            @ApiImplicitParam(name = "userInfoAge",value = "年龄",defaultValue="27",dataType = "Integer",dataTypeClass = Integer.class),
-            @ApiImplicitParam(name = "userInfoSex", value = "用户性别",defaultValue = "true",required = true, dataType = "Boolean"),
+            @ApiImplicitParam(dataType = "Long",name = "userInfoId", value = "用户Id",example = "2",defaultValue = "2",required = true),
+            @ApiImplicitParam(dataType = "string",name = "userInfoAccount",value = "用户信息账号",example = "admin",defaultValue = "admin",required = true),
+            @ApiImplicitParam(dataType = "string",name = "userInfoPassword", value = "用户信息密码",example = "root",defaultValue = "root",required = true),
+            @ApiImplicitParam(dataType = "int",name = "userInfoAge",value = "年龄",example = "27",defaultValue="27",required = true),
+            @ApiImplicitParam(dataType = "boolean",name = "userInfoSex", value = "用户性别",example = "true",defaultValue = "true",required = true),
     })
     @PutMapping(value = "/userInfo")
     public AppResponse modifyUserInfo(
-                                  @RequestParam(value = "userInfoId")Long userInfoId,
-                                  @RequestParam(value = "userInfoName")String userInfoName,
-                                  @RequestParam(value = "userInfoMobile")String userInfoMobile,
-                                  @RequestParam(value = "userInfoAge")Integer userInfoAge,
-                                  @RequestParam(value = "userInfoSex")Boolean userInfoSex
+            @RequestParam(value = "userInfoId")Long userInfoId,
+            @RequestParam(value = "userInfoAccount")String userInfoAccount,
+            @RequestParam(value = "userInfoPassword")String userInfoPassword,
+            @RequestParam(value = "userInfoAge")Integer userInfoAge,
+            @RequestParam(value = "userInfoSex")Boolean userInfoSex
     ){
 
         userInfo.setUserInfoId(userInfoId);
-        userInfo.setUserInfoName(userInfoName);
-        userInfo.setUserInfoMobile(userInfoMobile);
+        userInfo.setUserInfoAccount(userInfoAccount);
+        userInfo.setUserInfoPassword(userInfoPassword);
         userInfo.setUserInfoAge(userInfoAge);
         userInfo.setUserInfoSex(userInfoSex);
 
@@ -160,7 +177,7 @@ public class UserInfoController {
                 appResponse.setResponseData(null);
                 return appResponse;
             }else{
-                appResponse.setResponseCode(500);
+                appResponse.setResponseCode(100);
                 appResponse.setResponseMessage("修改用户信息失败");
                 appResponse.setResponseData(null);
                 return appResponse;
@@ -169,7 +186,7 @@ public class UserInfoController {
     }
 
     @ApiOperation(value="查看某一用户信息")
-    @ApiImplicitParam(name = "userInfoId",required = true, dataType = "Long",example = "1")
+    @ApiImplicitParam(dataType = "Long",name = "userInfoId",value = "用户信息ID",example = "2",defaultValue = "2",required = true)
     @GetMapping(value = "/userInfo/{userInfoId}")
     public AppResponse findUserInfoByUserInfoId(@PathVariable(value = "userInfoId")Long userInfoId){
         UserInfo findUserInfo= null;
@@ -186,7 +203,7 @@ public class UserInfoController {
             appResponse.setResponseMessage("获取用户信息成功");
             appResponse.setResponseData(findUserInfo);
         }else{
-            appResponse.setResponseCode(201);
+            appResponse.setResponseCode(100);
             appResponse.setResponseMessage("未找到该用户");
             appResponse.setResponseData(null);
         }
@@ -212,7 +229,45 @@ public class UserInfoController {
             appResponse.setResponseData(userInfoList);
             return appResponse;
         }else{
-            appResponse.setResponseCode(201);
+            appResponse.setResponseCode(100);
+            appResponse.setResponseMessage("未找到相关用户信息");
+            appResponse.setResponseData(null);
+            return appResponse;
+        }
+    }
+
+    @ApiOperation(value="根据条件查看所有用户信息")
+    @ApiImplicitParams({
+            @ApiImplicitParam(dataType = "string",name = "userInfoAccount", value = "用户信息账号",example = "星云",defaultValue = "星云",required = true),
+            @ApiImplicitParam(dataType = "string",name = "userInfoPassword", value = "用户信息密码",example = "123456",defaultValue = "123456",required = true),
+    })
+    @GetMapping(value = "/userInfo.do")
+    public AppResponse findAllUserInfoByCondition(@RequestParam(value = "userInfoAccount")String userInfoAccount,
+                                                  @RequestParam(value = "userInfoPassword",required = false)String userInfoPassword){
+        List<UserInfo> userInfoList;
+        Map<String,Object> queryMap=new HashMap<>();
+        queryMap.put("userInfoAccount",userInfoAccount);
+        if(null==userInfoPassword||"".equals(userInfoPassword)){
+            queryMap.put("userInfoPassword",null);
+        }else{
+            queryMap.put("userInfoPassword",userInfoPassword);
+        }
+        try {
+            userInfoList=userInfoService.findAllUserInfoByCondition(queryMap);
+        } catch (Exception e) {
+            log.error("根据条件获取所有用户信息出错:",e);
+            appResponse.setResponseCode(500);
+            appResponse.setResponseMessage("根据条件查看所有用户信息出错");
+            appResponse.setResponseData(null);
+            return appResponse;
+        }
+        if(null!=userInfoList&&userInfoList.size()>0){
+            appResponse.setResponseCode(200);
+            appResponse.setResponseMessage("根据条件查看所有用户信息成功");
+            appResponse.setResponseData(userInfoList);
+            return appResponse;
+        }else{
+            appResponse.setResponseCode(100);
             appResponse.setResponseMessage("未找到相关用户信息");
             appResponse.setResponseData(null);
             return appResponse;

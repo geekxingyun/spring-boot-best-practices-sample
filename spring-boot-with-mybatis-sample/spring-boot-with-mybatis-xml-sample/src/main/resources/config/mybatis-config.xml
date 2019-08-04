@@ -3,10 +3,10 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-    <!-- MyBatis 全局配置 -->
+    <!-- MyBatis 全局配置 也可以在application-dev.properties 配置 -->
     <settings>
         <!--logImpl 可选的值有：SLF4J、LOG4J、LOG4J2、JDK_LOGGING、COMMONS_LOGGING、STDOUT_LOGGING、NO_LOGGING -->
-        <setting name="logImpl" value="LOG4J"/>
+        <setting name="logImpl" value="SLF4J"/>
         <!--全局地开启或关闭配置文件中的所有映射器已经配置的任何缓存。 有效值 true | false	默认值 true-->
         <setting name="cacheEnabled" value="true"/>
         <!--延迟加载的全局开关。当开启时，所有关联对象都会延迟加载。 特定关联关系中可通过设置 fetchType 属性来覆盖该项的开关状态。-->
@@ -81,40 +81,11 @@
 
     <!-- 定义别名 -->
     <typeAliases>
-        <typeAlias alias="UserInfo" type="com.xingyun.springbootwithmybatisxmlsample.model.business.UserInfo"/>
+        <typeAlias type="com.xingyun.springbootwithmybatisxmlsample.model.business.UserInfo" alias="UserInfo"/>
         <typeAlias alias="int" type="java.lang.Integer"/>
         <typeAlias alias="string" type="java.lang.String"/>
         <typeAlias alias="double" type="java.lang.Double"/>
         <typeAlias alias="long" type="java.lang.Long"/>
         <typeAlias alias="map" type="java.util.Map"/>
     </typeAliases>
-
-    <environments default="development">
-        <environment id="development">
-            <transactionManager type="JDBC"/>
-            <dataSource type="POOLED">
-                <property name="driver" value="${spring.datasource.driver-class-name}"/>
-                <property name="url" value="${spring.datasource.url}"/>
-                <property name="username" value="${spring.datasource.username}"/>
-                <property name="password" value="${spring.datasource.password}"/>
-            </dataSource>
-        </environment>
-        <environment id="product">
-            <transactionManager type="JDBC"/>
-            <dataSource type="POOLED">
-                <property name="driver" value="${spring.datasource.driver-class-name}"/>
-                <property name="url" value="${spring.datasource.url}"/>
-                <property name="username" value="${spring.datasource.username}"/>
-                <property name="password" value="${spring.datasource.password}"/>
-            </dataSource>
-        </environment>
-    </environments>
-
-    <!-- application-dev.properties 已经配置
-    mybatis.mapper-locations=classpath:mapper/*Mapper.xml
-    因此指定不需要重复配置，否则需要添加如下配置
-    -->
-<!--        <mappers>-->
-<!--            <mapper resource="mapper/*Mapper.xml"/>-->
-<!--        </mappers>-->
 </configuration>
