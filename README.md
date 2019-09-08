@@ -6,7 +6,7 @@ Spring Boot 2.x最佳实践手册代码库
 
 推荐使用我精心配置的[settings.xml](https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/resources/share/settings.xml)
 
-|项目名称|项目简介|
+|项目名称|博文讲解|
 |---|---|
 |[spring-boot-with-customize-banner-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-customize-banner-sample)|[1.Spring Boot 2.x最佳实践之自定义Banner](https://blog.csdn.net/hadues/article/details/88819151)|
 |[spring-boot-with-slf4j-logback-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-slf4j-logback-sample)|[2. Spring Boot 2.x 最佳实践之日志使用SLF4J+Logback](https://blog.csdn.net/hadues/article/details/88884141)|
