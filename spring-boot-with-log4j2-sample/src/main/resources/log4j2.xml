@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--从版本2.9开始，出于安全原因，Log4j不处理XML文件中的DTD-->
+<!--monitorInterval="30" 每隔30秒检查下当前配置文件是否有改动如果有重新自动加载,最小间隔为5秒。 -->
+<!-- status可选值"trace", "debug", "info", "warn", "error" and "fatal" log4j进行故障排除使用-->
+<!--是否严格检查log4j2.xml配置文件格式 strict="false"-->
+<!--verbose="" 加载插件时启用诊断信息。-->
+<configuration name="log4j2Config" monitorInterval="30" status="WARN" strict="false" >
+    <Properties>
+        <property name="appName" value="myApp"/>
+        <Property name="baseDir" value="/opt/appLogs/${appName}/log"></Property>
+        <Property name="logName" value="${baseDir}/${appName}.log"></Property>
+        <Property name="logArchive" value="${baseDir}/$${date:yyyy-MM-dd}/${appName}-archive-%d{yyyy-MM-dd}-%i.log.gz"/>
+    </Properties>
+    <Appenders>
+        <!-- 输出到控制台 -->
+        <Console name="STDOUT" target="SYSTEM_OUT" ignoreExceptions="false">
+            <PatternLayout charset="GB18030" pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+        <!-- 滚动输出到文件 -->
+        <RollingFile name="rollingFile"
+                     append="true"
+                     bufferedIO="true"
+                     bufferSize="8192"
+                     createOnDemand="false"
+                     immediateFlush="true"
+                     fileName="${logName}"
+                     filePattern="${logArchive}"
+                     ignoreExceptions="true"
+        >
+            <PatternLayout>
+                <charset>UTF-8</charset>
+                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <!--每次启动是否归档滚动 -->
+                <!--<OnStartupTriggeringPolicy minSize="1"/>-->
+                <!-- 滚动策略根据大小进行滚动 -->
+                <SizeBasedTriggeringPolicy size="1GB"  />
+                <!-- 滚动策略根据日期进行滚动 每天压缩一次
+                 maxRandomDelay表示随机延迟翻转的最大秒数。 默认情况下，该值为0表示没有延迟-->
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" maxRandomDelay="0"/>
+            </Policies>
+            <!--最多保留100个归档-->
+            <DefaultRolloverStrategy max="20" min="1">
+                <!--删除策略 -->
+                <Delete basePath="${baseDir}" maxDepth="8">
+                    <IfFileName glob="*/app-*.log.gz">
+                        <!--会保留大小10G或者最近的10个文件-->
+                        <IfLastModified age="30d">
+                            <IfAny>
+                                <IfAccumulatedFileSize exceeds="10GB" />
+                                <IfAccumulatedFileCount exceeds="100" />
+                            </IfAny>
+                        </IfLastModified>
+                    </IfFileName>
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Logger name="com.xingyun" level="DEBUG" additivity="true"/>
+        <root level="ERROR">
+            <AppenderRef ref="STDOUT" />
+            <AppenderRef ref="rollingFile" />
+        </root>
+    </Loggers>
+</configuration>

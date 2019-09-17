@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--将项目的父项目设置为Spring Boot-->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.8.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <!--设置本项目的groupId artifactId 和版本信息-->
+    <groupId>com.xingyun</groupId>
+    <artifactId>spring-boot-with-log4j2-sample</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>spring-boot-with-log4j2-sample</name>
+    <description>spring boot with log4j2 sample project for Spring Boot</description>
+
+    <properties>
+        <!-- 设置项目所使用的编码为UTF-8 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!--设置项目所用JDK版本,也可以使用低版本，建议使用JDK1.8以上版本-->
+        <java.version>12</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <maven.compiler.plugin.version>3.5.1</maven.compiler.plugin.version>
+        <!--是否跳过测试-->
+        <skipTests>true</skipTests>
+        <!--设置项目使用第三方依赖包，建议以后都采用这种方式，统一在一个地方声明版本号，这样对项目可以统一管理，方便以后升级-->
+        <log4j2.version>2.12.1</log4j2.version>
+    </properties>
+
+    <dependencies>
+        <!--使用lombok可以使用 @Slf4j注解-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <!--使用Spring MVC Web模块-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!--排除默认的logback日志-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!--使用log4j2日志框架-->
+        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-log4j2 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-log4j2</artifactId>
+        </dependency>
+
+        <!--如果当前项目已经大量使用了log4j 2.x,添加如下依赖可以做下适配
+            将log4j1.x 调用方式不变,日志实现替换为Log4J 2 Core实现类-->
+       <!-- <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-1.2-api</artifactId>
+            <version>2.12.1</version>
+        </dependency>-->
+
+        <!--如果项目中有Common Logging 日志门面的调用,那么添加如下依赖
+            可以将Common Logging 日志门面做下适配,日志实现类使用log4j2-core -->
+        <!--The Apache Log4j Commons Logging Adapter-->
+        <!--<dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-jcl</artifactId>
+            <version>2.12.1</version>
+        </dependency>-->
+
+        <!--如果需要配置监听那么需要-->
+        <!--<dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-web</artifactId>
+            <version>2.12.1</version>
+        </dependency>-->
+
+        <!--测试框架 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <!--如果项目中传递依赖指定了多个log4j的版本,那么设置统一下log4j2 版本依赖 -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-bom</artifactId>
+                <version>${log4j2.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <!--该插件可以将该当前项目打包成一个可执行的jar-->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <!--该插件限定Maven 打包时所使用的版本,避免出现版本不匹配问题-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.plugin.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
