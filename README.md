@@ -75,13 +75,6 @@ java -jar your-app.jar
 > - BOOT-INF\lib 项目依赖的Jar包
 > - org\springframework\boot\loader Spring Boot 启动时需要的类
 
-# 赞助支持
-
-<div align="left">
-<h2>微信赞赏二维码</h2>
-<img src="https://img2018.cnblogs.com/blog/622489/201812/622489-20181215164147325-217176189.png" alt="" width="303" height="282">
-</div>
-
 ---
 # 关于我
 
@@ -94,15 +87,11 @@ java -jar your-app.jar
 
 [星云微博](https://weibo.com/xingyunsky)
 
+# 关注与赞赏
 
-# 免费加入我的知识星球
-
-<p><a href="https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/resources/images/my_world.png?raw=true"> <img src="https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/resources/images/my_world.png?raw=true" width="253" height="340"><a><p>
+<p><a href="https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/resources/images/share-public.png?raw=true" width="253" height="340"><a><p>
 
 
 # 联系我
 
 Email: fairy_xingyun@hotmail.com
-
-![1569041003225](C:\Users\xingyun\AppData\Roaming\Typora\typora-user-images\1569041003225.png)
-
