@@ -47,7 +47,7 @@
 
 # 0x04 如何安装打包运行一个Spring Boot 项目?
 
-推荐使用我精心配制的[settings.xml](https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/resources/share/settings.xml)
+推荐使用我精心配制的[settings.xml](https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/assets/share/settings.xml)
 
 ## 4.1 maven 安装依赖
 
