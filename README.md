@@ -88,7 +88,7 @@ Email: fairy_xingyun@hotmail.com
 
 > 交流即分享，分享才能进步！ by 星云
 
-# 关注与赞赏
+# 关注与打赏
 
 [星云CSDN博客](https://blog.csdn.net/hadues)
 
