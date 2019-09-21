@@ -24,11 +24,11 @@
 
 > 构建一个Spring Boot 项目最流行的有如下三种方式.
 
-## 2.1 使用 Intellij Idea 构建项目
+## 3.1 使用 Intellij Idea 构建项目
 
 > [Intellij Idea](https://www.jetbrains.com/idea/) 是一款Java开发最强大最智能的IDE集成开发工具。
 
-## 2.2 使用Spring Tools 4 for Eclipse(简称 STS)构建项目
+## 3.2 使用Spring Tools 4 for Eclipse(简称 STS)构建项目
 
 > - Spring Tools 4 for Eclipse 是Spring 官方团队推出的Java开发集成IDE工具。
 
@@ -39,7 +39,7 @@
 > - [Spring Tools 3 for Eclipse](https://spring.io/tools3/sts/all) 旧版本,该版本支持部署war到tomcat,Jetty 等外部容器中
 
 
-## 2.3 start.spring.io 在线构建项目
+## 3.3 start.spring.io 在线构建项目
 
 > 初始化一个Spring Boot 项目,推荐使用Spring 官方团队提供的项目生成工具 [https://start.spring.io/](https://start.spring.io/)
 
