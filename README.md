@@ -17,6 +17,13 @@
 |- |[9. Spring Boot 2.x 最佳实践之静态资源拦截](https://xingyun.blog.csdn.net/article/details/92772523)|
 |[spring-boot-with-mybatis-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-mybatis-sample)|[10. Spring Boot 2.x 最佳实践之MyBatis集成](https://xingyun.blog.csdn.net/article/details/97929511)
 
+# 赞助支持
+
+<div align="left">
+<h2>微信赞赏二维码</h2>
+<img src="https://img2018.cnblogs.com/blog/622489/201812/622489-20181215164147325-217176189.png" alt="" width="303" height="282">
+</div>
+
 ---
 # 0x03 如何构建一个Spring Boot 项目
 
@@ -93,10 +100,3 @@ java -jar your-app.jar
 # 联系我
  
 > Email：fairy_xingyun@hotmail.com   
-
-# 赞助支持
-
-<div align="left">
-<h2>微信赞赏二维码</h2>
-<img src="https://img2018.cnblogs.com/blog/622489/201812/622489-20181215164147325-217176189.png" alt="" width="303" height="282">
-</div>
