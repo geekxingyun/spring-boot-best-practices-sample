@@ -1,10 +1,8 @@
-# SpringBootBestPracticesSample
+# 0x01 前言
 
-Spring Boot 2.x最佳实践手册代码库
+>- 大家好,我是该仓库的维护者星云,该仓库致力于 Spring Boot 与各种技术的整合示例库,欢迎各位持续关注~
 
-大家好，我是仓库维护者星云，该仓库致力于Spring Boot 集成各种技术的最佳实践,欢迎各位关注~
-
-推荐使用我精心配置的[settings.xml](https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/resources/share/settings.xml)
+# 0x02 Spring Boot 与各种技术整合示例库列表
 
 |项目名称|博文讲解|
 |---|---|
@@ -20,6 +18,51 @@ Spring Boot 2.x最佳实践手册代码库
 |[spring-boot-with-mybatis-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-mybatis-sample)|[10. Spring Boot 2.x 最佳实践之MyBatis集成](https://xingyun.blog.csdn.net/article/details/97929511)
 
 ---
+# 0x03 如何构建一个Spring Boot 项目
+
+> 构建一个Spring Boot 项目最流行的有如下三种方式.
+## 2.1 使用 Intellij Idea 构建项目
+[Intellij Idea](https://www.jetbrains.com/idea/) 是一款Java开发最强大最智能的IDE集成开发工具。
+## 2.2 start.spring.io 在线构建项目
+初始化一个Spring Boot 项目,推荐使用Spring 官方团队提供的项目生成工具
+> [https://start.spring.io/](https://start.spring.io/)
+## 2.3 使用Spring Tools 4 for Eclipse(简称 STS)构建项目
+
+> - Spring Tools 4 for Eclipse 是Spring 官方团队推出的Java开发集成IDE工具。
+
+> - 对Spring完美支持,开源免费且支持start.spring.io网址构建项目
+
+# 0x04 运行方法
+
+## 4.1 maven 安装依赖
+
+pom.xml 根目录下运行
+```
+mvn clean install
+```
+## 4.2 maven 打包
+
+pom.xml根目录下执行
+```
+mvn clean package
+```
+> 命令含义:首先清理target文件夹中所有内容,然后打包成*.jar或者*.war输出到target根目录
+
+### 4.3 maven 运行
+
+pom.xml根目录下执行
+```
+java -jar your-app.jar
+```
+> 命令含义: 运行一个*.jar
+ 
+ ### 4.4 jar剖析
+ 
+ 解压该jar文件可以看到
+ 
+> - BOOT-INF\classes 存放编译后的所有Java源码
+> - BOOT-INF\lib 项目依赖的Jar包
+> - org\springframework\boot\loader Spring Boot 启动时需要的类
 
 > 交流即分享，分享才能进步！不对之处，还请各位前辈多多指教。  by 星云
 
@@ -28,13 +71,7 @@ Spring Boot 2.x最佳实践手册代码库
 
 [星云CSDN博客](https://blog.csdn.net/hadues)
 
-[星云博客园](http://www.cnblogs.com/xingyunblog)
-
-[星云阿里云栖博客](https://yq.aliyun.com/u/xingyunsky)
-
 [星云GitHub](https://github.com/geekxingyun)
-
-[星云GitHub Page](http://www.520geek.cn)
 
 [星云微博](https://weibo.com/xingyunsky)
 
@@ -54,4 +91,3 @@ Spring Boot 2.x最佳实践手册代码库
 <h2>微信赞赏二维码</h2>
 <img src="https://img2018.cnblogs.com/blog/622489/201812/622489-20181215164147325-217176189.png" alt="" width="303" height="282">
 </div>
-
