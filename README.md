@@ -36,7 +36,7 @@
 
 > - 对Spring完美支持,开源免费且支持start.spring.io网址构建项目
 
-> - [Spring Tools 4 for Eclipse](https://spring.io/tools3/sts/all) 新版本,该版本不支持部署war到tomcat,Jetty 等外部容器中
+> - [Spring Tools 4 for Eclipse](https://spring.io/tools) 新版本,该版本不支持部署war到tomcat,Jetty 等外部容器中
 
 > - [Spring Tools 3 for Eclipse](https://spring.io/tools3/sts/all) 旧版本,该版本支持部署war到tomcat,Jetty 等外部容器中
 
