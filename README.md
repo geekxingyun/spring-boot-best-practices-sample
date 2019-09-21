@@ -34,6 +34,8 @@
 
 # 0x04 运行方法
 
+推荐使用我精心配制的[settings.xml](https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/resources/share/settings.xml)
+
 ## 4.1 maven 安装依赖
 
 pom.xml 根目录下运行
