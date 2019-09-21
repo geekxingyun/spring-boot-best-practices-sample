@@ -5,6 +5,7 @@
 # 0x02 Spring Boot 与各种技术整合示例库列表
 
 > 推荐安装Github 源码浏览插件 [Octotree](https://www.octotree.io/)
+> 该系列源码讲解推荐看我的博客专栏[Spring Boot 2.x 最佳实践手册](https://xingyun.blog.csdn.net/article/category/9284593)
 
 |项目名称|博文讲解|
 |---|---|
