@@ -2,7 +2,7 @@
 
 ## 0x01 前言
 
->- 我是星云,该仓库致力于提供Spring Boot 与各种技术的整合的示例库。
+>- 我是星云,该仓库致力于提供[Spring Boot 与各种技术的整合的示例库](https://github.com/geekxingyun/SpringBootBestPracticesSample)
 >- 当前源码讲解Spring Boot 自定义Banner 部分的内容.
  
 ## 0x02源码讲解
