@@ -32,7 +32,12 @@
 
 > - 对Spring完美支持,开源免费且支持start.spring.io网址构建项目
 
-## 2.2 start.spring.io 在线构建项目
+> - [Spring Tools 4 for Eclipse](https://spring.io/tools3/sts/all) 最新功能,该版本不支持部署war到tomcat,Jetty 等外部容器中
+
+> - [Spring Tools 3 for Eclipse](https://spring.io/tools3/sts/all) 旧版本,该版本支持部署war到tomcat,Jetty 等外部容器中
+
+
+## 2.3 start.spring.io 在线构建项目
 
 > 初始化一个Spring Boot 项目,推荐使用Spring 官方团队提供的项目生成工具 [https://start.spring.io/](https://start.spring.io/)
 
