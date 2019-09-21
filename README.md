@@ -95,8 +95,7 @@ java -jar your-app.jar
 
 <div align="center">
  <a href="https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/assets/images/follow-me-and-award-me.png">
- <img src="https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/assets/images/follow-me-and-award-me.png">
- </img>
+ <img src="https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/assets/images/follow-me-and-award-me.png"/>
   </a>
 </div>
 
