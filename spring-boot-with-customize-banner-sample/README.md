@@ -9,7 +9,7 @@
 
 关于当前项目的源码讲解请移步参考我的CSDN博文
 
-[1. Spring Boot 2.x With Custom Banner](https://xingyun.blog.csdn.net/article/details/88819151)
+[Spring Boot 2.x With Custom Banner](https://xingyun.blog.csdn.net/article/details/88819151)
 
 
 
