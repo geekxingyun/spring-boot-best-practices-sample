@@ -101,5 +101,5 @@ java -jar your-app.jar
 
 # 联系我
 
-fairy_xingyun@hotmail.com
+Email: fairy_xingyun@hotmail.com
 
