@@ -82,8 +82,11 @@ java -jar your-app.jar
 ---
 # 关于我
 
-> 交流即分享，分享才能进步！ by 星云
+网络ID 星云,英文名fairy,真名赵庆峰,CSDN 博客专家,致力于后端技术分享，喜欢开源和交流技术。
 
+Email: fairy_xingyun@hotmail.com
+
+> 交流即分享，分享才能进步！ by 星云
 
 [星云CSDN博客](https://blog.csdn.net/hadues)
 
@@ -94,7 +97,3 @@ java -jar your-app.jar
 # 关注与赞赏
 
 <div align="center"><img src="https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/assets/images/follow-me-and-award-me.png?raw=true"/></div>
-
-# 联系我
-
-Email: fairy_xingyun@hotmail.com
