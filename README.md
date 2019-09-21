@@ -43,7 +43,7 @@
 
 > 初始化一个Spring Boot 项目,推荐使用Spring 官方团队提供的项目生成工具 [https://start.spring.io/](https://start.spring.io/)
 
-# 0x04 运行方法
+# 0x04 如何安装打包运行一个Spring Boot 项目?
 
 推荐使用我精心配制的[settings.xml](https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/resources/share/settings.xml)
 
