@@ -4,6 +4,8 @@
 
 # 0x02 Spring Boot 与各种技术整合示例库列表
 
+> 推荐安装Github 源码浏览插件 [Octotree](https://www.octotree.io/)
+
 |项目名称|博文讲解|
 |---|---|
 |[spring-boot-with-customize-banner-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-customize-banner-sample)|[1.Spring Boot 2.x最佳实践之自定义Banner](https://blog.csdn.net/hadues/article/details/88819151)|
@@ -90,8 +92,8 @@ java -jar your-app.jar
 # 关注与赞赏
 
 <div align="center">
- <a href="https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/resources/images/share-public.png">
- <img src="https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/resources/images/share-public.png">
+ <a href="https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/resources/images/follow-me-and-award-me.png">
+ <img src="https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/resources/images/follow-me-and-award-me.png">
  </img>
   </a>
 </div>
