@@ -70,10 +70,10 @@ java -jar your-app.jar
 > - BOOT-INF\lib 项目依赖的Jar包
 > - org\springframework\boot\loader Spring Boot 启动时需要的类
 
-> 交流即分享，分享才能进步！不对之处，还请各位前辈多多指教。  by 星云
-
 ---
 # 关于我
+
+> 交流即分享，分享才能进步！ by 星云
 
 [星云CSDN博客](https://blog.csdn.net/hadues)
 
