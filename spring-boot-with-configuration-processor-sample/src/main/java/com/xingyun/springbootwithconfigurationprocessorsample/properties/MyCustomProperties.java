@@ -4,15 +4,31 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
  * 自定义属性前缀
+ * @author xingyun
  * */
 @ConfigurationProperties(prefix="com.xingyun.custom")
 public class MyCustomProperties {
-    private String serverAddress;  //对应的属性就是 com.xingyun.custom.server-address
-    private String port;//对应的属性就是 com.xingyun.custom.port
-    private String username;//对应属性就是 com.xingyun.custom.username
-    private String password;//对应属性就是 com.xingyun.custom.password
+    /**
+     * 对应的属性就是 com.xingyun.custom.server-address
+     */
+    private String serverAddress;
+    /**
+     * 对应的属性就是 com.xingyun.custom.port
+     */
+    private String port;
+    /**
+     * 对应属性就是 com.xingyun.custom.username
+     */
+    private String username;
+    /**
+     * 对应属性就是 com.xingyun.custom.password
+     */
+    private String password;
 
-    //getter and setter
+    /**
+     * Getter and Setter
+     * @return
+     */
     public String getServerAddress() {
         return serverAddress;
     }
