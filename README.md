@@ -91,9 +91,7 @@ java -jar your-app.jar
 <p><a href="https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/resources/images/my_world.png?raw=true"> <img src="https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/resources/images/my_world.png?raw=true" width="253" height="340"><a><p>
 
 # 联系我
-
-> QQ：2864438285　
-> 
+ 
 > Email：fairy_xingyun@hotmail.com   
 
 # 赞助支持
