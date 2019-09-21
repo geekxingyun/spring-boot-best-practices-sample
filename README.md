@@ -89,8 +89,12 @@ java -jar your-app.jar
 
 # 关注与赞赏
 
-<p><a href="https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/resources/images/share-public.png?raw=true" width="253" height="340"><a><p>
-
+<div align="center">
+ <a href="https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/resources/images/share-public.png">
+ <img src="https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/resources/images/share-public.png">
+ </img>
+  </a>
+</div>
 
 # 联系我
 
