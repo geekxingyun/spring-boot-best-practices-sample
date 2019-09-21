@@ -93,7 +93,7 @@ java -jar your-app.jar
 
 # 关注与赞赏
 
-<div align="center"><a href="https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/assets/images/follow-me-and-award-me.png"><img src="https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/assets/images/follow-me-and-award-me.png"/></a></div>
+<div align="center"><img src="https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/assets/images/follow-me-and-award-me.png"/></div>
 
 # 联系我
 
