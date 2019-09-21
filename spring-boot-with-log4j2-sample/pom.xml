@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <!--将项目的父项目设置为Spring Boot-->
+    <!-- 设置当前项目的父项目为Spring Boot -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -11,7 +11,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <!--设置本项目的groupId artifactId 和版本信息-->
+    <!-- 设置当前项目的基本信息 -->
     <groupId>com.xingyun</groupId>
     <artifactId>spring-boot-with-log4j2-sample</artifactId>
     <version>0.0.1-SNAPSHOT</version>
@@ -19,16 +19,17 @@
     <description>spring boot with log4j2 sample project for Spring Boot</description>
 
     <properties>
-        <!-- 设置项目所使用的编码为UTF-8 -->
+        <!-- 设置当前项目源码使用字符编码为UTF-8 -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <!--设置项目所用JDK版本,也可以使用低版本，建议使用JDK1.8以上版本-->
+        <!-- 设置当前项目所需要的JDK版本 Open JDK下载地址:https://jdk.java.net/ -->
         <java.version>12</java.version>
+        <!-- 设置当前项目编译所需要的JDK版本 Open JDK下载地址:https://jdk.java.net/ -->
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
+        <!-- 设置maven编译插件版本,可通过下面网址查看最新的版本-->
+        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
         <maven.compiler.plugin.version>3.5.1</maven.compiler.plugin.version>
-        <!--是否跳过测试-->
-        <skipTests>true</skipTests>
-        <!--设置项目使用第三方依赖包，建议以后都采用这种方式，统一在一个地方声明版本号，这样对项目可以统一管理，方便以后升级-->
+        <!-- 项目所使用第三方依赖jar包的版本,建议以后都使用这种方式,方便今后维护和升级 -->
         <log4j2.version>2.12.1</log4j2.version>
     </properties>
 
@@ -109,12 +110,12 @@
 
     <build>
         <plugins>
-            <!--该插件可以将该当前项目打包成一个可执行的jar-->
+            <!--该插件可以让我们通过maven命令将项目打包成一个可执行的Jar-->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-            <!--该插件限定Maven 打包时所使用的版本,避免出现版本不匹配问题-->
+            <!--该插件限定Maven打包时所使用的版本,避免出现版本不匹配问题-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
