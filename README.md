@@ -6,7 +6,7 @@
 
 > - 推荐安装Github 源码浏览插件 [Octotree](https://www.octotree.io/)
 > - 该系列源码讲解推荐看我的博客专栏 [Spring Boot 2.x 最佳实践手册](https://xingyun.blog.csdn.net/article/category/9284593)
-> - 该系列源码视频教程后期我会放到我的微信公众号,欢迎扫码关注
+> - 该系列源码视频教程后期我会放到我的微信公众号
 
 |项目名称|博文讲解|
 |---|---|
