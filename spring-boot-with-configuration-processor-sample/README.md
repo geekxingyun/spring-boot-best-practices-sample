@@ -1,4 +1,4 @@
-# Spring Boot with Custom Properties Sample
+# Spring Boot with Customize Properties Sample
 
 ## 0x01 前言
 
@@ -9,7 +9,7 @@
 
 关于当前项目的源码讲解请移步参考我的CSDN博文
 
-[Spring Boot 2.x With Custom Properties](https://xingyun.blog.csdn.net/article/details/89408533)
+[Spring Boot 2.x With Customize Properties](https://xingyun.blog.csdn.net/article/details/89408533)
 
 
 
