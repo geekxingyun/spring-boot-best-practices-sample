@@ -13,9 +13,9 @@
 
     <!-- 设置当前项目的基本信息 -->
     <groupId>com.xingyun</groupId>
-    <artifactId>spring-boot-with-i-shop-sample</artifactId>
+    <artifactId>spring-boot-with-easy-shop-sample</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-boot-with-i-shop-sample</name>
+    <name>spring-boot-with-easy-shop-sample</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -38,7 +38,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-        <!-- 提供简化数据持久层开发 -->
+        <!-- 简化数据持久层开发 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>

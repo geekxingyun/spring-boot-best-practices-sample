@@ -1,4 +1,4 @@
-package com.xingyun.springbootwithishopsample;
+package com.xingyun.springbootwitheasyshopsample;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
