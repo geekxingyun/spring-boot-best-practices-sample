@@ -7,7 +7,7 @@
 <configuration name="log4j2Config" monitorInterval="30" status="WARN" strict="false" >
     <Properties>
         <property name="appName" value="myApp"/>
-        <Property name="baseDir" value="/opt/appLogs/${appName}/log"></Property>
+        <Property name="baseDir" value="/opt/applog/${appName}/log"></Property>
         <Property name="logName" value="${baseDir}/${appName}.log"></Property>
         <Property name="logArchive" value="${baseDir}/$${date:yyyy-MM-dd}/${appName}-archive-%d{yyyy-MM-dd}-%i.log.gz"/>
     </Properties>

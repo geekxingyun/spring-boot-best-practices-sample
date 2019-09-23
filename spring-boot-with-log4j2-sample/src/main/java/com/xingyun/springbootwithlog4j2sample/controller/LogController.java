@@ -45,11 +45,11 @@ public class LogController {
         //第四种方式自定义线程日志
         if(null==loggerCustom){
             loggerCustom= ThreadCustomLogger.getLogger("myThread",LogController.class.getSimpleName());
-            loggerCustom.debug("this is custom debug message");
-            loggerCustom.info("this is custom info message");
-            loggerCustom.warn("this is custom warn message");
-            loggerCustom.error("this is custom error message");
         }
+        loggerCustom.debug("this is custom debug message");
+        loggerCustom.info("this is custom info message");
+        loggerCustom.warn("this is custom warn message");
+        loggerCustom.error("this is custom error message");
         return "log test finished,please check console message";
     }
 }
