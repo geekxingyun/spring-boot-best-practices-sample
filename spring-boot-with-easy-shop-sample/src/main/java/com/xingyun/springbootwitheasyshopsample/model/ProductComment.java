@@ -25,6 +25,8 @@ public class ProductComment implements Serializable {
     private static final long serialVersionUID = -2663067961238356484L;
     /**
      * 商品评论数据库主键
+     * @Id 用来注解数据库主键
+     * @GeneratedValue 告诉JPA自动生成主键的值 默认情况下采取自动递增的方式
      */
     @Id
     @GeneratedValue

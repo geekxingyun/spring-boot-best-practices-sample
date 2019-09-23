@@ -5,6 +5,8 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
 
@@ -23,6 +25,8 @@ public class Product implements Serializable {
     /**
      * 用户数据库主键
      */
+    @Id
+    @GeneratedValue
     private Long id;
     /**
      * 商品名称
