@@ -4,10 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
@@ -21,11 +18,12 @@ import java.io.Serializable;
  * @功能 用户表
  * @date 9/22/2019 9:32 AM
  */
-@Table(name = "T_USER")
-@Entity
+
 @Getter
 @Setter
 @ToString
+@Table(name = "T_USER")
+@Entity
 public class User implements Serializable {
     private static final long serialVersionUID = -2587419559293211354L;
 
@@ -41,6 +39,7 @@ public class User implements Serializable {
     /**
      * 用户昵称
      */
+    @Column(name = "NIKE_NAME")
     private String nickName;
     /**
      * 用户头像

@@ -1,6 +1,5 @@
 package com.xingyun.springbootwitheasyshopsample.dao.repository;
 
-import com.xingyun.springbootwitheasyshopsample.customize.UserRepositoryExtend;
 import com.xingyun.springbootwitheasyshopsample.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 

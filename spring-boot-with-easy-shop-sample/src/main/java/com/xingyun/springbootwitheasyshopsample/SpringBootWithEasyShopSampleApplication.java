@@ -2,6 +2,7 @@ package com.xingyun.springbootwitheasyshopsample;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 /**
  * Spring Boot 需要一个应用引导类,引导类的作用是让Spring Boot 框架启动并初始化应用.
@@ -13,6 +14,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * 多个包名可以使用@ComponentScan("com.xingyun.**,com.swallow.**")
  * @author xingyun
  */
+@EnableJpaRepositories
 @SpringBootApplication
 public class SpringBootWithEasyShopSampleApplication {
 

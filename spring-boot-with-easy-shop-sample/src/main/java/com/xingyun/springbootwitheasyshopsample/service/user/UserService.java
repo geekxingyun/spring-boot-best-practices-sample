@@ -5,6 +5,8 @@ import com.xingyun.springbootwitheasyshopsample.model.dto.UserDto;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import java.util.List;
+
 /**
  * @author 星云
  * @功能
@@ -17,6 +19,8 @@ public interface UserService {
      * @return 分页数据
      */
     Page<User> getPage(Pageable pageable);
+
+    List<User> showAllUser();
 
     /**
      * 加载指定的用户信息

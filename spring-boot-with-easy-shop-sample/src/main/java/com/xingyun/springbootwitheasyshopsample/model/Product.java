@@ -4,10 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
@@ -27,6 +24,7 @@ public class Product implements Serializable {
      */
     @Id
     @GeneratedValue
+    @Column(name = "ID")
     private Long id;
     /**
      * 商品名称
@@ -35,6 +33,7 @@ public class Product implements Serializable {
     /**
      * 商品封面图片
      */
+    @Column(name = "COVER_IMAGE")
     private String coverImage;
     /**
      * 商品价格

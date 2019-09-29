@@ -4,6 +4,8 @@ import com.xingyun.springbootwitheasyshopsample.model.User;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.stereotype.Component;
+import springfox.documentation.annotations.ApiIgnore;
 
 /**
  * @author 星云
@@ -13,19 +15,17 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
+@Component
 public class UserDto {
 
-    public UserDto(User user){
 
+    public UserDto(User user){
+        this.id=user.getId();
+        this.nickName=user.getNickName();
+        this.avatar=user.getAvatar();
     }
     public UserDto(){}
 
-    /**
-     * 用户数据库主键
-     * @Id 用来注解数据库主键
-     * @GeneratedValue 告诉JPA自动生成主键的值 默认情况下采取自动递增的方式
-     * 也可以使用这种
-     */
     private Long id;
     /**
      * 用户昵称

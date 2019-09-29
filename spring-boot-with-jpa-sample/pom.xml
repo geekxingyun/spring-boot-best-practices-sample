@@ -2,7 +2,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <!-- 设置当前项目的父项目为Spring Boot -->
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -13,9 +12,9 @@
 
     <!-- 设置当前项目的基本信息 -->
     <groupId>com.xingyun</groupId>
-    <artifactId>spring-boot-with-easy-shop-sample</artifactId>
+    <artifactId>spring-boot-with-jpa-sample</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-boot-with-easy-shop-sample</name>
+    <name>spring-boot-with-jpa-sample</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -30,62 +29,33 @@
         <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
         <maven.compiler.plugin.version>3.5.1</maven.compiler.plugin.version>
         <!-- 项目所使用第三方依赖jar包的版本,建议以后都使用这种方式,方便今后维护和升级 -->
-        <swagger.version>2.9.2</swagger.version>
     </properties>
 
+
     <dependencies>
-        <!-- 提供应用健康监控 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-        <!-- 简化数据持久层开发 -->
+        <!-- Spring Data JPA -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
-        <!-- 提供Thymeleaf页面模板支持 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency>
-        <!-- 提供Web模块支持 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <!-- 提供数据库持久化支持 -->
+        <!-- H2 Database -->
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <scope>runtime</scope>
         </dependency>
-
-        <!-- 通过注解简化Getter and Setter ToString()方法 -->
+        <!-- Spring Web -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!-- lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
-
-        <!--http://springfox.github.io/springfox/ -->
-        <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
-        <!-- Swagger 一个描述API的json文件，而这个组件的功能就是帮助我们自动生成这个json文件 -->
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>${swagger.version}</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
-        <!-- Swagger 就是将这个json文件解析出来，用一种更友好的方式呈现出来 -->
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-            <version>${swagger.version}</version>
-        </dependency>
-
-        <!-- Spring Boot test Framework -->
+        <!-- Spring Boot Test -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>

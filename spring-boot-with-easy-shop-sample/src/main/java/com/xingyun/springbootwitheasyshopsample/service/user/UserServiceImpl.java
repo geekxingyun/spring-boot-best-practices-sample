@@ -9,6 +9,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -29,6 +30,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public List<User> showAllUser() {
+        return userRepository.findAll();
+    }
+
+    @Override
     public User load(Long id) {
 
         //封装查询条件
@@ -40,10 +46,12 @@ public class UserServiceImpl implements UserService {
         //获取查询结果
         Optional<User> resultUserWithOptional=this.userRepository.findOne(findUserExample);
 
-        //获取业务实体类
-        User resultUser=resultUserWithOptional.get();
-
-        return resultUser;
+        if(resultUserWithOptional.isPresent()){
+            //获取业务实体类
+            return resultUserWithOptional.get();
+        }else{
+            return null;
+        }
     }
 
     @Override
@@ -58,16 +66,19 @@ public class UserServiceImpl implements UserService {
         Optional<User> findUserWithOptional=this.userRepository.findOne(checkUserExample);
 
         //返回用户
-        User checkUser=findUserWithOptional.get();
-
-        //如果对象为空
-        if(null==checkUser){
+        User checkUser;
+        if(findUserWithOptional.isPresent()){
+            //返回用户
+            checkUser=findUserWithOptional.get();
+        }else{
+            //如果对象为空
             //创建一个对象
             checkUser=new User();
+
+            //设置要保存的对象属性
+            checkUser.setAvatar(user.getAvatar());
+            checkUser.setNickName(user.getNickName());
         }
-        //设置要保存的对象属性
-        checkUser.setAvatar(user.getAvatar());
-        checkUser.setNickName(user.getNickName());
         return this.userRepository.save(checkUser);
     }
 
