@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
  * @功能
  * @date 9/23/2019 8:43 PM
  */
-@EnableJpaRepositories(value = "com.xingyun.springbootwitheasyshopsample.dao.repository")
+@EnableJpaRepositories(basePackages = "com.xingyun.springbootwitheasyshopsample.dao.repository")
 @Configuration
 public class JpaConfig {
 }

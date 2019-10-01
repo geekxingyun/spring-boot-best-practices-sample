@@ -1,6 +1,6 @@
 package com.xingyun.springbootwitheasyshopsample.service.user;
 
-import com.xingyun.springbootwitheasyshopsample.model.User;
+import com.xingyun.springbootwitheasyshopsample.model.UserInfo;
 import com.xingyun.springbootwitheasyshopsample.model.dto.UserDto;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -18,16 +18,16 @@ public interface UserService {
      * @param pageable 分页参数
      * @return 分页数据
      */
-    Page<User> getPage(Pageable pageable);
+    Page<UserInfo> getPage(Pageable pageable);
 
-    List<User> showAllUser();
+    List<UserInfo> showAllUser();
 
     /**
      * 加载指定的用户信息
      * @param id 用户主键
      * @return 指定的用户信息
      */
-    User load(Long id);
+    UserInfo load(Long id);
 
     /**
      * 一般使用DTO 作为前后端分离的数据传输
@@ -35,7 +35,7 @@ public interface UserService {
      * @param user UserDto,Data Transfer Object,数据传输对象，简称DTO 只包含数据属性不包含业务逻辑
      * @return
      */
-    User save(UserDto user);
+    UserInfo save(UserDto user);
 
     /**
      * 删除指定的用户

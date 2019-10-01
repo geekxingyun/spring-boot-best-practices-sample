@@ -1,6 +1,6 @@
 package com.xingyun.springbootwitheasyshopsample.customize;
 
-import com.xingyun.springbootwitheasyshopsample.model.User;
+import com.xingyun.springbootwitheasyshopsample.model.UserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.EntityManager;
@@ -18,7 +18,7 @@ public class UserRepositoryExtendImpl implements UserRepositoryExtend {
     EntityManager entityManager;
 
     @Override
-    public List<User> findTopUser(int maxResult) {
+    public List<UserInfo> findTopUser(int maxResult) {
         Query query= null;
 //        try {
 ////            query = this.entityManager.createQuery("select u from User u",User.class);

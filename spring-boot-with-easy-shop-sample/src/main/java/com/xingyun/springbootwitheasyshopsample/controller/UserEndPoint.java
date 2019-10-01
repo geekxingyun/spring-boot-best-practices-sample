@@ -1,22 +1,17 @@
 package com.xingyun.springbootwitheasyshopsample.controller;
 
-import com.xingyun.springbootwitheasyshopsample.model.User;
+import com.xingyun.springbootwitheasyshopsample.model.UserInfo;
 import com.xingyun.springbootwitheasyshopsample.model.dto.AppResponse;
 import com.xingyun.springbootwitheasyshopsample.model.dto.UserDto;
 import com.xingyun.springbootwitheasyshopsample.service.user.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
-import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * 熟悉Spring MVC 的应该知道这个类其实是一个Controller类
@@ -77,11 +72,11 @@ public class UserEndPoint {
     @ApiOperation(value = "获取用户详情数据",notes = "获取用户详情数据",httpMethod = "GET",tags = "用户管理相关Api")
     @ApiImplicitParam(name = "id",value = "用户的主键",defaultValue = "1",dataType = "long",paramType = "path",example = "1")
     public AppResponse detail(@PathVariable Long id){
-        User user=this.userService.load(id);
-        if(null!=user){
+        UserInfo userInfo =this.userService.load(id);
+        if(null!= userInfo){
             appResponse.setResponseCode(200);
             appResponse.setResponseMessage("获取指定用户详情数据成功");
-            appResponse.setResponseData(new UserDto(user));
+            appResponse.setResponseData(new UserDto(userInfo));
         }else{
             appResponse.setResponseCode(401);
             appResponse.setResponseMessage("用户不存在");
@@ -96,8 +91,8 @@ public class UserEndPoint {
     @ApiImplicitParam(name = "id",value = "用户的主键",defaultValue = "1",dataType = "Long",paramType = "path",example = "1")
     public UserDto update(@PathVariable Long id,@RequestBody UserDto userDto){
        userDto.setId(id);
-       User user=this.userService.save(userDto);
-        return (null!=user)?new UserDto(user):null;
+       UserInfo userInfo =this.userService.save(userDto);
+        return (null!= userInfo)?new UserDto(userInfo):null;
     }
 
 
@@ -113,15 +108,15 @@ public class UserEndPoint {
     @ApiOperation(value = "获取所有用户数据",notes = "获取所有用户数据",httpMethod = "GET",tags = "用户管理相关Api")
     @GetMapping(value = "/")
     public AppResponse test(){
-        List<User>  allUserList= null;
+        List<UserInfo> allUserInfoList = null;
         try {
-            allUserList = this.userService.showAllUser();
+            allUserInfoList = this.userService.showAllUser();
         } catch (Exception e) {
             log.error(e.getMessage(),e);
         }
         appResponse.setResponseCode(200);
         appResponse.setResponseMessage("查询所有用户信息成功");
-        appResponse.setResponseData(allUserList);
+        appResponse.setResponseData(allUserInfoList);
         return appResponse;
     }
 }

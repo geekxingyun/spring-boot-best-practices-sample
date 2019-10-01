@@ -1,6 +1,6 @@
 package com.xingyun.springbootwitheasyshopsample.customize;
 
-import com.xingyun.springbootwitheasyshopsample.model.User;
+import com.xingyun.springbootwitheasyshopsample.model.UserInfo;
 import org.springframework.data.repository.NoRepositoryBean;
 
 import java.util.List;
@@ -17,5 +17,5 @@ public interface UserRepositoryExtend {
      * @param maxResult
      * @return
      */
-    List<User> findTopUser(int maxResult);
+    List<UserInfo> findTopUser(int maxResult);
 }

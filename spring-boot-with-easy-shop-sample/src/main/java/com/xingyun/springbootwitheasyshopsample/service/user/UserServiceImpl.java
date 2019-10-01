@@ -1,7 +1,7 @@
 package com.xingyun.springbootwitheasyshopsample.service.user;
 
-import com.xingyun.springbootwitheasyshopsample.dao.repository.UserRepository;
-import com.xingyun.springbootwitheasyshopsample.model.User;
+import com.xingyun.springbootwitheasyshopsample.dao.repository.UserInfoRepository;
+import com.xingyun.springbootwitheasyshopsample.model.UserInfo;
 import com.xingyun.springbootwitheasyshopsample.model.dto.UserDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
@@ -21,30 +21,30 @@ import java.util.Optional;
 public class UserServiceImpl implements UserService {
 
     @Autowired
-    UserRepository userRepository;
+    UserInfoRepository userInfoRepository;
 
     @Override
-    public Page<User> getPage(Pageable pageable) {
+    public Page<UserInfo> getPage(Pageable pageable) {
         //这里直接使用Jpa提供的分页查询功能
-        return this.userRepository.findAll(pageable);
+        return this.userInfoRepository.findAll(pageable);
     }
 
     @Override
-    public List<User> showAllUser() {
-        return userRepository.findAll();
+    public List<UserInfo> showAllUser() {
+        return userInfoRepository.findAll();
     }
 
     @Override
-    public User load(Long id) {
+    public UserInfo load(Long id) {
 
         //封装查询条件
-        User findUser=new User();
-        findUser.setId(id);
+        UserInfo findUserInfo =new UserInfo();
+        findUserInfo.setId(id);
         //转换成查询对象
-        Example<User> findUserExample=Example.of(findUser);
+        Example<UserInfo> findUserExample=Example.of(findUserInfo);
 
         //获取查询结果
-        Optional<User> resultUserWithOptional=this.userRepository.findOne(findUserExample);
+        Optional<UserInfo> resultUserWithOptional=this.userInfoRepository.findOne(findUserExample);
 
         if(resultUserWithOptional.isPresent()){
             //获取业务实体类
@@ -55,36 +55,36 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User save(UserDto user) {
+    public UserInfo save(UserDto user) {
 
-        User queryUser=new User();
-        queryUser.setId(user.getId());
+        UserInfo queryUserInfo =new UserInfo();
+        queryUserInfo.setId(user.getId());
         //转换成查询对象
-        Example<User> checkUserExample=Example.of(queryUser);
+        Example<UserInfo> checkUserExample=Example.of(queryUserInfo);
 
         //获取查询结果
-        Optional<User> findUserWithOptional=this.userRepository.findOne(checkUserExample);
+        Optional<UserInfo> findUserWithOptional=this.userInfoRepository.findOne(checkUserExample);
 
         //返回用户
-        User checkUser;
+        UserInfo checkUserInfo;
         if(findUserWithOptional.isPresent()){
             //返回用户
-            checkUser=findUserWithOptional.get();
+            checkUserInfo =findUserWithOptional.get();
         }else{
             //如果对象为空
             //创建一个对象
-            checkUser=new User();
+            checkUserInfo =new UserInfo();
 
             //设置要保存的对象属性
-            checkUser.setAvatar(user.getAvatar());
-            checkUser.setNickName(user.getNickName());
+            checkUserInfo.setAvatar(user.getAvatar());
+            checkUserInfo.setNickName(user.getNickName());
         }
-        return this.userRepository.save(checkUser);
+        return this.userInfoRepository.save(checkUserInfo);
     }
 
     @Override
     public void delete(Long id) {
         //根据Id 删除某一个用户
-        this.userRepository.deleteById(id);
+        this.userInfoRepository.deleteById(id);
     }
 }

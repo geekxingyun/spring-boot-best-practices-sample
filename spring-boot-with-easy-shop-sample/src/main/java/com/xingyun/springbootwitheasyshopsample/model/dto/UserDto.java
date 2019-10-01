@@ -1,11 +1,10 @@
 package com.xingyun.springbootwitheasyshopsample.model.dto;
 
-import com.xingyun.springbootwitheasyshopsample.model.User;
+import com.xingyun.springbootwitheasyshopsample.model.UserInfo;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import org.springframework.stereotype.Component;
-import springfox.documentation.annotations.ApiIgnore;
 
 /**
  * @author 星云
@@ -19,10 +18,10 @@ import springfox.documentation.annotations.ApiIgnore;
 public class UserDto {
 
 
-    public UserDto(User user){
-        this.id=user.getId();
-        this.nickName=user.getNickName();
-        this.avatar=user.getAvatar();
+    public UserDto(UserInfo userInfo){
+        this.id= userInfo.getId();
+        this.nickName= userInfo.getNickName();
+        this.avatar= userInfo.getAvatar();
     }
     public UserDto(){}
 

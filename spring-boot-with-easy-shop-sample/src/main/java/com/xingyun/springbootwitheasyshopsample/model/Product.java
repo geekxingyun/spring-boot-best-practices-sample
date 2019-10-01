@@ -21,22 +21,21 @@ public class Product implements Serializable {
     private static final long serialVersionUID = 6003315201652318080L;
     /**
      * 用户数据库主键
+     * id 会映射为ID
      */
     @Id
-    @GeneratedValue
-    @Column(name = "ID")
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
     /**
      * 商品名称
      */
-    private String name;
+    private String productName;
     /**
      * 商品封面图片
      */
-    @Column(name = "COVER_IMAGE")
     private String coverImage;
     /**
      * 商品价格
      */
-    private int price;
+    private int productPrice;
 }

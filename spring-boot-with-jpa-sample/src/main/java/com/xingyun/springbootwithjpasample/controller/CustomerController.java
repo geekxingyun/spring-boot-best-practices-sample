@@ -27,6 +27,7 @@ public class CustomerController {
     CustomerService customerService;
 
     /**
+     * curl -d '' http://127.0.0.1:8080/customers/saveCustomer
      * 保存一个对象
      * @return
      */
@@ -47,6 +48,7 @@ public class CustomerController {
 
     /**
      * 根据Id 查找某个对象
+     * curl http://127.0.0.1:8080/customers/1
      * @param id
      */
     @GetMapping(value = "/{id}")
@@ -75,6 +77,7 @@ public class CustomerController {
 
     /**
      * 查找所有的对象
+     * curl http://127.0.0.1:8080/customers/showCustomerList
      */
     @GetMapping(value = "/showCustomerList")
     public AppResponse showAllCustomer(){
@@ -95,6 +98,7 @@ public class CustomerController {
 
     /**
      * 根据lastName 查找一个对象
+     * curl http://127.0.0.1:8080/customers/findCustomerByLastName?lastName=Bauer
      */
     @GetMapping(value = "/findCustomerByLastName")
     public AppResponse showAllCustomerByLastName(@RequestParam(value = "lastName")String lastName){
