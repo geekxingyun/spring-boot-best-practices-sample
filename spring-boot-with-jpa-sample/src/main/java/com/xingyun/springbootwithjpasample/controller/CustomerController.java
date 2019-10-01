@@ -128,4 +128,34 @@ public class CustomerController {
         }
         return appResponse;
     }
+
+    /**
+     * 根据lastName 查找一个对象
+     * curl http://127.0.0.1:8080/customers/findCustomerByLastNameWithSQL?lastName=Bauer
+     */
+    @GetMapping(value = "/findCustomerByLastNameWithSQL")
+    public AppResponse findCustomerByLastNameWithSQL(@RequestParam(value = "lastName")String lastName){
+
+        List<Customer> customerList=customerService.findAllCustomerBySQL(lastName);
+        // fetch customers by last name
+        if(null!=customerList){
+            //使用lambda表达式
+            customerList.forEach(bauer -> {
+                log.info(bauer.toString());
+            });
+
+            //使用传统的方式遍历
+            for (Customer bauer : customerList) {
+                log.info(bauer.toString());
+            }
+            appResponse.setResponseCode(200);
+            appResponse.setResponseMessage("根据lastName 查找一个对象 finished");
+            appResponse.setResponseData(customerList);
+        }else{
+            appResponse.setResponseCode(401);
+            appResponse.setResponseMessage("未找到相关数据");
+            appResponse.setResponseData(null);
+        }
+        return appResponse;
+    }
 }

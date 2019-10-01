@@ -37,4 +37,11 @@ public interface CustomerService {
      * @return
      */
     List<Customer> showAllCustomer();
+
+    /**
+     * 根据名字查找对象
+     * @param lastName
+     * @return
+     */
+    List<Customer> findAllCustomerBySQL(String lastName);
 }

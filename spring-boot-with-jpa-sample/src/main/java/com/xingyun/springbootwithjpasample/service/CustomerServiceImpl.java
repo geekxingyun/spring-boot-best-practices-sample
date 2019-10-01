@@ -40,4 +40,9 @@ public class CustomerServiceImpl implements CustomerService{
     public List<Customer> showAllCustomer() {
         return customerRepository.findAll();
     }
+
+    @Override
+    public List<Customer> findAllCustomerBySQL(String lastName) {
+        return customerRepository.findByLastName(lastName);
+    }
 }

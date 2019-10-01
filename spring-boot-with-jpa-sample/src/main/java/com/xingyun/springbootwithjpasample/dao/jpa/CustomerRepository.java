@@ -17,4 +17,12 @@ public interface CustomerRepository extends JpaRepository<Customer, Long> {
      * @return
      */
     List<Customer> findByLastName(String lastName);
+
+    /**
+     * 使用原生的SQL进行查询
+     * @param lastName 查询的名字
+     * @return 返回用户
+     */
+//    @Query(value = "select u from #{#entityName} u where u.LAST_NAME = ?1",nativeQuery = true)
+//    List<Customer> findByLastName(String lastName);
 }
