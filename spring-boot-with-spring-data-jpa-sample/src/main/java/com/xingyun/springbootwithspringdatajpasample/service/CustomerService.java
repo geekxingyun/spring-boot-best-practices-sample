@@ -1,6 +1,6 @@
-package com.xingyun.springbootwithjpasample.service;
+package com.xingyun.springbootwithspringdatajpasample.service;
 
-import com.xingyun.springbootwithjpasample.model.Customer;
+import com.xingyun.springbootwithspringdatajpasample.model.Customer;
 
 import java.util.List;
 import java.util.Optional;

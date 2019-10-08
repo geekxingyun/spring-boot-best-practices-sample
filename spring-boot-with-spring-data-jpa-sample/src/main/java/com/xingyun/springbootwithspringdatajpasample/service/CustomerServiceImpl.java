@@ -1,7 +1,7 @@
-package com.xingyun.springbootwithjpasample.service;
+package com.xingyun.springbootwithspringdatajpasample.service;
 
-import com.xingyun.springbootwithjpasample.dao.jpa.CustomerRepository;
-import com.xingyun.springbootwithjpasample.model.Customer;
+import com.xingyun.springbootwithspringdatajpasample.dao.jpa.CustomerRepository;
+import com.xingyun.springbootwithspringdatajpasample.model.Customer;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

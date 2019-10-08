@@ -1,4 +1,4 @@
-package com.xingyun.springbootwithjpasample.model;
+package com.xingyun.springbootwithspringdatajpasample.model;
 
 import lombok.Getter;
 import lombok.Setter;

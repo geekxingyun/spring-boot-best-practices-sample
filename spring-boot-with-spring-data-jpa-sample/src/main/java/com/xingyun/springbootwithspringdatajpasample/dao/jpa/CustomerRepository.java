@@ -1,6 +1,6 @@
-package com.xingyun.springbootwithjpasample.dao.jpa;
+package com.xingyun.springbootwithspringdatajpasample.dao.jpa;
 
-import com.xingyun.springbootwithjpasample.model.Customer;
+import com.xingyun.springbootwithspringdatajpasample.model.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

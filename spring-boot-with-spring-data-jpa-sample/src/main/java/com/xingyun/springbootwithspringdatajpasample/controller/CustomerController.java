@@ -1,8 +1,8 @@
-package com.xingyun.springbootwithjpasample.controller;
+package com.xingyun.springbootwithspringdatajpasample.controller;
 
-import com.xingyun.springbootwithjpasample.model.AppResponse;
-import com.xingyun.springbootwithjpasample.model.Customer;
-import com.xingyun.springbootwithjpasample.service.CustomerService;
+import com.xingyun.springbootwithspringdatajpasample.model.AppResponse;
+import com.xingyun.springbootwithspringdatajpasample.model.Customer;
+import com.xingyun.springbootwithspringdatajpasample.service.CustomerService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
