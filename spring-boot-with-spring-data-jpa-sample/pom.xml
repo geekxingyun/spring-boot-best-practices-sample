@@ -12,9 +12,9 @@
 
     <!-- 设置当前项目的基本信息 -->
     <groupId>com.xingyun</groupId>
-    <artifactId>spring-boot-with-jpa-sample</artifactId>
+    <artifactId>spring-boot-with-spring-data-jpa-sample</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-boot-with-jpa-sample</name>
+    <name>spring-boot-with-spring-data-jpa-sample</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
