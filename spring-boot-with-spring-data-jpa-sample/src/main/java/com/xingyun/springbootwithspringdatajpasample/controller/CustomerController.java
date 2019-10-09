@@ -143,11 +143,6 @@ public class CustomerController {
             customerList.forEach(bauer -> {
                 log.info(bauer.toString());
             });
-
-            //使用传统的方式遍历
-            for (Customer bauer : customerList) {
-                log.info(bauer.toString());
-            }
             appResponse.setResponseCode(200);
             appResponse.setResponseMessage("根据lastName 查找一个对象 finished");
             appResponse.setResponseData(customerList);

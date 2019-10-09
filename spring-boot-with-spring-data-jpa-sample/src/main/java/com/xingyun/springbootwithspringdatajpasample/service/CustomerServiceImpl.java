@@ -43,6 +43,6 @@ public class CustomerServiceImpl implements CustomerService{
 
     @Override
     public List<Customer> findAllCustomerBySQL(String lastName) {
-        return customerRepository.findByLastName(lastName);
+        return customerRepository.findByLastNameBySQL(lastName);
     }
 }
