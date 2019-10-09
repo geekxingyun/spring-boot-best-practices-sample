@@ -24,6 +24,7 @@
 |[11. Spring Boot 2.x With Swagger](https://xingyun.blog.csdn.net/article/details/89420502)|[spring-boot-with-swagger-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-swagger-sample)|
 |[12. Spring Boot 2.x wtih MyBatis](https://xingyun.blog.csdn.net/article/details/97929511)|[spring-boot-with-mybatis-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-mybatis-sample)|
 |[13. Spring Boot 2.x With Spring for Apache Kafka](https://xingyun.blog.csdn.net/article/details/88974967)|[spring-boot-with-spring-kafka-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-spring-kafka-sample)|
+|[14. Spring Boot 2.x With Spring Data JPA](https://xingyun.blog.csdn.net/article/details/101632155)|[spring-boot-with-spring-data-jpa-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-spring-data-jpa-sample)|
 
 
 ---
