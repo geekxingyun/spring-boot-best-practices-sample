@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.tiny.cloud/1/k6vsz8vk86k2k0v5aime6jc1aciq9dy99igbe1bvuzxduppz/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        <!-- 初始化富文本编辑器-->
+        tinymce.init({
+            selector: '#myTextArea',
+        });
+    </script>
+</head>
+<body>
+<h1>TinyMCE Quick Start Guide</h1>
+<form action="post.do" method="post">
+    <textarea id="myTextArea" name="myTextArea">Hello, World!</textarea>
+
+    <button type="submit">保存</button>
+</form>
+</body>
+</html>
