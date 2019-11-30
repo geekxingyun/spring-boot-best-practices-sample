@@ -1,37 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- 指定了当前Maven模型的版本号，对于Maven2和Maven3来说，它只能是4.0.0-->
     <modelVersion>4.0.0</modelVersion>
+
+    <!-- 设置当前项目的父项目为Spring Boot -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.2.1.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
+    <!-- 设置当前项目的基本信息 -->
     <groupId>com.xingyun</groupId>
     <artifactId>spring-boot-with-spring-security-sample</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-boot-with-spring-security-sample</name>
-    <description>Demo project for Spring Boot</description>
+    <description>Spring Security project for Spring Boot</description>
 
     <properties>
+        <!-- 设置当前项目源码使用字符编码为UTF-8 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- 设置当前项目所需要的JDK版本 Open JDK下载地址:https://jdk.java.net/ -->
         <java.version>1.8</java.version>
+        <!-- 设置当前项目编译所需要的JDK版本-->
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <!-- 项目所使用第三方依赖jar包的版本,建议以后都使用这种方式,方便今后维护和升级 -->
+        <!-- guava 可以为我们提供缓存集合等一些方便的工具类 -->
+        <maven.compiler.plugin.version>3.5.1</maven.compiler.plugin.version>
+        <guava.version>23.0</guava.version>
+        <!--Swagger帮助生成Restful API文档-->
+        <swagger.version>2.7.0</swagger.version>
     </properties>
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
         </dependency>
+        <!-- 项目使用Spring Boot Starters:Web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
+        <!-- 项目使用Thymeleaf 页面模板引擎 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
         <!--http://springfox.github.io/springfox/ -->
         <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
         <!-- Swagger 一个描述API的json文件，而这个组件的功能就是帮助我们自动生成这个json文件 -->
@@ -47,13 +73,12 @@
             <artifactId>springfox-swagger-ui</artifactId>
             <version>2.7.0</version>
         </dependency>
-
-
+        <!-- 项目使用Spring Security 保护我们的API -->
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
+        <!-- spring boot test -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -65,6 +90,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!-- spring security test -->
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-test</artifactId>
@@ -74,11 +100,21 @@
 
     <build>
         <plugins>
+            <!--该插件限定Maven打包时所使用的版本,避免出现版本不匹配问题-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.plugin.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+            <!--该插件可以让我们通过maven命令将项目打包成一个可执行的Jar-->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
-
 </project>
