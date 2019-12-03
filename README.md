@@ -9,23 +9,28 @@
 > - 该系列源码视频教程后期我会放到我的微信公众号
 
 
+---
 | 博文标题 |源码下载  |
 |--|--|
-| [1.Spring Boot 2.x with Get Started](https://xingyun.blog.csdn.net/article/details/101110483)|-|
-| [2.Spring Boot 2.x With Customize Banner](https://xingyun.blog.csdn.net/article/details/88819151) |  [spring-boot-with-customize-banner-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-customize-banner-sample)|
-| [3.Spring Boot 2.x With Customize Properties](https://xingyun.blog.csdn.net/article/details/89408533)|[spring-boot-with-configuration-processor-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-configuration-processor-sample)|
-|[4. Spring Boot 2.x With lombok](https://xingyun.blog.csdn.net/article/details/100763122)|-|
-|[5. Spring Boot 2.x With Logback](https://xingyun.blog.csdn.net/article/details/88884141)|[spring-boot-with-slf4j-logback-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-slf4j-logback-sample)|
-|[6. Spring Boot 2.x With Apache Log4j2](https://xingyun.blog.csdn.net/article/details/100856124)|[spring-boot-with-log4j2-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-log4j2-sample)|
-|[7. Spring Boot 2.x With Spring Web MVC](https://xingyun.blog.csdn.net/article/details/89413333)|[spring-boot-with-web-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-web-sample)|
-|[8. Spring Boot 2.x With Static Resources](https://xingyun.blog.csdn.net/article/details/92772523)|-|
-|[9. Spring Boot 2.x With Thymeleaf](https://xingyun.blog.csdn.net/article/details/89422513)|[spring-boot-with-thymeleaf-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-thymeleaf-sample)
-|[10.Spring Boot 2.x With JSP](https://xingyun.blog.csdn.net/article/details/89413877)|[spring-boot-with-jsp-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-jsp-sample)|
-|[11. Spring Boot 2.x With Swagger](https://xingyun.blog.csdn.net/article/details/89420502)|[spring-boot-with-swagger-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-swagger-sample)|
-|[12. Spring Boot 2.x wtih MyBatis](https://xingyun.blog.csdn.net/article/details/97929511)|[spring-boot-with-mybatis-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-mybatis-sample)|
-|[13. Spring Boot 2.x With Spring for Apache Kafka](https://xingyun.blog.csdn.net/article/details/88974967)|[spring-boot-with-spring-kafka-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-spring-kafka-sample)|
-|[14. Spring Boot 2.x With Spring Data JPA](https://xingyun.blog.csdn.net/article/details/101632155)|[spring-boot-with-spring-data-jpa-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-spring-data-jpa-sample)|
+| [1.Spring Boot 2.x 最佳实践之入门](https://xingyun.blog.csdn.net/article/details/101110483)|-|
+| [2.Spring Boot 2.x 最佳实践之自定义Banner](https://xingyun.blog.csdn.net/article/details/88819151) |  [spring-boot-with-customize-banner-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-customize-banner-sample)|
+| [3.Spring Boot 2.x 最佳实践之自定义Properties](https://xingyun.blog.csdn.net/article/details/89408533)|[spring-boot-with-configuration-processor-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-configuration-processor-sample)|
+|[4. Spring Boot 2.x 最佳实践之lombok集成](https://xingyun.blog.csdn.net/article/details/100763122)|-|
+|[5. Spring Boot 2.x 最佳实践之Logback集成](https://xingyun.blog.csdn.net/article/details/88884141)|[spring-boot-with-slf4j-logback-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-slf4j-logback-sample)|
+|[6. Spring Boot 2.x 最佳实践之 Apache Log4j2 集成](https://xingyun.blog.csdn.net/article/details/100856124)|[spring-boot-with-log4j2-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-log4j2-sample)|
+|[7. Spring Boot 2.x 最佳实践之 Spring Web MVC 集成](https://xingyun.blog.csdn.net/article/details/89413333)|[spring-boot-with-web-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-web-sample)|
+|[8. Spring Boot 2.x 最佳实践之静态资源处理](https://xingyun.blog.csdn.net/article/details/92772523)|-|
+|[9. Spring Boot 2.x 最佳实践之Thymeleaf集成](https://xingyun.blog.csdn.net/article/details/89422513)|[spring-boot-with-thymeleaf-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-thymeleaf-sample)
+|[10.Spring Boot 2.x 最佳实践之JSP集成](https://xingyun.blog.csdn.net/article/details/89413877)|[spring-boot-with-jsp-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-jsp-sample)|
+|[11. Spring Boot 2.x 最佳实践之Swagger集成](https://xingyun.blog.csdn.net/article/details/89420502)|[spring-boot-with-swagger-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-swagger-sample)|
+|[12. Spring Boot 2.x 最佳实践之MyBatis集成](https://xingyun.blog.csdn.net/article/details/97929511)|[spring-boot-with-mybatis-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-mybatis-sample)|
+|[13. Spring Boot 2.x 最佳实践之Spring for Apache Kafka集成](https://xingyun.blog.csdn.net/article/details/88974967)|[spring-boot-with-spring-kafka-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-spring-kafka-sample)|
+|[14. Spring Boot 2.x 最佳实践之 Spring Data JPA集成](https://xingyun.blog.csdn.net/article/details/101632155)|[spring-boot-with-spring-data-jpa-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-spring-data-jpa-sample)|
+|[15. Spring Boot 2.x 最佳实践之 TinyMCE 集成](https://xingyun.blog.csdn.net/article/details/102492921)| [spring-boot-with-tinymce-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-tinymce-sample)|
+|[16. Spring Boot 2.x 最佳实践之 Quartz 集成](https://xingyun.blog.csdn.net/article/details/103067196)|[spring-boot-with-quartz-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-quartz-sample)|
+|[17. Spring Boot 2.x 最佳实践之 Spring Security 集成](https://xingyun.blog.csdn.net/article/details/100038318)|[Spring Boot With Spring Security Sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-spring-security-sample)
 
+未完待续，持续更新中。。。
 
 ---
 # 0x03 如何构建一个Spring Boot 项目
