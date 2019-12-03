@@ -2,7 +2,6 @@ package com.xingyun.springbootwithquartzsample.util;
 
 import lombok.extern.slf4j.Slf4j;
 import org.quartz.*;
-import org.quartz.impl.StdSchedulerFactory;
 import org.springframework.stereotype.Component;
 
 /**
@@ -12,10 +11,12 @@ import org.springframework.stereotype.Component;
 @Slf4j
 @Component
 public class QuartzUtils{
-    /**
-     * 定时任务工厂
-     */
-    private SchedulerFactory schedulerFactory = new StdSchedulerFactory();
+
+    private final Scheduler schedulerPlus;
+
+    public QuartzUtils(Scheduler schedulerPlus) {
+        this.schedulerPlus = schedulerPlus;
+    }
 
     /**
      * @Description: 添加一个定时任务
@@ -43,15 +44,13 @@ public class QuartzUtils{
             // 创建Trigger对象
             CronTrigger trigger = (CronTrigger) triggerBuilder.build();
 
-            Scheduler scheduler = schedulerFactory.getScheduler();
-
             // 调度容器设置JobDetail和Trigger
-            scheduler.scheduleJob(jobDetail, trigger);
+            schedulerPlus.scheduleJob(jobDetail, trigger);
 
             //如果没有关闭
-            if (!scheduler.isShutdown()) {
+            if (!schedulerPlus.isShutdown()) {
                 //启动定时任务调度程序
-                scheduler.start();
+                schedulerPlus.start();
             }
         } catch (Exception e) {
             log.error("添加定时任务失败"+e.toString());
@@ -69,9 +68,8 @@ public class QuartzUtils{
      */
     public void modifyJobTime(String jobName,String jobGroupName, String triggerName, String triggerGroupName, String cron) {
         try {
-            Scheduler scheduler = schedulerFactory.getScheduler();
             TriggerKey triggerKey = TriggerKey.triggerKey(triggerName, triggerGroupName);
-            CronTrigger trigger = (CronTrigger) scheduler.getTrigger(triggerKey);
+            CronTrigger trigger = (CronTrigger) schedulerPlus.getTrigger(triggerKey);
             if (trigger == null) {
                 return;
             }
@@ -91,7 +89,7 @@ public class QuartzUtils{
                 // 创建Trigger对象
                 trigger = (CronTrigger) triggerBuilder.build();
                 // 方式一 ：修改一个任务的触发时间
-                scheduler.rescheduleJob(triggerKey, trigger);
+                schedulerPlus.rescheduleJob(triggerKey, trigger);
                 /** 方式一 ：调用 rescheduleJob 结束 */
 
                 /** 方式二：先删除，然后在创建一个新的Job  */
@@ -120,14 +118,13 @@ public class QuartzUtils{
     public void removeJob(String jobName, String jobGroupName,
                           String triggerName, String triggerGroupName) {
         try {
-            Scheduler scheduler = schedulerFactory.getScheduler();
             TriggerKey triggerKey = TriggerKey.triggerKey(triggerName, triggerGroupName);
             // 停止触发器
-            scheduler.pauseTrigger(triggerKey);
+            schedulerPlus.pauseTrigger(triggerKey);
             // 移除触发器
-            scheduler.unscheduleJob(triggerKey);
+            schedulerPlus.unscheduleJob(triggerKey);
             // 删除任务
-            scheduler.deleteJob(JobKey.jobKey(jobName, jobGroupName));
+            schedulerPlus.deleteJob(JobKey.jobKey(jobName, jobGroupName));
         } catch (Exception e) {
             log.error("移除定时任务失败"+e.toString());
             throw new RuntimeException(e);
@@ -139,8 +136,7 @@ public class QuartzUtils{
      */
     public void startJobs() {
         try {
-            Scheduler scheduler = schedulerFactory.getScheduler();
-            scheduler.start();
+            schedulerPlus.start();
         } catch (Exception e) {
             log.error("启动所有定时任务失败"+e.toString());
             throw new RuntimeException(e);
@@ -152,9 +148,8 @@ public class QuartzUtils{
      */
     public void shutdownJobs() {
         try {
-            Scheduler scheduler = schedulerFactory.getScheduler();
-            if (!scheduler.isShutdown()) {
-                scheduler.shutdown();
+            if (!schedulerPlus.isShutdown()) {
+                schedulerPlus.shutdown();
             }
         } catch (Exception e) {
             log.error("关闭所有定时任务失败"+e.toString());

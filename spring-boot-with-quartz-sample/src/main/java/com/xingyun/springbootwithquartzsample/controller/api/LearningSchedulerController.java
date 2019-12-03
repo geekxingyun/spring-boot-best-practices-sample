@@ -1,4 +1,4 @@
-package com.xingyun.springbootwithquartzsample.controller;
+package com.xingyun.springbootwithquartzsample.controller.api;
 
 import com.xingyun.springbootwithquartzsample.job.HelloJob;
 import com.xingyun.springbootwithquartzsample.util.QuartzUtils;
@@ -6,7 +6,6 @@ import com.xingyun.springbootwithquartzsample.util.SmartDateUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,6 +19,12 @@ import static org.quartz.TriggerBuilder.newTrigger;
 @Slf4j
 @RestController
 public class LearningSchedulerController {
+
+    private final QuartzUtils quartzUtils;
+
+    public LearningSchedulerController(QuartzUtils quartzUtils) {
+        this.quartzUtils = quartzUtils;
+    }
 
     /**
      * 最基础的没有任务的调度程序
@@ -167,8 +172,6 @@ public class LearningSchedulerController {
         return "Quartz Job Sample 2";
     }
 
-    @Autowired
-    private QuartzUtils quartzUtils;
 
     /**
      * 最佳实践
