@@ -9,6 +9,8 @@ import org.quartz.impl.StdSchedulerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Date;
+
 import static org.quartz.SimpleScheduleBuilder.simpleSchedule;
 import static org.quartz.TriggerBuilder.newTrigger;
 
@@ -20,6 +22,9 @@ import static org.quartz.TriggerBuilder.newTrigger;
 @RestController
 public class LearningSchedulerController {
 
+    /**
+     * 构造方法注入
+     */
     private final QuartzUtils quartzUtils;
 
     public LearningSchedulerController(QuartzUtils quartzUtils) {
@@ -91,47 +96,16 @@ public class LearningSchedulerController {
 
     /**
      * 我们定时任务从当前时间立即开始执行
-     * 当定时任务到2018-11-06 16:56:22 之前停止任务调度
-     * 也就是说 endAt 的含义是 当执行到 2018-11-06 16:56:20 时发现到达我们设置的终点值，此时终止任务调度。
-     * 而不是恰好等于2018-11-06 16:56:22
+     * 当定时任务到2060-10-01 24:00:00 之前停止任务调度
+     * 也就是说 endAt 的含义是 当执行到 2060-10-01 23:58:00 时发现到达我们设置的终点值，此时终止任务调度。
+     * 而不是恰好等于2060-10-01 24:00:00
      * @return
      */
     @GetMapping(value = "/job1.do")
     public String usageJob(){
-        try {
-
-            //从工厂里取出来一个定时任务调度程序实例
-            Scheduler scheduler= StdSchedulerFactory.getDefaultScheduler();
-
-            //创建一个jobDetail的实例，将该实例与HelloJob Class绑定
-            JobDetail jobDetail = JobBuilder.newJob(HelloJob.class)
-                    .withIdentity("myJob","myGroup")
-                    .build();
-            //创建一个Trigger触发器的实例，定义该job立即执行，并且每2秒执行一次，一直执行
-            SimpleTrigger trigger = TriggerBuilder.
-                    newTrigger()
-                    //触发器名称
-                    .withIdentity("myTrigger","myGroup")
-                    //从现在起
-                    .startNow()
-                    //截止日期
-                    .endAt(SmartDateUtils.strToDateLong("2019-11-14 16:10:22")).
-                    withSchedule(
-                            //简单的任务调度
-                            SimpleScheduleBuilder.simpleSchedule()
-                                    //每隔两秒执行一次
-                                    .withIntervalInSeconds(2)
-                                    //永久循环
-                                    .repeatForever())
-                    .build();
-
-            //告诉Quartz 要什么时候触发执行我们的任务
-            scheduler.scheduleJob(jobDetail,trigger);
-            //开始启动
-            scheduler.start();
-        } catch (SchedulerException e) {
-            log.error(e.getMessage(),e);
-        }
+        String endDateString="2060-10-01 24:00:00";
+        Date endDate=SmartDateUtils.strToDateLong(endDateString);
+        quartzUtils.addJobSimple("myJob","myJobGroupName","myTrigger","myTriggerGroupName",HelloJob.class,endDate,2);
         return "Quartz Job Sample 1";
     }
 

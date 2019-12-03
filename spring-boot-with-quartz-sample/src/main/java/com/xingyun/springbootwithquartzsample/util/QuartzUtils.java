@@ -4,6 +4,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.quartz.*;
 import org.springframework.stereotype.Component;
 
+import java.util.Date;
+
 /**
  * @author qing-feng.zhao
  * @功能 Quartz定时任务执行框架代码封装
@@ -55,6 +57,40 @@ public class QuartzUtils{
         } catch (Exception e) {
             log.error("添加定时任务失败"+e.toString());
             throw new RuntimeException(e);
+        }
+    }
+
+    public void addJobSimple(String jobName, String jobGroupName,
+                             String triggerName, String triggerGroupName, Class jobClass, Date endDate,Integer intervalInSeconds) {
+        try {
+            //创建一个jobDetail的实例，将该实例与HelloJob Class绑定
+            JobDetail jobDetail = JobBuilder.newJob(jobClass)
+                    .withIdentity(jobName,jobGroupName)
+                    .build();
+            //创建一个Trigger触发器的实例，定义该job立即执行，并且每2秒执行一次，一直执行
+            SimpleTrigger trigger = TriggerBuilder.
+                    newTrigger()
+                    //触发器名称
+                    .withIdentity(triggerName,triggerGroupName)
+                    //从现在起
+                    .startNow()
+                    //截止日期
+                    .endAt(endDate).
+                            withSchedule(
+                                    //简单的任务调度
+                                    SimpleScheduleBuilder.simpleSchedule()
+                                            //每隔多少秒执行一次
+                                            .withIntervalInSeconds(intervalInSeconds)
+                                            //永久循环
+                                            .repeatForever())
+                    .build();
+
+            //告诉Quartz 要什么时候触发执行我们的任务
+            schedulerPlus.scheduleJob(jobDetail,trigger);
+            //开始启动
+            schedulerPlus.start();
+        } catch (SchedulerException e) {
+            log.error(e.getMessage(),e);
         }
     }
 
