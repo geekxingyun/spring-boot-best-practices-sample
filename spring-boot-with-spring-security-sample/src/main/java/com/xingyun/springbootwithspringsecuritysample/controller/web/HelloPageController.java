@@ -5,13 +5,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 /**
  * @author qing-feng.zhao
- * @description
+ * @description 欢迎页面控制器
  * @date 2019/11/30 21:53
  */
 @Controller
-public class HelloController {
-
-    @GetMapping(value = "/hello")
+public class HelloPageController {
+    /**
+     * 拦截 /hello.do 请求
+     * @return 返回 classpath:/templates/hello.html
+     */
+    @GetMapping(value = "/hello.do")
     public String helloPage(){
         return "hello";
     }

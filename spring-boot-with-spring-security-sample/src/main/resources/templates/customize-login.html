@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+>
+<head>
+    <title>Spring Security Example </title>
+</head>
+<body>
+<div th:if="${param.error}">
+    Invalid username and password.
+</div>
+<div th:if="${param.logout}">
+    You have been logged out.
+</div>
+
+<div align="center">
+    <!-- 登录表单 值得注意的是这里的action必须和 .loginPage("/login.do") 配置的一样-->
+    <form method="post" th:action="@{/jumpLoginPageOrCheckLogin.do}">
+        <!-- 名称必须是username和password-->
+        <div>
+            <label>you must type your username and password so that you can have the access to continue.</label>
+        </div>
+        <div>
+            <label>User Name : <input name="username" type="text"/></label>
+        </div>
+        <div>
+            <label> Password: <input name="password" type="password"/> </label>
+        </div>
+        <div>
+            <input type="submit" value="Sign In"/>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

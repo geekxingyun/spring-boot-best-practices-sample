@@ -1,36 +1,32 @@
 package com.xingyun.springbootwithspringsecuritysample.controller.api;
 
-import io.swagger.annotations.ApiImplicitParam;
-import io.swagger.annotations.ApiOperation;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import com.xingyun.springbootwithspringsecuritysample.model.vo.AppResponse;
+import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author qing-feng.zhao
- * @description
- * @date 2019/11/21 12:37
+ * @description 测试API 控制器
+ * @date 2019/12/3 20:15
  */
-@Slf4j
+@RequestMapping(value = "/api/v1")
+@Api(tags = "系统测试API")
 @RestController
 public class TestController {
 
-    @GetMapping(value = "/test.do")
-    @ApiOperation(value="测试API")
-    public String test(){
-        return "test success";
+    private final AppResponse appResponse;
+
+    public TestController(AppResponse appResponse) {
+        this.appResponse = appResponse;
     }
 
-    @GetMapping(value = "/encryptPassword.do")
-    @ApiOperation(value="密码加密API")
-    @ApiImplicitParam(name ="password",value = "原始明文密码",example = "123456")
-    public String encryptPassword(@RequestParam(value = "password")String password){
-        log.info("原始明文密码是:{}",password);
-
-        String encryptPassword=new BCryptPasswordEncoder().encode(password);
-        log.info("原始明文密码是:{}",encryptPassword);
-        return encryptPassword;
+    @GetMapping(value = "/test.do")
+    public AppResponse test(){
+        appResponse.setResponseCode(200);
+        appResponse.setResponseMessage("请求成功");
+        appResponse.setResponseData(null);
+        return appResponse;
     }
 }

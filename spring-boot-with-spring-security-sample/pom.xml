@@ -33,7 +33,7 @@
         <maven.compiler.plugin.version>3.5.1</maven.compiler.plugin.version>
         <guava.version>23.0</guava.version>
         <!--Swagger帮助生成Restful API文档-->
-        <swagger.version>2.7.0</swagger.version>
+        <swagger.version>2.9.2</swagger.version>
     </properties>
 
     <dependencies>
@@ -64,14 +64,14 @@
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
-            <version>2.7.0</version>
+            <version>${swagger.version}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
         <!-- Swagger 就是将这个json文件解析出来，用一种更友好的方式呈现出来 -->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
-            <version>2.7.0</version>
+            <version>${swagger.version}</version>
         </dependency>
         <!-- 项目使用Spring Security 保护我们的API -->
         <dependency>

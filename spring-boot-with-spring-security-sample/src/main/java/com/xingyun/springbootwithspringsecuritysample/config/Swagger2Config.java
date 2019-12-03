@@ -13,7 +13,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * @author qing-feng.zhao
- * @description
+ * @description Swagger2 API 配置
  * @date 2019/11/23 10:11
  */
 @EnableSwagger2

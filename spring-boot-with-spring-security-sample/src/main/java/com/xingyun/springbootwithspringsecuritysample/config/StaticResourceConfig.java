@@ -6,7 +6,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
 
 /**
  * @author qing-feng.zhao
- * @description
+ * @description 静态资源处理
  * @date 2019/11/23 10:06
  */
 @Configuration
