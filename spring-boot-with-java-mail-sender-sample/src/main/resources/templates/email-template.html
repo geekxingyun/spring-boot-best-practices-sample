@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Send Email Template</title>
+</head>
+<body>
+<h1>
+    <h2>嗨,欢迎加入极客训练营,你的验证码是</h2>
+    <div th:text="${code}"></div>
+    <img src='cid:logoImage'/>
+</h1>
+</body>
+</html>
