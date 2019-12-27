@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>common-css</title>
+
+    <!-- 新 Bootstrap4 核心 CSS 文件 -->
+    <div th:fragment="bootstrap-v4-core-required-css" id="bootstrap-v4-core-required-css">
+
+        <link rel="stylesheet"
+              href="../../static/third-party-library/bootstrap-4.3.1-dist/css/bootstrap.min.css"
+              th:href="@{/static/third-party-library/bootstrap-4.3.1-dist/css/bootstrap.min.css}"
+        >
+    </div>
+
+    <!-- BootStrap Table CSS -->
+    <div th:fragment="bootstrap-table-required-css">
+        <link rel="stylesheet"
+              href="../static/third-party-library/bootstrap-table-1.14.2-dist/bootstrap-table.min.css"
+              th:href="@{/static/third-party-library/bootstrap-table-1.14.2-dist/bootstrap-table.min.css} ">
+    </div>
+</head>
+<body>
+</body>
+</html>

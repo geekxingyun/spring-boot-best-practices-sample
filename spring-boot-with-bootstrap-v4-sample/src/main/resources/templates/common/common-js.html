@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!-- BootStrap V4 Core JS-->
+<div th:fragment="bootstrap-v4-core-required-js">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+            src="../../static/third-party-library/jquery-3.4.1-dist/jquery.min.js"
+            th:src="@{/static/third-party-library/jquery-3.4.1-dist/jquery.min.js}"></script>
+    <!--Our bootstrap.bundle.js and bootstrap.bundle.min.js include Popper, but not jQuery-->
+    <!--<script
+            src="../static/third-party-library/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"
+            th:src="@{/static/third-party-library/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js}"></script>-->
+    <!-- popper.min.js 用于设置弹窗、提示、下拉菜单，目前 bootstrap.bundle.min.js 已经包含了 popper.min.js -->
+    <script
+            src="../../static/third-party-library/popper-1.12.5-dist/popper.min.js"
+            th:src="@{/static/third-party-library/popper-1.12.5-dist/popper.min.js}"></script>
+    <!-- Bootstrap4 core JavaScript file -->
+    <script src="../../static/third-party-library/bootstrap-4.3.1-dist/js/bootstrap.min.js"
+            th:src="@{/static/third-party-library/bootstrap-4.3.1-dist/js/bootstrap.min.js}"></script>
+</div>
+
+<!-- BootStrap Table JS -->
+<div th:fragment="bootstrap-table-required-js">
+    <script
+            src="../../static/third-party-library/bootstrap-table-1.14.2-dist/bootstrap-table.min.js"
+            th:src="@{/static/third-party-library/bootstrap-table-1.14.2-dist/bootstrap-table.min.js}"></script>
+    <script
+            src="../../static/third-party-library/bootstrap-table-1.14.2-dist/locale/bootstrap-table-zh-CN.min.js"
+            th:src="@{/static/third-party-library/bootstrap-table-1.14.2-dist/locale/bootstrap-table-zh-CN.min.js}">
+    </script>
+</div>
+</body>
+</html>

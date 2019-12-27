@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:insert="~{common/common-meta::mobile-compatible-meta}"></div>
+    <title>Title</title>
+
+    <div th:insert="~{common/common-css::bootstrap-v4-core-required-css}"></div>
+
+    <!--login css style -->
+    <link href="../static/business/css/sign-in.css"
+          rel="stylesheet"
+          th:href="@{/static/business/css/sign-in.css}">
+
+    <!--common favicon-->
+    <div th:insert="~{common/common-favicon::common-favicon}"></div>
+
+</head>
+<body class="text-center">
+<form class="form-sign-in" method="post" th:action="@{/login.do}">
+    <img alt=""
+         class="mb-4"
+         height="72"
+         src="../static/business/brand/bootstrap-solid.svg"
+         data-th-src="@{/static/business/brand/bootstrap-solid.svg}" width="72">
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    <label class="sr-only" for="inputEmail">Email address</label>
+    <input autofocus class="form-control" id="inputEmail" name="username" placeholder="Email address" required tye="email">
+    <label class="sr-only" for="inputPassword">Password</label>
+    <input class="form-control" id="inputPassword" name="password" placeholder="Password" required type="email">
+    <button class="btn btn-lg btn-primary btn-block">Sign in</button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2019-2020</p>
+</form>
+
+<div th:insert="~{common/common-js::bootstrap-v4-core-required-js}"></div>
+</body>
+</html>
