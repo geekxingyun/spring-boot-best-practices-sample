@@ -32,7 +32,7 @@ public class SpringWebSecurityConfig extends WebSecurityConfigurerAdapter {
                 //首页 登录 退出 静态资源不拦截
                 // /swagger-ui.html 和Restful API 需要权限验证 其他不需要
                 .antMatchers("/","/login.do","/logout.do","/login","/logout").permitAll()
-                .antMatchers("/toFtpPage.do","/showAmbLink.do","/swagger-ui.html","/api/v1/**","/actuator/**").authenticated()
+                .antMatchers("/swagger-ui.html","/api/v1/**","/actuator/**").authenticated()
                 //所有请求都不拦截
                 //其他请求不拦截
                 .anyRequest().permitAll()
