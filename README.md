@@ -117,4 +117,4 @@ Email: fairy_xingyun@hotmail.com
 
 [星云微博](https://weibo.com/xingyunsky)
 
-<div align="center"><img src="https://img-blog.csdnimg.cn/20191101135202539.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly94aW5neXVuLmJsb2cuY3Nkbi5uZXQ=,size_16,color_FFFFFF,t_70"/></div>
+<div align="center"><img src="https://raw.githubusercontent.com/geekxingyun/SpringBootBestPracticesSample/master/assets/images/ji-ke-ji-shu-zhai.png"/></div>
