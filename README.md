@@ -116,5 +116,3 @@ Email: fairy_xingyun@hotmail.com
 [星云GitHub](https://github.com/geekxingyun)
 
 [星云微博](https://weibo.com/xingyunsky)
-
-<div align="center"><img src="https://raw.githubusercontent.com/geekxingyun/SpringBootBestPracticesSample/master/assets/images/ji-ke-ji-shu-zhai.png" width="265px" height="353"/></div>
