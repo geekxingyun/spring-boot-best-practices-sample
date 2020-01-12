@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <div th:insert="~{common/common-meta::mobile-compatible-meta}"></div>
+    <div th:insert="~{common-meta::mobile-compatible-meta}"></div>
     <title>Title</title>
 
-    <div th:insert="~{common/common-css::bootstrap-v4-core-required-css}"></div>
+    <div th:insert="~{common-css::bootstrap-v4-core-required-css}"></div>
 
     <!--login css style -->
     <link href="../static/business/css/sign-in.css"
@@ -12,7 +12,7 @@
           th:href="@{/static/business/css/sign-in.css}">
 
     <!--common favicon-->
-    <div th:insert="~{common/common-favicon::common-favicon}"></div>
+    <div th:insert="~{common-favicon::common-favicon}"></div>
 
 </head>
 <body class="text-center">
@@ -31,6 +31,6 @@
     <p class="mt-5 mb-3 text-muted">&copy; 2019-2020</p>
 </form>
 
-<div th:insert="~{common/common-js::bootstrap-v4-core-required-js}"></div>
+<div th:insert="~{common-js::bootstrap-v4-core-required-js}"></div>
 </body>
 </html>
