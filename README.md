@@ -101,18 +101,3 @@ java -jar your-app.jar
 > - org\springframework\boot\loader Spring Boot 启动时需要的类
 
 ---
-# 关于我
-
-网络ID 星云,英文名fairy,真名赵庆峰,CSDN 博客专家,致力于后端技术分享，喜欢开源和交流技术。
-
-Email: fairy_xingyun@hotmail.com
-
-> 交流即分享，分享才能进步！ by 星云
-
-# 关注与打赏
-
-[星云CSDN博客](https://blog.csdn.net/hadues)
-
-[星云GitHub](https://github.com/geekxingyun)
-
-[星云微博](https://weibo.com/xingyunsky)
