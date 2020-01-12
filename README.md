@@ -2,36 +2,46 @@
 
 > 该仓库致力于提供Spring Boot 与各种技术的整合示例库源码,欢迎各位持续关注~
 
-# 0x02 Spring Boot 与各种技术整合示例库列表
-
 > - 推荐安装Github 源码浏览插件 [Octotree](https://www.octotree.io/)
-> - 该系列源码讲解推荐看我的博客专栏 [Spring Boot 2.x 最佳实践手册](https://xingyun.blog.csdn.net/article/category/9284593)
+
 > - 该系列源码视频教程后期我会放到我的微信公众号
 
+# 0x02 Spring Boot 最佳实践专栏简介
 
----
-| 博文标题 |源码下载  |
-|--|--|
-| [1.Spring Boot 2.x 最佳实践之入门](https://xingyun.blog.csdn.net/article/details/101110483)|-|
-| [2.Spring Boot 2.x 最佳实践之自定义Banner](https://xingyun.blog.csdn.net/article/details/88819151) |  [spring-boot-with-customize-banner-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-customize-banner-sample)|
-| [3.Spring Boot 2.x 最佳实践之自定义Properties](https://xingyun.blog.csdn.net/article/details/89408533)|[spring-boot-with-configuration-processor-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-configuration-processor-sample)|
-|[4. Spring Boot 2.x 最佳实践之lombok集成](https://xingyun.blog.csdn.net/article/details/100763122)|-|
-|[5. Spring Boot 2.x 最佳实践之Logback集成](https://xingyun.blog.csdn.net/article/details/88884141)|[spring-boot-with-slf4j-logback-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-slf4j-logback-sample)|
-|[6. Spring Boot 2.x 最佳实践之 Apache Log4j2 集成](https://xingyun.blog.csdn.net/article/details/100856124)|[spring-boot-with-log4j2-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-log4j2-sample)|
-|[7. Spring Boot 2.x 最佳实践之 Spring Web MVC 集成](https://xingyun.blog.csdn.net/article/details/89413333)|[spring-boot-with-web-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-web-sample)|
-|[8. Spring Boot 2.x 最佳实践之静态资源处理](https://xingyun.blog.csdn.net/article/details/92772523)|-|
-|[9. Spring Boot 2.x 最佳实践之Thymeleaf集成](https://xingyun.blog.csdn.net/article/details/89422513)|[spring-boot-with-thymeleaf-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-thymeleaf-sample)
-|[10.Spring Boot 2.x 最佳实践之JSP集成](https://xingyun.blog.csdn.net/article/details/89413877)|[spring-boot-with-jsp-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-jsp-sample)|
-|[11. Spring Boot 2.x 最佳实践之Swagger集成](https://xingyun.blog.csdn.net/article/details/89420502)|[spring-boot-with-swagger-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-swagger-sample)|
-|[12. Spring Boot 2.x 最佳实践之MyBatis集成](https://xingyun.blog.csdn.net/article/details/97929511)|[spring-boot-with-mybatis-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-mybatis-sample)|
-|[13. Spring Boot 2.x 最佳实践之Spring for Apache Kafka集成](https://xingyun.blog.csdn.net/article/details/88974967)|[spring-boot-with-spring-kafka-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-spring-kafka-sample)|
-|[14. Spring Boot 2.x 最佳实践之 Spring Data JPA集成](https://xingyun.blog.csdn.net/article/details/101632155)|[spring-boot-with-spring-data-jpa-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-spring-data-jpa-sample)|
-|[15. Spring Boot 2.x 最佳实践之 TinyMCE 集成](https://xingyun.blog.csdn.net/article/details/102492921)| [spring-boot-with-tinymce-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-tinymce-sample)|
-|[16. Spring Boot 2.x 最佳实践之 Quartz 集成](https://xingyun.blog.csdn.net/article/details/103067196)|[spring-boot-with-quartz-sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-quartz-sample)|
-|[17. Spring Boot 2.x 最佳实践之 Spring Security 集成](https://xingyun.blog.csdn.net/article/details/100038318)|[Spring Boot With Spring Security Sample](https://github.com/geekxingyun/SpringBootBestPracticesSample/tree/master/spring-boot-with-spring-security-sample)
+> Spring Boot 无疑如今已经成为Java 后端开发的行业标准，学会Spring Boot
+与各种技术集成是必学技能，该专栏是博主根据实战摸索出来的Spring Boot 2.x
+与各种技术集成经验分享，后期会配上视频讲解，敬请期待。
+
+> - 博客专栏首页 [Spring Boot 2.x 最佳实践手册](https://xingyun.blog.csdn.net/article/category/9284593)
+
+| Spring Boot 与各种技术整合示例库列表|
+|--|
+| [1.Spring Boot 2.x 最佳实践之入门](https://xingyun.blog.csdn.net/article/details/101110483)|
+| [2.Spring Boot 2.x 最佳实践之自定义Banner](https://xingyun.blog.csdn.net/article/details/88819151) |  
+| [3.Spring Boot 2.x 最佳实践之自定义Properties](https://xingyun.blog.csdn.net/article/details/89408533)|
+|[4. Spring Boot 2.x 最佳实践之lombok集成](https://xingyun.blog.csdn.net/article/details/100763122)|
+|[5. Spring Boot 2.x 最佳实践之Logback集成](https://xingyun.blog.csdn.net/article/details/88884141)|
+|[6. Spring Boot 2.x 最佳实践之 Apache Log4j2 集成](https://xingyun.blog.csdn.net/article/details/100856124)|
+|[7. Spring Boot 2.x 最佳实践之 Spring Web MVC 集成](https://xingyun.blog.csdn.net/article/details/89413333)|
+|[8. Spring Boot 2.x 最佳实践之静态资源处理](https://xingyun.blog.csdn.net/article/details/92772523)|
+|[9. Spring Boot 2.x 最佳实践之Thymeleaf集成](https://xingyun.blog.csdn.net/article/details/89422513)|
+|[10.Spring Boot 2.x 最佳实践之JSP集成](https://xingyun.blog.csdn.net/article/details/89413877)|
+|[11. Spring Boot 2.x 最佳实践之Swagger集成](https://xingyun.blog.csdn.net/article/details/89420502)|
+|[12. Spring Boot 2.x 最佳实践之MyBatis集成](https://xingyun.blog.csdn.net/article/details/97929511)|
+|[13. Spring Boot 2.x 最佳实践之Spring for Apache Kafka集成](https://xingyun.blog.csdn.net/article/details/88974967)|
+|[14. Spring Boot 2.x 最佳实践之 Spring Data JPA集成](https://xingyun.blog.csdn.net/article/details/101632155)|
+|[15. Spring Boot 2.x 最佳实践之 TinyMCE 集成](https://xingyun.blog.csdn.net/article/details/102492921)| 
+|[16. Spring Boot 2.x 最佳实践之 Quartz 集成](https://xingyun.blog.csdn.net/article/details/103067196)|
+|[17. Spring Boot 2.x 最佳实践之 Spring Security 集成](https://xingyun.blog.csdn.net/article/details/100038318)|
+|[18.Spring Boot 2.x 最佳实践之 Java Mail Sender集成](https://xingyun.blog.csdn.net/article/details/103074053)|
+|[19. Spring Boot 2.x 最佳实践之 BootStrap V4集成](https://xingyun.blog.csdn.net/article/details/103735434)|
+|[20. Spring Boot 2.x 最佳实践之Sonar 集成](https://xingyun.blog.csdn.net/article/details/103754754)|
+|[21. Spring Boot 2.x最佳实践之 HTTPS 集成](https://xingyun.blog.csdn.net/article/details/103607879)|
 
 未完待续，持续更新中。。。
 
+---
+> - 交流即分享，分享才能进步。
 ---
 # 0x03 如何构建一个Spring Boot 项目
 
