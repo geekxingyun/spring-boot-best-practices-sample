@@ -1,22 +1,11 @@
-# 0x01 前言
-
-> 该仓库致力于提供Spring Boot 与各种技术的整合示例库源码,欢迎各位持续关注~
-
+## 前言
+> - 该专栏致力于提供Spring Boot 与各种技术整合最佳实践示例。
 > - 推荐安装Github 源码浏览插件 [Octotree](https://www.octotree.io/)
 
-> - 该系列源码视频教程后期我会放到我的微信公众号
-
-# 0x02 Spring Boot 最佳实践专栏简介
-
-> Spring Boot 无疑如今已经成为Java 后端开发的行业标准，学会Spring Boot
-与各种技术集成是必学技能，该专栏是博主根据实战摸索出来的Spring Boot 2.x
-与各种技术集成经验分享，后期会配上视频讲解，敬请期待。
-
-> - 博客专栏首页 [Spring Boot 2.x 最佳实践手册](https://xingyun.blog.csdn.net/article/category/9284593)
-
-| Spring Boot 与各种技术整合示例库列表|
+|博文标题|
 |--|
-| [1.Spring Boot 2.x 最佳实践之入门](https://xingyun.blog.csdn.net/article/details/101110483)|
+| [如何打造一个完美的源码阅读环境？](https://xingyun.blog.csdn.net/article/details/104001278)|
+| [1.Spring Boot 2.x 最佳实践之构建 Hello World web 应用程序](https://xingyun.blog.csdn.net/article/details/101110483)|
 | [2.Spring Boot 2.x 最佳实践之自定义Banner](https://xingyun.blog.csdn.net/article/details/88819151) |  
 | [3.Spring Boot 2.x 最佳实践之自定义Properties](https://xingyun.blog.csdn.net/article/details/89408533)|
 |[4. Spring Boot 2.x 最佳实践之lombok集成](https://xingyun.blog.csdn.net/article/details/100763122)|
@@ -41,63 +30,28 @@
 未完待续，持续更新中。。。
 
 ---
+**为什么要读源码？**
+
+如今网络世界中，学习计算机的人越来越多。据说，每年培训机构将会为全国培养上万的程序员。
+
+培训机构一般都可以在短暂的4-6个月内教会你使用目前市面上主流的一些框架，让你有能力开发一些基础简单的的项目，这应该是不难的，只要不是傻子 ，靠背诵和练习，十有八九都可以掌握。
+
+试想下，程序员的量多了，那么面试的要求难度自然也是一年更比一年难。
+
+在过去，说真的，只要会使用这些框架你就可以找到一个不错的工作。但是如今想找到不是外包，比较满意的工作，难度还是挺大的。
+
+根据自己对市场的接触和感受，发觉除了掌握各种技术的使用之外，技术实现的原理变得越来越加重要。
+
+如果想知道框架技术实现的原理，最好的途径是什么呢？
+
+没错，就是看源码，但是如果看只是生冷硬的源码恐怕你十有八九会从入门到放弃吧。
+
+我独创的这个源码阅读环境，不同于网上大多数的直接从github 下载源码导入项目。
+
+而是拥有源码调试功能，源码模仿学习练习功能，代码调用学习等功能。
+
+ [如何打造一个完美的源码阅读环境？](https://xingyun.blog.csdn.net/article/details/104001278)
+ 
+---
 > - 交流即分享，分享才能进步。
----
-# 0x03 如何构建一个Spring Boot 项目
-
-> 构建一个Spring Boot 项目最流行的有如下三种方式.
-
-## 3.1 使用 Intellij Idea 构建项目
-
-> [Intellij Idea](https://www.jetbrains.com/idea/) 是一款Java开发最强大最智能的IDE集成开发工具。
-
-## 3.2 使用Spring Tools 4 for Eclipse(简称 STS)构建项目
-
-> - Spring Tools 4 for Eclipse 是Spring 官方团队推出的Java开发集成IDE工具。
-
-> - 对Spring完美支持,开源免费且支持start.spring.io网址构建项目
-
-> - [Spring Tools 4 for Eclipse](https://spring.io/tools) 新版本,该版本不支持部署war到tomcat,Jetty 等外部容器中
-
-> - [Spring Tools 3 for Eclipse](https://spring.io/tools3/sts/all) 旧版本,该版本支持部署war到tomcat,Jetty 等外部容器中
-
-
-## 3.3 start.spring.io 在线构建项目
-
-> 初始化一个Spring Boot 项目,可以使用Spring 官方团队提供的项目生成工具 [https://start.spring.io/](https://start.spring.io/)
-
-# 0x04 如何安装打包运行一个Spring Boot 项目?
-
-推荐使用我精心配制的[settings.xml](https://github.com/geekxingyun/SpringBootBestPracticesSample/blob/master/assets/share/settings.xml)
-
-## 4.1 maven 安装依赖
-
-pom.xml 根目录下运行
-```
-mvn clean install
-```
-## 4.2 maven 打包
-
-pom.xml根目录下执行
-```
-mvn clean package
-```
-> 命令含义:首先清理target文件夹中所有内容,然后打包成*.jar或者*.war输出到target根目录
-
-### 4.3 maven 运行
-
-pom.xml根目录下执行
-```
-java -jar your-app.jar
-```
-> 命令含义: 运行一个*.jar
- 
- ### 4.4 jar剖析
- 
- 解压该jar文件可以看到
- 
-> - BOOT-INF\classes 存放编译后的所有Java源码
-> - BOOT-INF\lib 项目依赖的Jar包
-> - org\springframework\boot\loader Spring Boot 启动时需要的类
-
----
+> - 如果有任何疑问或建议，可以发我邮箱 `fairy_xingyun@hotmail.com`
