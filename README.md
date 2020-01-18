@@ -1,6 +1,13 @@
-## 前言
+## Spring Boot  2.x 最佳实践专栏简介
+> - Spring的出现简化了Java企业级应用的开发,从最初的依赖注入容器以及灵活的配置方式，经过多年的发展,已经成为功能丰富，生态完整的企业应用开发全栈框架。但是针对这些功能和子系统，我们往往要在xml中配置很多内容，一不小心很容易配置错误。 
+> - Spring团队意识到这个问题后，就推出了Spring Boot. Spring Boot 无疑如今已经成为Java 后端开发的行业标准，学会Spring Boot与各种技术集成是必学技能，
 > - 该专栏致力于提供Spring Boot 与各种技术整合最佳实践示例。
 > - 推荐安装Github 源码浏览插件 [Octotree](https://www.octotree.io/)
+> - 后期会考虑加入视频讲解，敬请期待。
+
+博客专栏首页：[Spring Boot  2.x 最佳实践专栏简介](https://xingyun.blog.csdn.net/category_9284593.html)
+
+博文更新列表，持续更新中。。。
 
 |博文标题|
 |--|
