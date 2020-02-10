@@ -1,3 +1,4 @@
+@[TOC](Spring Boot  2.x 最佳实践专栏简介)
 ## Spring Boot  2.x 最佳实践专栏简介
 > - Spring的出现简化了Java企业级应用的开发,从最初的依赖注入容器以及灵活的配置方式，经过多年的发展,已经成为功能丰富，生态完整的企业应用开发全栈框架。但是针对这些功能和子系统，我们往往要在xml中配置很多内容，一不小心很容易配置错误。 
 > - Spring团队意识到这个问题后，就推出了Spring Boot.
@@ -14,10 +15,11 @@
 > - [Intellij Idea 常用经典定制配置](https://xingyun.blog.csdn.net/article/details/104154430)
 
 ## 1.2 博文更新列表
-
 > 本专栏致力于打造 Spring Boot 与各种技术最佳实践整合的示例库
 
-博客专栏首页：[Spring Boot  2.x 最佳实践专栏简介](https://xingyun.blog.csdn.net/category_9284593.html)
+博客专栏首页：[Spring Boot  2.x 最佳实践专栏](https://xingyun.blog.csdn.net/category_9284593.html)
+博客专栏简介：[Spring Boot 2.x 最佳实践专栏简介](https://xingyun.blog.csdn.net/article/details/103041834) 
+代码仓库地址：[spring-boot-best-practices-sample](https://github.com/geekxingyun/spring-boot-best-practices-sample) 
 
 博文更新列表，持续更新中。。。
 
@@ -51,3 +53,5 @@
 ---
 > - 我是技术宅星云，交流即分享，分享才能进步。
 > - 如果有任何疑问或建议，可以发我邮箱 `fairy_xingyun@hotmail.com`
+> - 更多学习心得分享，见极客技术宅知识星球，免费的。
+> ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200211071535606.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hhZHVlcw==,size_16,color_FFFFFF,t_70)
