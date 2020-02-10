@@ -3,9 +3,19 @@
 > - Spring团队意识到这个问题后，就推出了Spring Boot.
 > -  Spring Boot 无疑如今已经成为Java 后端开发的行业标准。
 > - 学会Spring Boot与各种技术集成是必学技能，
-> - 该专栏致力于提供Spring Boot 与各种技术整合最佳实践示例。
-> - 推荐安装Github 源码浏览插件 [Octotree](https://www.octotree.io/)
 > - 后期会考虑加入视频讲解，敬请期待。
+
+**本专栏致力于打造 Spring Boot 与各种技术最佳实践整合的示例库**
+## 1.1 Getting Started
+> -  [Maven](https://xingyun.blog.csdn.net/article/details/91415197) 
+> - [JDK 8 update 60 +](https://www.oracle.com/technetwork/java/javase/downloads/index.html).
+> - [Octotree](https://www.octotree.io/)
+> - [Intellij Idea 介绍,安装，激活与更新中文教程](https://xingyun.blog.csdn.net/article/details/104191661)
+> - [Intellij Idea 常用经典定制配置](https://xingyun.blog.csdn.net/article/details/104154430)
+
+## 1.2 博文更新列表
+
+> 本专栏致力于打造 Spring Boot 与各种技术最佳实践整合的示例库
 
 博客专栏首页：[Spring Boot  2.x 最佳实践专栏简介](https://xingyun.blog.csdn.net/category_9284593.html)
 
@@ -39,28 +49,7 @@
 未完待续，持续更新中。。。
 
 ---
-**为什么要读源码？**
-
-如今网络世界中，学习计算机的人越来越多。据说，每年培训机构将会为全国培养上万的程序员。
-
-培训机构一般都可以在短暂的4-6个月内教会你使用目前市面上主流的一些框架，让你有能力开发一些基础简单的的项目，这应该是不难的，只要不是傻子 ，靠背诵和练习，十有八九都可以掌握。
-
-试想下，程序员的量多了，那么面试的要求难度自然也是一年更比一年难。
-
-在过去，说真的，只要会使用这些框架你就可以找到一个不错的工作。但是如今想找到不是外包，比较满意的工作，难度还是挺大的。
-
-根据自己对市场的接触和感受，发觉除了掌握各种技术的使用之外，技术实现的原理变得越来越加重要。
-
-如果想知道框架技术实现的原理，最好的途径是什么呢？
-
-没错，就是看源码，但是如果看只是生冷硬的源码恐怕你十有八九会从入门到放弃吧。
-
-我独创的这个源码阅读环境，不同于网上大多数的直接从github 下载源码导入项目。
-
-而是拥有源码调试功能，源码模仿学习练习功能，代码调用学习等功能。
-
- [如何打造一个完美的源码阅读环境？](https://xingyun.blog.csdn.net/article/details/104001278)
- 
----
-> - 交流即分享，分享才能进步。
+> - 我是技术宅星云，交流即分享，分享才能进步。
 > - 如果有任何疑问或建议，可以发我邮箱 `fairy_xingyun@hotmail.com`
+> - 更多学习心得分享，见极客技术宅知识星球，免费的。
+> ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200211071535606.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hhZHVlcw==,size_16,color_FFFFFF,t_70)
