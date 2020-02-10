@@ -1,28 +1,23 @@
 @[TOC](Spring Boot  2.x 最佳实践专栏简介)
-## Spring Boot  2.x 最佳实践专栏简介
+## 1.1 为什么写这个专栏？
 > - Spring的出现简化了Java企业级应用的开发,从最初的依赖注入容器以及灵活的配置方式，经过多年的发展,已经成为功能丰富，生态完整的企业应用开发全栈框架。但是针对这些功能和子系统，我们往往要在xml中配置很多内容，一不小心很容易配置错误。 
 > - Spring团队意识到这个问题后，就推出了Spring Boot.
 > -  Spring Boot 无疑如今已经成为Java 后端开发的行业标准。
 > - 学会Spring Boot与各种技术集成是必学技能，
 > - 后期会考虑加入视频讲解，敬请期待。
+## 1.2 Spring Boot 2.x 最佳实践专栏简介
+> **本专栏致力于打造 Spring Boot 与各种技术最佳实践整合的示例库**
 
-**本专栏致力于打造 Spring Boot 与各种技术最佳实践整合的示例库**
-## 1.1 Getting Started
+ - 专栏首页：[Spring Boot  2.x 最佳实践专栏](https://xingyun.blog.csdn.net/category_9284593.html)
+ - 专栏简介：[Spring Boot 2.x 最佳实践专栏简介](https://xingyun.blog.csdn.net/article/details/103041834) 
+- 代码仓库：[spring-boot-best-practices-sample](https://github.com/geekxingyun/spring-boot-best-practices-sample)
+## 1.3 学习环境搭建
 > -  [Maven](https://xingyun.blog.csdn.net/article/details/91415197) 
 > - [JDK 8 update 60 +](https://www.oracle.com/technetwork/java/javase/downloads/index.html).
 > - [Octotree](https://www.octotree.io/)
 > - [Intellij Idea 介绍,安装，激活与更新中文教程](https://xingyun.blog.csdn.net/article/details/104191661)
 > - [Intellij Idea 常用经典定制配置](https://xingyun.blog.csdn.net/article/details/104154430)
-
-## 1.2 博文更新列表
-> 本专栏致力于打造 Spring Boot 与各种技术最佳实践整合的示例库
-
-- 博客专栏首页：[Spring Boot  2.x 最佳实践专栏](https://xingyun.blog.csdn.net/category_9284593.html)
-- 博客专栏简介：[Spring Boot 2.x 最佳实践专栏简介](https://xingyun.blog.csdn.net/article/details/103041834) 
-- 代码仓库地址：[spring-boot-best-practices-sample](https://github.com/geekxingyun/spring-boot-best-practices-sample) 
-
-博文更新列表，持续更新中。。。
-
+## 1.4 博文更新列表
 |博文标题|
 |--|
 | [如何打造一个完美的源码阅读环境？](https://xingyun.blog.csdn.net/article/details/104001278)|
