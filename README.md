@@ -1,3 +1,4 @@
+@[TOC](Spring Boot  2.x 最佳实践专栏简介)
 ## 1.1 为什么写这个专栏？
 > - Spring的出现简化了Java企业级应用的开发,从最初的依赖注入容器以及灵活的配置方式，经过多年的发展,已经成为功能丰富，生态完整的企业应用开发全栈框架。但是针对这些功能和子系统，我们往往要在xml中配置很多内容，一不小心很容易配置错误。 
 > - Spring团队意识到这个问题后，就推出了Spring Boot.
@@ -19,7 +20,6 @@
 ## 1.4 博文更新列表
 |博文标题|
 |--|
-| [如何打造一个完美的源码阅读环境？](https://xingyun.blog.csdn.net/article/details/104001278)|
 | [1.Spring Boot 2.x 最佳实践之构建 Hello World web 应用程序](https://xingyun.blog.csdn.net/article/details/101110483)|
 | [2.Spring Boot 2.x 最佳实践之自定义Banner](https://xingyun.blog.csdn.net/article/details/88819151) |  
 | [3.Spring Boot 2.x 最佳实践之自定义Properties](https://xingyun.blog.csdn.net/article/details/89408533)|
