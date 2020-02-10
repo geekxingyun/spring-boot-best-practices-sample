@@ -17,9 +17,9 @@
 ## 1.2 博文更新列表
 > 本专栏致力于打造 Spring Boot 与各种技术最佳实践整合的示例库
 
-博客专栏首页：[Spring Boot  2.x 最佳实践专栏](https://xingyun.blog.csdn.net/category_9284593.html)
-博客专栏简介：[Spring Boot 2.x 最佳实践专栏简介](https://xingyun.blog.csdn.net/article/details/103041834) 
-代码仓库地址：[spring-boot-best-practices-sample](https://github.com/geekxingyun/spring-boot-best-practices-sample) 
+- 博客专栏首页：[Spring Boot  2.x 最佳实践专栏](https://xingyun.blog.csdn.net/category_9284593.html)
+- 博客专栏简介：[Spring Boot 2.x 最佳实践专栏简介](https://xingyun.blog.csdn.net/article/details/103041834) 
+- 代码仓库地址：[spring-boot-best-practices-sample](https://github.com/geekxingyun/spring-boot-best-practices-sample) 
 
 博文更新列表，持续更新中。。。
 
