@@ -28,8 +28,6 @@ Code Introduce ,please refer to [Spring Boot 2.x With Customize Banner](https://
 
 ## 1.5 More About
 
-[Spring Boot 最佳实践](https://xingyun.blog.csdn.net/category_9284593.html)
+Code Introduce : [Spring Boot 最佳实践](https://xingyun.blog.csdn.net/category_9284593.html)
 
-[spring-boot-best-practices-sample](https://github.com/geekxingyun/spring-boot-best-practices-sample)
-
-
+Code Repository: [spring-boot-best-practices-sample](https://github.com/geekxingyun/spring-boot-best-practices-sample)
