@@ -19,6 +19,5 @@ public class SpringBootWithCustomizeBannerSampleApplication {
 	public static void main(String[] args) {
 		//SpringApplication.run方法会构建一个Spring容器,并且返回一个ApplicationContext对象,也就是项目的上下文
 		SpringApplication.run(SpringBootWithCustomizeBannerSampleApplication.class, args);
-
 	}
 }

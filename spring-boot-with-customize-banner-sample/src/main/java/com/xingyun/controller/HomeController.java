@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class HomeController {
-
 	/**
 	 * 当拦截到访问 http://127.0.0.1/8080 请求的时候执行这个方法
 	 * @return 返回字符串
