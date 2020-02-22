@@ -13,7 +13,7 @@
 ## 1.3 学习环境搭建
 > -  [Maven](https://xingyun.blog.csdn.net/article/details/91415197) 
 > - [JDK 8 update 60 +](https://www.oracle.com/technetwork/java/javase/downloads/index.html).
-> - [Octotree](https://github.com/ovity/octotree/tree/master/dist)
+> - [Octotree](https://www.octotree.io/)
 > - [Intellij Idea 介绍,安装，激活与更新中文教程](https://xingyun.blog.csdn.net/article/details/104191661)
 > - [Intellij Idea 常用经典定制配置](https://xingyun.blog.csdn.net/article/details/104154430)
 ## 1.4 博文更新列表
