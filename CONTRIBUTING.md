@@ -7,7 +7,7 @@ To build you will need [Git](https://help.github.com/set-up-git-redirect) and [J
 ## 1.2 Get the Source Code
 
 ```bash
-git clone https://github.com/geekxingyun/how-to-open-source-a-project.git
+git clone https://github.com/geekxingyun/spring-boot-best-practices-sample.git
 ```
 
 
