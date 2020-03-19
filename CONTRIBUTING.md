@@ -9,10 +9,6 @@ To build you will need [Git](https://help.github.com/set-up-git-redirect) and [J
 ```bash
 git clone https://github.com/geekxingyun/how-to-open-source-a-project.git
 ```
-or
-```bash
-git clone git@github.com:geekxingyun/how-to-open-source-a-project.git
-```
 
 
 
