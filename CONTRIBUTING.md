@@ -10,5 +10,10 @@ To build you will need [Git](https://help.github.com/set-up-git-redirect) and [J
 git clone https://github.com/geekxingyun/spring-boot-best-practices-sample.git
 ```
 
+## 1.3 go into a project fodler which have a pom.xml
 
+run the command as below:
+```bash
+mvn clean package
+```
 
