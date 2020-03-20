@@ -13,6 +13,7 @@ import java.nio.charset.Charset;
 
 /**
  * 线程日志工具类
+ * @author qing-feng.zhao
  */
 public class LogbackThreadLogger extends RollingFileAppender{
 

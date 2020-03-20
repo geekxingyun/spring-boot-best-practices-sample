@@ -37,6 +37,13 @@
 <!--			<artifactId>spring-boot-starter-logging</artifactId>-->
 <!--		</dependency>-->
 
+		<!-- 添加Lombok 注解 -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+
 		<!-- Web应用开发 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -48,6 +55,13 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+			<exclusions>
+				<!-- 排除这个依赖后就不支持Junit4了,如果需要用Junit4 请注释掉exclusion标签内容-->
+				<exclusion>
+					<groupId>org.junit.vintage</groupId>
+					<artifactId>junit-vintage-engine</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 	</dependencies>
 
