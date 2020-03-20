@@ -8,7 +8,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.8.RELEASE</version>
+		<version>2.2.5.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
@@ -20,26 +20,22 @@
 	<description>Slf4j and logback project for Spring Boot</description>
 
 	<properties>
-		<!-- 设置当前项目源码使用字符编码为UTF-8 -->
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- 设置当前项目所需要的JDK版本 Open JDK下载地址:https://jdk.java.net/ -->
-		<java.version>12</java.version>
-		<!-- 设置当前项目编译所需要的JDK版本 Open JDK下载地址:https://jdk.java.net/ -->
-		<maven.compiler.source>${java.version}</maven.compiler.source>
-		<maven.compiler.target>${java.version}</maven.compiler.target>
-		<!-- 设置maven编译插件版本,可通过下面网址查看最新的版本-->
-		<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
-		<maven.compiler.plugin.version>3.5.1</maven.compiler.plugin.version>
+		<java.version>1.8</java.version>
 		<!-- 项目所使用第三方依赖jar包的版本,建议以后都使用这种方式,方便今后维护和升级 -->
 	</properties>
 
 	<dependencies>
 
-		<!-- slf4j+ logback日志系统 -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-logging</artifactId>
-		</dependency>
+		<!-- slf4j+ logback日志系统
+		凡是使用了spring 官方团队公布的starer 你会发现，他们都引入了spring-boot-starer.
+		而spring-boot-starter 默认传递依赖的方式使用了Spring 5.x, Logback 相关的依赖
+		因此可以不显示指定使用这个日志
+		 -->
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter-logging</artifactId>-->
+<!--		</dependency>-->
 
 		<!-- Web应用开发 -->
 		<dependency>
@@ -61,16 +57,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-			<!--该插件限定Maven打包时所使用的版本,避免出现版本不匹配问题-->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>${maven.compiler.plugin.version}</version>
-				<configuration>
-					<source>${java.version}</source>
-					<target>${java.version}</target>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
