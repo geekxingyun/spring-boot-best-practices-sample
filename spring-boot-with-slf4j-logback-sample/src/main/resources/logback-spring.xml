@@ -2,23 +2,22 @@
 
     <!--logback 不需要DTD 文件,节点不区分大小写-->
 
-    <!--日志存放路径,windows会将日志存放到当前磁盘 c:/opt/applog/myApp/log/myApp.log -->
-    <!--日志存放路径,Linux会将日志存放到当前磁盘 /opt/applog/myApp/log/myApp.log -->
-    <property scope="context" name="APP_NAME" value="myApp"/>
-    <property scope="context" name="LOG_FILE_PATH" value="/opt/applog/${APP_NAME}/log" />
+    <!--日志存放路径,windows会将日志存放到当前磁盘 c:/opt/logs/app/myApp.log -->
+    <!--日志存放路径,Linux会将日志存放到当前磁盘 /opt/logs/app/myApp.log -->
+    <property scope="context" name="APP_NAME" value="spring-boot-with-logback-sample"/>
+    <property scope="context" name="LOG_FILE_PATH" value="/opt/logs/${APP_NAME}/" />
 
     <!--配置输出到控制台-->
     <!-- Appender 有两个属性name 和class可以配置
          name属性指定appender的名称，而class属性指定要实例化的appender类的完全限定名称
         <appender>元素可以包含零个或一个<layout>元素，零个或多个<encoder>元素以及零个或多个<filter>元素。 -->
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-
         <!--
         <encoder>
         默认使用 ch.qos.logback.classic.encoder.PatternLayoutEncoder 实现类
         如果使用自定义类，则需要指定完全限定名称
         如下所示:
-        <encoder class="com.xingun.custom.MyPatternLayoutEncoder">
+        <encoder class="com.xingyun.customize.MyPatternLayoutEncoder">
           -->
         <encoder>
             <!--配置控制台输出格式，由于是控制台，我这里调成了日志高亮显示 -->
@@ -26,7 +25,7 @@
         </encoder>
     </appender>
 
-    <!--配置输出到控制台-->
+    <!--配置输出到文件 -->
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <!--配置日志输出的文件路径和名称-->
         <file>${LOG_FILE_PATH}/${APP_NAME}.log</file>
