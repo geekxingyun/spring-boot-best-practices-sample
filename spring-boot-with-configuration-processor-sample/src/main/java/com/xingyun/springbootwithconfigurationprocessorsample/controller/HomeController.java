@@ -1,36 +1,46 @@
 package com.xingyun.springbootwithconfigurationprocessorsample.controller;
 
-import com.xingyun.springbootwithconfigurationprocessorsample.properties.MyCustomProperties;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.xingyun.springbootwithconfigurationprocessorsample.customize.properties.MyCustomProperties;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @author xingyun
+ * @author qing-feng.zhao
  */
+@Slf4j
 @RestController
 public class HomeController {
 
-    Logger logger= LoggerFactory.getLogger(HomeController.class);
+    /**
+     * Spring 今后推荐使用构造方法注入
+     */
+    public final MyCustomProperties myCustomProperties;
+    public HomeController(MyCustomProperties myCustomProperties) {
+        this.myCustomProperties = myCustomProperties;
+    }
 
+    /**
+     * 拦截首页 / 请求
+     * @return
+     */
     @GetMapping(value = "/")
     public String homePage(){
         return "Hello World";
     }
 
-    @Autowired
-    public MyCustomProperties myCustomProperties;
-
+    /**
+     * 测试自定义属性调用 值得注意的是只能实例方法调用,静态方法不可调用
+     * @return
+     */
     @GetMapping(value = "/test.do")
     public String testCustomProperties(){
-        logger.debug("自定义属性测试使用开始");
-        logger.debug("server address:{}",myCustomProperties.getServerAddress());
-        logger.debug("port:{}",myCustomProperties.getPort());
-        logger.debug("username:{}",myCustomProperties.getUsername());
-        logger.debug("password:{}",myCustomProperties.getPassword());
-        logger.debug("自定义属性测试使用结束");
-        return "test success";
+        log.debug("自定义属性测试使用开始");
+        log.debug("server address:{}",myCustomProperties.getServerAddress());
+        log.debug("port:{}",myCustomProperties.getPort());
+        log.debug("username:{}",myCustomProperties.getUsername());
+        log.debug("password:{}",myCustomProperties.getPassword());
+        log.debug("自定义属性测试使用结束");
+        return "test success,please check log from console";
     }
 }

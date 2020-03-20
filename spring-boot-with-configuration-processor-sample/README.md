@@ -9,7 +9,7 @@
 
 关于当前项目的源码讲解请移步参考我的CSDN博文
 
-[Spring Boot 2.x With Customize Properties](https://xingyun.blog.csdn.net/article/details/89408533)
+[Spring Boot 2.x 自定义配置属性](https://xingyun.blog.csdn.net/article/details/89408533)
 
 
 
