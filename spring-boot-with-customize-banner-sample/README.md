@@ -9,13 +9,13 @@ Be sure that your JAVA_HOME environment variable points to the jdk1.8.0 folder e
 ## 1.2 Building the Application
 
 Execute the following command in the pom.xml root directory
-```
+```bash
 mvn clean package
 ```
 ## 1.3 Deploying
 
 - Execute the following command in the pom.xml root directory
-```
+```bash
 java -jar ./target/spring-boot-with-customize-banner-sample-0.0.1-SNAPSHOT.jar
 ```
 - visit the website
