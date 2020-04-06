@@ -18,7 +18,6 @@ ARG JAR_FILE=target/*.jar
 COPY ${JAR_FILE} app.jar
 # execute command as java -jar app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
-FROM : 相当于java 代码中的import 命令，引
 ```
 
 if you are using maven ,please type these command as below:
