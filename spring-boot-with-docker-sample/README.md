@@ -60,3 +60,6 @@ if you want to run your image,please type command as below:
 ```bash
 docker run -p 8080:8080 -t fairyxingyun/spring-boot-2-with-docker-sample
 ```
+More detail ,please visit the article as below:
+
+[Spring Boot 2.x 最佳实践之Docker 集成](https://xingyun.blog.csdn.net/article/details/104969021)
