@@ -1,0 +1,4 @@
+spring:
+  application:
+    # config spring application name
+    name: spring-boot-2-with-docker-sample

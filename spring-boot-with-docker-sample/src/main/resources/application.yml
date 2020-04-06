@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    # config active which one profile
+    active: dev
+
+# 默认是tomcat 容器
+server:
+  # 一般情况最好不要配置这个属性,它会自动计算获取本地IP地址
+  # 如果配置127.0.0.1 那么访问 localhost 将无法访问成功
+  #address: 127.0.0.1
+  port: 8080
+  servlet:
+    context-path: /

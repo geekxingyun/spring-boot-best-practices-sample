@@ -7,7 +7,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.5.RELEASE</version>
+        <version>2.2.6.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -43,14 +43,21 @@
 
     <build>
         <plugins>
+            <!-- 这个插件包含了很多功能,比如
+            1.将项目和依赖打包成一个可执行的胖jar
+            2.搜索public static void main()方法标记为可运行的类
+            3.提供了基础的版本依赖管理,虽然可以重写但是一般情况没必要重写版本 -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+
             <plugin>
                 <groupId>com.google.cloud.tools</groupId>
                 <artifactId>jib-maven-plugin</artifactId>
+                <version>2.1.0</version>
             </plugin>
+
         </plugins>
     </build>
 
