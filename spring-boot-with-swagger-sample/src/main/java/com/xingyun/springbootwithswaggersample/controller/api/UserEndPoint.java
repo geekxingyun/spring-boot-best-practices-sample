@@ -65,6 +65,7 @@ public class UserEndPoint {
      * @param userQuery
      * @return
      */
+    @ApiOperation(value = "验证当前用户登陆账号",notes ="验证当前用户登陆账号",httpMethod = "GET")
     @PostMapping(value = "/user/check.do")
     public AppResponse checkMethod(@ModelAttribute UserQuery userQuery){
         this.appResponse.setResponseCode(200);
