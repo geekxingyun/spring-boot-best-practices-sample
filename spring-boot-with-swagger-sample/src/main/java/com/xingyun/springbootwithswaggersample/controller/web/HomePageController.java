@@ -1,11 +1,11 @@
-package com.xingyun.springbootwithswaggersample.controller;
+package com.xingyun.springbootwithswaggersample.controller.web;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 import springfox.documentation.annotations.ApiIgnore;
 
-@RestController
-public class HomeController {
+@Controller
+public class HomePageController {
 
     /**
      * @ApiIgnore 该注解表示忽略,不会被Swagger扫描解析成API 文档
@@ -13,7 +13,7 @@ public class HomeController {
     @ApiIgnore
     @GetMapping(value = "/")
     public String homePage(){
-        return "Hello World";
+        return "index";
     }
 
 }
