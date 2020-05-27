@@ -1,0 +1,49 @@
+spring:
+  application:
+    name: spring-boot-with-spring-security-token-sample
+  datasource:
+    # MySQL 5.x
+    #driver-class-name: com.mysql.jdbc.Driver
+    # MySQL 8.x
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test_db?serverTimezone=UTC&useUnicode=true&useSSL=false&allowPublicKeyRetrieval=true&characterEncoding=UTF-8
+    username: root
+    password: toor
+    initialization-mode: never
+  servlet:
+    multipart:
+      max-request-size: 50MB
+      enabled: true
+      max-file-size: 50MB
+  jpa:
+    database: mysql
+    open-in-view: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+        implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+
+# config tomcat server
+server:
+  port: 8080
+  address: 0.0.0.0
+  servlet:
+    context-path: /
+  tomcat:
+    max-swallow-size: 50MB
+    max-http-form-post-size: 50MB
+
+# spring actuator
+management:
+  endpoint:
+    health:
+      show-details: when_authorized
+    shutdown:
+      enabled: true
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: health,info,shutdown

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="com.xingyun.springbootwithspringsecuritytokensample.interceptor.MyTokenAuthorityInterceptor">
+        <!-- 如下列表请求不需要登陆拦截 -->
+        <property name="excludeUrls">
+            <list>
+                <!-- 省列表 -->
+                <value>/area/province/list</value>
+                <!-- 市列表 -->
+                <value>/area/city/list</value>
+                <!-- 区列表 -->
+                <value>/area/area/list</value>
+                <!-- 登录 -->
+                <value>/user/login</value>
+            </list>
+        </property>
+    </bean>
+</beans>
