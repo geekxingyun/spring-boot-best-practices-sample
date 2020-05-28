@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>蛙跳视频移动端API</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          th:href="@{webjars/bootstrap/4.4.1/css/bootstrap.min.css}"
+          href="webjars/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+
+<div class="container">
+    <div align="center" style="margin-top: 100px">
+        <!-- Content here -->
+        <div class="jumbotron">
+            <h1 class="display-4">欢迎访问示例API</h1>
+            <div align="center">
+                <h2><a th:href="@{/read-api-page.do}" href="/read-api-page.do" style="text-decoration:none">Read API</a></h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+   <!-- Optional JavaScript -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script
+           src="webjars/jquery/3.5.0/jquery.min.js"
+           th:src="@{webjars/jquery/3.5.0/jquery.min.js}"
+    >
+   </script>
+   <script
+           src="webjars/popper.js/1.14.3/umd/popper.min.js"
+           th:src="@{webjars/popper.js/1.14.3/umd/popper.min.js}"
+   ></script>
+   <script
+           src="webjars/bootstrap/4.4.1/js/bootstrap.min.js"
+           th:src="@{webjars/bootstrap/4.4.1/js/bootstrap.min.js}"
+   >
+   </script>
+</body>
+</html>

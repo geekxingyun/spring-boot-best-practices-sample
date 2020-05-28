@@ -10,8 +10,8 @@ spring:
 
 # config tomcat server
 server:
-  port: 8080
-  address: 0.0.0.0
+  port: 8081
+  #address: 0.0.0.0
   servlet:
     context-path: /
   tomcat:

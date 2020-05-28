@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>403 Forbidden</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          th:href="@{webjars/bootstrap/4.4.1/css/bootstrap.min.css}"
+          href="webjars/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <div align="center" style="margin-top: 100px">
+        <!-- Content here -->
+        <div class="jumbotron">
+            <h1 class="display-4">403 Forbidden</h1>
+            <p class="lead">当前账号无权限操作此页面,请切换登陆账号再次尝试.</p>
+            <hr class="my-4">
+            <p>如果有其他问题,请联系fairy_xingyun@hotmail.com获取技术支持</p>
+            <a class="btn btn-primary btn-lg" href="/toLogin.do" role="button">返回登陆页面</a>
+        </div>
+    </div>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script
+        src="webjars/jquery/3.5.0/jquery.min.js"
+        th:src="@{webjars/jquery/3.5.0/jquery.min.js}"
+>
+</script>
+<script
+        src="webjars/popper.js/1.14.3/umd/popper.min.js"
+        th:src="@{webjars/popper.js/1.14.3/umd/popper.min.js}"
+></script>
+<script
+        src="webjars/bootstrap/4.4.1/js/bootstrap.min.js"
+        th:src="@{webjars/bootstrap/4.4.1/js/bootstrap.min.js}"
+>
+</script>
+</body>
+</html>

@@ -10,5 +10,10 @@ import java.util.Optional;
  */
 public interface UserInfoJpaRepository extends JpaRepository<UserInfoEntity,Long> {
 
+    /**
+     * 查找用户信息
+     * @param userInfoToken
+     * @return
+     */
     Optional<UserInfoEntity> findByUserInfoToken(String userInfoToken);
 }
