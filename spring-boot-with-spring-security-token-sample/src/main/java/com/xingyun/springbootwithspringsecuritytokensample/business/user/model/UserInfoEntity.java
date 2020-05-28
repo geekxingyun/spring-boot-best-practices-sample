@@ -1,10 +1,13 @@
 package com.xingyun.springbootwithspringsecuritytokensample.business.user.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
 /**
  * @author qing-feng.zhao
  */
+@Data
 @Table(name = "t_user_info")
 @Entity
 public class UserInfoEntity {

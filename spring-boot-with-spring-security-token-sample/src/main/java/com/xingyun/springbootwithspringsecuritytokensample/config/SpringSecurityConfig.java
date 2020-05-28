@@ -66,7 +66,9 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests()
                 //swagger access
-                .antMatchers("/swagger-ui.html").hasRole("swagger-access-role")
+                //swagger access
+                .antMatchers("/read-api-page.do","/swagger-ui.html").hasRole("swagger-access-role")
+                .antMatchers("/actuator/**").hasRole("app-access-role")
                 // 除上面外的所有请求全部放行因为我们还有自定义拦截器会去处理API相关的拦截。
                 .anyRequest().permitAll()
                 .and()
@@ -74,7 +76,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .formLogin()
                 //第一次如果拦截到非法请求,默认重定向到 /login 请求去处理
                 //默认值/login 如果不配置会默认拦截/login请求并自动生成一个登陆页面 如果配置会指向自定义的登陆页面
-                //.loginPage("/toLoginPage.do")
+                .loginPage("/toLoginPage.do")
                 //执行登陆的请求处理 如果不配置会拦截/login 交给Spring Security 默认处理
                 .loginProcessingUrl("/login")
                 //要允许匿名访问

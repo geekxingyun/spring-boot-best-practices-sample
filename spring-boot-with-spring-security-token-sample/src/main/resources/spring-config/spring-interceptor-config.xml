@@ -7,14 +7,9 @@
         <!-- 如下列表请求不需要登陆拦截 -->
         <property name="excludeUrls">
             <list>
-                <!-- 省列表 -->
-                <value>/area/province/list</value>
-                <!-- 市列表 -->
-                <value>/area/city/list</value>
-                <!-- 区列表 -->
-                <value>/area/area/list</value>
-                <!-- 登录 -->
-                <value>/user/login</value>
+                <!-- 注册页面需要不拦截 -->
+                <value>/user/add-user.do</value>
+                <value>/user/login.do</value>
             </list>
         </property>
     </bean>

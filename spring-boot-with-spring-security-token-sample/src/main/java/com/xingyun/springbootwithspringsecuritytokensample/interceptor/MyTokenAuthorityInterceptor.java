@@ -1,14 +1,20 @@
 package com.xingyun.springbootwithspringsecuritytokensample.interceptor;
 
+import com.google.gson.Gson;
 import com.xingyun.springbootwithspringsecuritytokensample.business.user.model.UserInfoEntity;
 import com.xingyun.springbootwithspringsecuritytokensample.business.user.service.UserInfoService;
+import com.xingyun.springbootwithspringsecuritytokensample.model.AppResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.jackson.JsonObjectSerializer;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.PrintWriter;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 /**
@@ -48,6 +54,16 @@ public class MyTokenAuthorityInterceptor implements HandlerInterceptor {
             if(userInfoEntityOptional.isPresent()){
                 return true;
             }else{
+                //登陆权限拦截 返回错误信息
+                //设置响应字符编码
+                response.setContentType("application/json;charset=UTF-8");
+                PrintWriter out = response.getWriter();
+                AppResponse appResponse=new AppResponse();
+                appResponse.setResponseCode(403);
+                appResponse.setResponseMessage("token不正确,无权限操作");
+                appResponse.setResponseData("请求错误的token="+token);
+                Gson gson =new Gson();
+                out.print(gson.toJson(appResponse));
                 return false;
             }
         }

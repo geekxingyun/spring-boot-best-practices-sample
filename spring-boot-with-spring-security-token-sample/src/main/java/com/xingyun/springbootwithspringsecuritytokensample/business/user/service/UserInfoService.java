@@ -3,6 +3,7 @@ package com.xingyun.springbootwithspringsecuritytokensample.business.user.servic
 import com.xingyun.springbootwithspringsecuritytokensample.business.user.model.UserInfoEntity;
 import com.xingyun.springbootwithspringsecuritytokensample.business.user.model.UserInfoLogin;
 
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -20,11 +21,13 @@ public interface UserInfoService {
      * 保存用户信息
      * @param userInfoEntity
      */
-    UserInfoEntity saveUserInfo(UserInfoEntity userInfoEntity);
+    Boolean saveUserInfo(UserInfoEntity userInfoEntity);
 
     /**
      * 登陆
      * @return
      */
     Optional<UserInfoEntity> login(UserInfoLogin userInfoLogin);
+
+    List<UserInfoEntity> findAllUserInfo();
 }

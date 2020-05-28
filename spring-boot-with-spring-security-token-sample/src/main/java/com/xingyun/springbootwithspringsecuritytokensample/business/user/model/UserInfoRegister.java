@@ -7,9 +7,9 @@ import lombok.Data;
  * @author qing-feng.zhao
  */
 @Data
-public class UserInfoLogin {
-    @ApiModelProperty(name = "userInfoAccount",value = "用户登陆账号",example = "admin")
+public class UserInfoRegister {
+    @ApiModelProperty(name = "userInfoAccount",value = "注册一个账号",example = "admin")
     private String userInfoAccount;
-    @ApiModelProperty(name = "userInfoPassword",value ="用户登陆密码",example = "123456")
+    @ApiModelProperty(name = "userInfoPassword",value ="注册一个密码",example = "123456")
     private String userInfoPassword;
 }

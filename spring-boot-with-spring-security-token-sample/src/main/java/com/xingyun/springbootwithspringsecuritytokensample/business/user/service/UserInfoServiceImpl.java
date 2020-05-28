@@ -7,6 +7,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -26,8 +27,15 @@ public class UserInfoServiceImpl implements UserInfoService{
     }
 
     @Override
-    public UserInfoEntity saveUserInfo(UserInfoEntity userInfoEntity) {
-        return this.userInfoJpaRepository.save(userInfoEntity);
+    public Boolean saveUserInfo(UserInfoEntity userInfoEntity) {
+        Example<UserInfoEntity> userInfoEntityExample= Example.of(userInfoEntity);
+        Optional<UserInfoEntity> checkUserInfoEntityOptional=this.userInfoJpaRepository.findOne(userInfoEntityExample);
+        if(checkUserInfoEntityOptional.isPresent()){
+           return false;
+        }else{
+            this.userInfoJpaRepository.save(userInfoEntity);
+            return true;
+        }
     }
 
     @Override
@@ -36,5 +44,10 @@ public class UserInfoServiceImpl implements UserInfoService{
         BeanUtils.copyProperties(userInfoLogin,loginUserInfoEntity);
         Example<UserInfoEntity> userInfoEntityExample= Example.of(loginUserInfoEntity);
         return this.userInfoJpaRepository.findOne(userInfoEntityExample);
+    }
+
+    @Override
+    public List<UserInfoEntity> findAllUserInfo() {
+        return this.userInfoJpaRepository.findAll();
     }
 }
