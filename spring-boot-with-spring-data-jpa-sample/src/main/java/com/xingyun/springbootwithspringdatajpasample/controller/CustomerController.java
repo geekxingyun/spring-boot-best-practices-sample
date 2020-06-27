@@ -98,6 +98,11 @@ public class CustomerController {
         return appResponse;
     }
 
+    /**
+     * http://127.0.0.1:8080/customers/showCustomerPageList?page=0&size=2
+     * @param pageable
+     * @return
+     */
     @GetMapping(value = "/showCustomerPageList")
     public AppResponse showAllCustomerPageList(Pageable pageable){
 
