@@ -1,6 +1,8 @@
 package com.xingyun.springbootwithspringdatajpasample.service;
 
 import com.xingyun.springbootwithspringdatajpasample.model.Customer;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 import java.util.Optional;
@@ -37,6 +39,8 @@ public interface CustomerService {
      * @return
      */
     List<Customer> showAllCustomer();
+
+    Page<Customer> showAllCustomerPageList(Pageable pageable);
 
     /**
      * 根据名字查找对象

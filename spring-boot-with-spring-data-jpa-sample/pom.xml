@@ -21,7 +21,7 @@
         <!-- 设置当前项目源码使用字符编码为UTF-8 -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- 设置当前项目所需要的JDK版本 Open JDK下载地址:https://jdk.java.net/ -->
-        <java.version>11</java.version>
+        <java.version>1.8</java.version>
         <!-- 设置当前项目编译所需要的JDK版本 Open JDK下载地址:https://jdk.java.net/ -->
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>

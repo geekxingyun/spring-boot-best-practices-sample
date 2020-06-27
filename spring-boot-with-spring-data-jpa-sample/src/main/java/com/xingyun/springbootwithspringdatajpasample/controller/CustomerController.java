@@ -5,6 +5,8 @@ import com.xingyun.springbootwithspringdatajpasample.model.Customer;
 import com.xingyun.springbootwithspringdatajpasample.service.CustomerService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -83,6 +85,25 @@ public class CustomerController {
     public AppResponse showAllCustomer(){
 
         List<Customer> customerList=customerService.showAllCustomer();
+        // fetch all customers
+        log.info("Customers found with findAll():");
+        log.info("-------------------------------");
+        for (Customer customer : customerList) {
+            log.info(customer.toString());
+        }
+
+        appResponse.setResponseCode(200);
+        appResponse.setResponseMessage("查找所有的对象 finished");
+        appResponse.setResponseData(customerList);
+        return appResponse;
+    }
+
+    @GetMapping(value = "/showCustomerPageList")
+    public AppResponse showAllCustomerPageList(Pageable pageable){
+
+        Page<Customer> customerPage=customerService.showAllCustomerPageList(pageable);
+
+        List<Customer> customerList=customerPage.getContent();
         // fetch all customers
         log.info("Customers found with findAll():");
         log.info("-------------------------------");

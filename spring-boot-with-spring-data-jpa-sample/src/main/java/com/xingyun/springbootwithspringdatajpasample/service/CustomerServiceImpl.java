@@ -4,6 +4,9 @@ import com.xingyun.springbootwithspringdatajpasample.dao.jpa.CustomerRepository;
 import com.xingyun.springbootwithspringdatajpasample.model.Customer;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -39,6 +42,12 @@ public class CustomerServiceImpl implements CustomerService{
     @Override
     public List<Customer> showAllCustomer() {
         return customerRepository.findAll();
+    }
+
+    @Override
+    public Page<Customer> showAllCustomerPageList(Pageable pageable) {
+        PageRequest pageRequest=PageRequest.of(pageable.getPageNumber(),pageable.getPageSize());
+        return this.customerRepository.findAll(pageRequest);
     }
 
     @Override
