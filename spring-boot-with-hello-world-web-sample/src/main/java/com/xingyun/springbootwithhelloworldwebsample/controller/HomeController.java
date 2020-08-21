@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author qing-feng.zhao
- * @description
+ * @description 首页控制器
  * @date 2020/1/18 15:54
  */
 @RestController
