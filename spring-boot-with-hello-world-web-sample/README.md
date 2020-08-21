@@ -41,8 +41,6 @@ java -jar ./target/spring-boot-with-hello-world-web-sample-0.0.1-SNAPSHOT.jar --
 ```
 
 ## 2.2 how to change server context path?
-
-if you want to change the context path,you can type command as below:
 ```bash
 java -jar ./target/spring-boot-with-hello-world-web-sample-0.0.1-SNAPSHOT.jar --server.port=8080 --server.servlet.context-path=/
 ```
