@@ -152,6 +152,7 @@ public class LogbackThreadLogger extends RollingFileAppender{
      * @param rollingFileAppender
      * @param folderName
      * @param className
+     *
      * @return
      */
     private static SizeAndTimeBasedRollingPolicy configSizeAndTimeBasedRollingPolicy(LoggerContext loggerContext,RollingFileAppender rollingFileAppender,String folderName,String className){
