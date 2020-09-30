@@ -40,7 +40,7 @@
         <!--日志滚动策略，这里配置根据大小和日期自动滚动 -->
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
             <!-- 首先按照每天滚动，根据日志放到不同文件夹中，最后根据大小进行滚动分割 -->
-            <fileNamePattern>${LOG_FILE_PATH}/%d{yyyy-MM-dd,aux}/${APP_NAME}-%d{yyyy-MM-dd,UTC}.%i.log</fileNamePattern>
+            <fileNamePattern>${LOG_FILE_PATH}/%d{yyyy-MM-dd,aux}/${APP_NAME}-%d{yyyy-MM-dd,Asia/Shanghai}.%i.log</fileNamePattern>
             <!-- 每个日志文件至少 100MB,保存30天,但是所有日志占用空间最大不能超过 20GB，超过后清理较旧的日志 -->
             <maxFileSize>100MB</maxFileSize>
             <maxHistory>30</maxHistory>
