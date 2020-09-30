@@ -162,7 +162,7 @@ public class LogbackThreadLogger extends RollingFileAppender{
         //配置日志追加器
         sizeAndTimeBasedRollingPolicy.setParent(rollingFileAppender);
         //配置日志滚动策略规则 /opt/logs/spring-boot-with-logback-sample/2019-08-20/myThread.log
-        sizeAndTimeBasedRollingPolicy.setFileNamePattern(LOG_FILE_BASE_PATH+"%d{yyyy-MM-dd,aux}"+File.separator+folderName+File.separator+className+"-%d{yyyy-MM-dd,UTC}.%i.log");
+        sizeAndTimeBasedRollingPolicy.setFileNamePattern(LOG_FILE_BASE_PATH+"%d{yyyy-MM-dd,aux}"+File.separator+folderName+File.separator+className+"-%d{yyyy-MM-dd,Asia/Shanghai}.%i.log");
         //设置单个文件大小
         sizeAndTimeBasedRollingPolicy.setMaxFileSize(MAX_FILE_SIZE_VALUE);
         //保存多少天
