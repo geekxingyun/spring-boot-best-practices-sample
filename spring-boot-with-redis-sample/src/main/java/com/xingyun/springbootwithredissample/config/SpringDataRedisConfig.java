@@ -1,6 +1,6 @@
 package com.xingyun.springbootwithredissample.config;
 
-import com.xingyun.springbootwithredissample.service.MyRedisMessageListener;
+import com.xingyun.springbootwithredissample.service.MyRedisMessageServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -49,24 +49,22 @@ public class SpringDataRedisConfig {
     @Bean
     RedisMessageListenerContainer container(RedisConnectionFactory connectionFactory,
                                             MessageListenerAdapter listenerAdapter) {
-
         RedisMessageListenerContainer container = new RedisMessageListenerContainer();
         container.setConnectionFactory(connectionFactory);
         //注册一个消息监听者
         container.addMessageListener(listenerAdapter, new PatternTopic("chat"));
-
         return container;
     }
 
     @Bean
-    MessageListenerAdapter listenerAdapter(MyRedisMessageListener myRedisMessageListener) {
+    MessageListenerAdapter listenerAdapter(MyRedisMessageServiceImpl myRedisMessageServiceImpl) {
         //这里绑定的监听的方法
-        return new MessageListenerAdapter(myRedisMessageListener, "receiveMessage");
+        return new MessageListenerAdapter(myRedisMessageServiceImpl, "receiveMessage");
     }
 
     @Bean
-    MyRedisMessageListener receiver() {
-        return new MyRedisMessageListener();
+    MyRedisMessageServiceImpl receiver() {
+        return new MyRedisMessageServiceImpl();
     }
 
     /**
