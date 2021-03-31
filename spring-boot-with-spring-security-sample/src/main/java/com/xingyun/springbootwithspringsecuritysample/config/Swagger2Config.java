@@ -28,7 +28,7 @@ public class Swagger2Config {
                 .title("App Restful API")
                 .description("App restful api")
                 .termsOfServiceUrl("https://xingyun.blog.csdn.net")
-                .contact(new Contact("星云","https://xingyun.blog.csdn.net/","fairy_xingyun@hotmail.com"))
+                .contact(new Contact("技术宅星云","https://xingyun.blog.csdn.net/","fairy_xingyun@hotmail.com"))
                 .version("1.0")
                 .build();
     }

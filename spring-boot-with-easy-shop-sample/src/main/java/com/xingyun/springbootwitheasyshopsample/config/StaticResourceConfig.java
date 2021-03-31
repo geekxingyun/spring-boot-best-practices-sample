@@ -5,7 +5,7 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 
 /**
- * @author 星云
+ * @author 技术宅星云
  * @功能
  * @date 9/23/2019 9:25 PM
  */

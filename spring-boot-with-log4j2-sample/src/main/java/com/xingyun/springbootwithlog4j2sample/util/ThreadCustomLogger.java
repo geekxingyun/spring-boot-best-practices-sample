@@ -16,7 +16,7 @@ import org.apache.logging.log4j.core.layout.PatternLayout;
 import java.io.File;
 import java.nio.charset.Charset;
 /**
- * @author 星云
+ * @author 技术宅星云
  * @功能 线程日志工具类 使用Log4j2自定义线程日志类
  * @date 9/17/2019 7:09 AM
  */

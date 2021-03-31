@@ -11,7 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * 因此该类必须放在项目的根包中,否则可能部分配置可能不会被扫描到.
  * 如果特殊情况不能放到根包,可以使用@ComponentScan显示指定包名,配置扫描包的位置如:@ComponentScan("com.xingyun.**")
  * 多个包名可以使用@ComponentScan("com.xingyun.**,com.swallow.**")
- * @author 星云
+ * @author 技术宅星云
  */
 @SpringBootApplication
 public class SpringBootWithTinymceSampleApplication {

@@ -6,7 +6,7 @@ import org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy;
 import java.util.Locale;
 
 /**
- * @author 星云
+ * @author 技术宅星云
  * @功能 将数据库表和字段全部大写
  * @date 9/22/2019 10:25 AM
  */

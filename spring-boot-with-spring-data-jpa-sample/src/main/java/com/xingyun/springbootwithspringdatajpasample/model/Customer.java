@@ -9,7 +9,7 @@ import javax.persistence.*;
 
 /**
  * @功能 用户实体类
- * @author 星云
+ * @author 技术宅星云
  * @date 9/28/2019 8:01 PM
  */
 @Getter

@@ -8,7 +8,7 @@ import javax.persistence.Query;
 import java.util.List;
 
 /**
- * @author 星云
+ * @author 技术宅星云
  * @功能 Spring Data JPA 自定义扩展接口实现类
  * @date 9/22/2019 11:19 AM
  */

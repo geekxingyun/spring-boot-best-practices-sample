@@ -24,7 +24,7 @@ public class Swagger2Config {
                 .title("Swagger Test App Restful API")
                 .description("swagger test app restful api")
                 .termsOfServiceUrl("https://www.521geek.com")
-                .contact(new Contact("星云","https://xingyun.blog.csdn.net/column/info/33374","fairy_xingyun@hotmail.com"))
+                .contact(new Contact("技术宅星云","https://xingyun.blog.csdn.net/column/info/33374","fairy_xingyun@hotmail.com"))
                 .version("1.0")
                 .build();
     }

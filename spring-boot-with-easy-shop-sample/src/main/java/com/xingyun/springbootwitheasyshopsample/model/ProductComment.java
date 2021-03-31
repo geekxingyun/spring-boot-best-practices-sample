@@ -9,7 +9,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * @author 星云
+ * @author 技术宅星云
  * @功能 商品评论表
  * @date 9/22/2019 9:42 AM
  */

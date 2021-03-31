@@ -21,7 +21,7 @@ import java.util.List;
  * 也可以在@Controller 注解的方法上加上@ResponseBody 来达到同样的目的
  * 值得注意的是,返回的对象如果是int,boolean 等基本类型可能会出错,最好对返回值进行包装。
  * @Api(value = "UserEndPoint",tags = "用户管理相关Api") 是Swagger 注解不是Spring MVC自带的
- * @author 星云
+ * @author 技术宅星云
  * @功能
  * @date 9/22/2019 12:49 PM
  */

@@ -3,7 +3,7 @@ package com.xingyun.springbootwithwebsample.controller;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * @author 星云
+ * @author 技术宅星云
  */
 @RestController
 public class HomeController {

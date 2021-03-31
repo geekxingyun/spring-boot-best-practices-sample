@@ -8,7 +8,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 /**
- * @author 星云
+ * @author 技术宅星云
  * @功能 商品表
  * @date 9/22/2019 9:36 AM
  */

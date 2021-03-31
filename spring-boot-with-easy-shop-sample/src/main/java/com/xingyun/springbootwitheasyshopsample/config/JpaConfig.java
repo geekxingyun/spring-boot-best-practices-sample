@@ -4,7 +4,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 /**
- * @author 星云
+ * @author 技术宅星云
  * @功能
  * @date 9/23/2019 8:43 PM
  */

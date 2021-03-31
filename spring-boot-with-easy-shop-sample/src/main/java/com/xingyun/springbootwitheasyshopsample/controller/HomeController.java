@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import springfox.documentation.annotations.ApiIgnore;
 
 /**
- * @author 星云
+ * @author 技术宅星云
  * @功能
  * @date 9/29/2019 8:14 AM
  */

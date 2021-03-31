@@ -14,7 +14,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
- * @author 星云
+ * @author 技术宅星云
  * @功能
  * @date 9/23/2019 9:20 PM
  */
@@ -32,7 +32,7 @@ public class SwaggerConfig {
         return new ApiInfoBuilder()
                 .title("Easy Shop App Restful API")
                 .description("Easy Shop app restful api")
-                .contact(new Contact("星云","https://xingyun.blog.csdn.net/","fairy_xingyun@hotmail.com"))
+                .contact(new Contact("技术宅星云","https://xingyun.blog.csdn.net/","fairy_xingyun@hotmail.com"))
                 .version("1.0")
                 .build();
     }

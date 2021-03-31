@@ -29,7 +29,7 @@ public class UserInfoController {
 
     @ApiOperation(value="添加一个用户信息")
     @ApiImplicitParams({
-            @ApiImplicitParam(dataType = "string",name = "userInfoAccount",value = "用户信息账号",example = "星云",defaultValue = "星云",required = true),
+            @ApiImplicitParam(dataType = "string",name = "userInfoAccount",value = "用户信息账号",example = "技术宅星云",defaultValue = "技术宅星云",required = true),
             @ApiImplicitParam(dataType = "string",name = "userInfoPassword", value = "用户信息密码",example = "123456",defaultValue = "123456",required = true),
             @ApiImplicitParam(dataType = "int",name = "userInfoAge",value = "年龄",example = "27",defaultValue="27",required = true),
             @ApiImplicitParam(dataType = "boolean",name = "userInfoSex", value = "用户性别",example = "true",defaultValue = "true",required = true),
@@ -238,7 +238,7 @@ public class UserInfoController {
 
     @ApiOperation(value="根据条件查看所有用户信息")
     @ApiImplicitParams({
-            @ApiImplicitParam(dataType = "string",name = "userInfoAccount", value = "用户信息账号",example = "星云",defaultValue = "星云",required = true),
+            @ApiImplicitParam(dataType = "string",name = "userInfoAccount", value = "用户信息账号",example = "技术宅星云",defaultValue = "技术宅星云",required = true),
             @ApiImplicitParam(dataType = "string",name = "userInfoPassword", value = "用户信息密码",example = "123456",defaultValue = "123456",required = true),
     })
     @GetMapping(value = "/userInfo.do")

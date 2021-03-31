@@ -14,7 +14,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
- * @author 星云
+ * @author 技术宅星云
  * @description
  * @date 2019/5/11 19:59
  */
@@ -39,7 +39,7 @@ public class SwaggerConfig{
                 .title("Mybatis Spring Boot Starter Restful API")
                 .description("Mybatis Spring Boot Starter restful api")
                 .termsOfServiceUrl(stringBuffer.toString())
-                .contact(new Contact("星云", "https://xingyun.blog.csdn.net/", "fairy_xingyun@hotmail.com"))
+                .contact(new Contact("技术宅星云", "https://xingyun.blog.csdn.net/", "fairy_xingyun@hotmail.com"))
                 .version("1.0")
                 .build();
     }
