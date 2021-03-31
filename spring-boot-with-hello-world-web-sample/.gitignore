@@ -1,3 +1,4 @@
+### Maven Project ###
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**
@@ -28,3 +29,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Mac OSX ###
+.DS_Store

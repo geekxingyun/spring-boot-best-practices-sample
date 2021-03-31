@@ -12,7 +12,7 @@ cd ./spring-boot-best-practices-sample/spring-boot-with-hello-world-web-sample/
 ```
 ## 1.2 Building the Application
 ```bash
-mvn package
+mvn clean package
 ```
 ## 1.3 Running the Application
 
