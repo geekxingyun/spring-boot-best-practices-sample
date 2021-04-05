@@ -28,8 +28,8 @@ public class SpringFoxSwaggerConfig {
     @Bean
     public ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Swagger Test App Restful API")
-                .description("swagger test app restful api")
+                .title("API Document")
+                .description("This is API Document")
                 .termsOfServiceUrl("https://github.com/geekxingyun")
                 .contact(new Contact("技术宅星云","https://xingyun.blog.csdn.net","fairy_xingyun@hotmail.com"))
                 .version("1.0")
