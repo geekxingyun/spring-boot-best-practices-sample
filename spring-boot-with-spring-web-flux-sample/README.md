@@ -3,4 +3,4 @@
 
 [spring-boot-with-spring-web-flux-use-annotated-sample](https://github.com/geekxingyun/spring-boot-best-practices-sample/tree/master/spring-boot-with-spring-web-flux-sample/spring-boot-with-spring-web-flux-use-annotated-sample)| Spring Boot 与Spring WebFlux 集成使用注解编程方式
 
-[spring-boot-with-spring-web-flux-use-functional-sample](https://github.com/geekxingyun/spring-boot-best-practices-sample/tree/master/spring-boot-with-spring-web-flux-sample/spring-boot-with-spring-web-flux-use-functional-sample))https://github.com/geekxingyun/spring-boot-best-practices-sample/tree/master/spring-boot-with-spring-web-flux-sample/spring-boot-with-spring-web-flux-use-functional-sample)| Spring Boot 与Spring WebFlux 集成使用函数式编程方式
+[spring-boot-with-spring-web-flux-use-functional-sample](https://github.com/geekxingyun/spring-boot-best-practices-sample/tree/master/spring-boot-with-spring-web-flux-sample/spring-boot-with-spring-web-flux-use-functional-sample)| Spring Boot 与Spring WebFlux 集成使用函数式编程方式
