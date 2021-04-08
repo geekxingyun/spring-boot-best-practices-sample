@@ -46,5 +46,4 @@ public class LoggingTestController {
 		log.info(singleFileMaxSize);
 		return "test success";
 	}
-
 }
