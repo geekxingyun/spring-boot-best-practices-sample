@@ -1,4 +1,4 @@
-HELP.md
+### Maven Project ###
 /target/
 !.mvn/wrapper/maven-wrapper.jar
 
@@ -27,3 +27,6 @@ HELP.md
 
 ### VS Code ###
 .vscode/
+
+### Mac OSX ###
+.DS_Store
