@@ -1,4 +1,4 @@
-package com.xingyun.controller;
+package com.xingyun.springbootwithlogback.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -1,4 +1,4 @@
-package com.xingyun.util;
+package com.xingyun.springbootwithlogback.util;
 
 import ch.qos.logback.classic.Logger;
 import ch.qos.logback.classic.LoggerContext;
@@ -6,10 +6,12 @@ import ch.qos.logback.classic.encoder.PatternLayoutEncoder;
 import ch.qos.logback.core.rolling.RollingFileAppender;
 import ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy;
 import ch.qos.logback.core.util.FileSize;
+import com.xingyun.springbootwithlogback.config.StaticPropertiesUtils;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 
 /**
  * 线程日志工具类
@@ -25,13 +27,13 @@ public class LogbackThreadLogger extends RollingFileAppender{
     /**
      * App Name
      */
-    public final static String APP_NAME="spring-boot-with-logback-sample";
+    public final static String APP_NAME=StaticPropertiesUtils.getProperty("customized.logback-thread-logging-config.applicationName");
 
     /**
      * 通用配置
-     * 日志存放路径 /opt/logs/spring-boot-with-logback-sample/customize-thread-log/
+     * 日志存放路径 /opt/logs/spring-boot-with-sl4j-logback-sample/dev-api/customize-thread-log/
      */
-    public final static String LOG_FILE_BASE_PATH=File.separator+"opt"+File.separator+"logs"+File.separator+APP_NAME+File.separator+"customize-thread-log"+File.separator;
+    public final static String LOG_FILE_BASE_PATH=StaticPropertiesUtils.getProperty("customized.logback-thread-logging-config.loggingFileBasePath");
     /**
      * 配置日志输出格式
      */
@@ -39,7 +41,7 @@ public class LogbackThreadLogger extends RollingFileAppender{
     /**
      * 配置日志编码
      */
-    public static final String CHAR_SET_NAME="UTF-8";
+    public static final String CHAR_SET_NAME= StandardCharsets.UTF_8.displayName();
     /**
      * 是否自动追加
      */
@@ -51,19 +53,19 @@ public class LogbackThreadLogger extends RollingFileAppender{
     /**
      * 单个文件最大值
      */
-    public static final String MAX_FILE_SIZE="100MB";
+    public static final String MAX_FILE_SIZE= StaticPropertiesUtils.getProperty("customized.logback-thread-logging-config.singleFileMaxSize");
     /**
      * 单个文件最大值
      */
     public static final  FileSize MAX_FILE_SIZE_VALUE=FileSize.valueOf(MAX_FILE_SIZE);
     /**
-     * 保存30天
+     * 保存3天
      */
-    public static final Integer MAX_HISTORY=30;
+    public static final Integer MAX_HISTORY=3;
     /**
      * 日志保存最大容量
      */
-    public static final String TOTAL_SIZE_CAP="20GB";
+    public static final String TOTAL_SIZE_CAP="2GB";
     /**
      * 日志保存最大容量
      */

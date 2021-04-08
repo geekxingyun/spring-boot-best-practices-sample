@@ -1,0 +1,34 @@
+# 基础配置
+spring:
+  application:
+    # 配置当前应用程序的名称,选填 可不配置
+    name: spring-boot-with-sl4j-logback-sample
+
+# 内嵌容器配置
+server:
+  port: 7001
+  servlet:
+    # 配置应用程序的上下文
+    context-path: /
+
+# 日志配置
+# Spring Boot 日志
+# SpringBoot默认使用的的日志框架是slf4j + Logback
+# Logback 没有 FATAL 级别，对应着 ERROR
+# 日志级别从低到高
+# TRACE < DEBUG < INFO < WARN < ERROR
+# 默认配置INFO、WARN、ERROR级别的日志输出到控制台
+# 根据不同的日志级别输出到不同的文件中
+logging:
+  config: classpath:log-config/logback-spring-test.xml
+
+# 自定义配置属性
+customized:
+  # 自定义线程日志环境
+  logback-thread-logging-config:
+    # 线程日志应用名称
+    applicationName: ${spring.application.name}
+    # 线程日志路径配置
+    loggingFileBasePath: /opt/logs/${spring.application.name}/test-api/customize-thread-log/
+    # 单个文件最大值
+    singleFileMaxSize: 100MB

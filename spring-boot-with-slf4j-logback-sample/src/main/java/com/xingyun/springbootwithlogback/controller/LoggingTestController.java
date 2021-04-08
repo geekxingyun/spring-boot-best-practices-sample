@@ -1,9 +1,11 @@
-package com.xingyun.controller;
+package com.xingyun.springbootwithlogback.controller;
 
-import com.xingyun.util.LogbackThreadLogger;
+import com.xingyun.springbootwithlogback.config.StaticPropertiesUtils;
+import com.xingyun.springbootwithlogback.util.LogbackThreadLogger;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -33,4 +35,16 @@ public class LoggingTestController {
 		logger.error("this is thread error message");
 		return "logback test success,please check logs";
 	}
+
+	@GetMapping(value = "/test.do")
+	public String loadStaticProperties(){
+		String appName=StaticPropertiesUtils.getProperty("customized.logback-thread-logging-config.applicationName");
+		String loggingFileBasePath=StaticPropertiesUtils.getProperty("customized.logback-thread-logging-config.loggingFileBasePath");
+		String singleFileMaxSize=StaticPropertiesUtils.getProperty("customized.logback-thread-logging-config.singleFileMaxSize");
+		log.info(appName);
+		log.info(loggingFileBasePath);
+		log.info(singleFileMaxSize);
+		return "test success";
+	}
+
 }
