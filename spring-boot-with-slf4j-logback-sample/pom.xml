@@ -13,8 +13,8 @@
 	</parent>
 
 	<!-- 设置当前项目的基本信息 -->
-	<groupId>com.travelsky.amb</groupId>
-	<artifactId>spring-boot-with-logging-sample</artifactId>
+	<groupId>com.xingyun</groupId>
+	<artifactId>spring-boot-with-slf4j-logback-sample</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-boot-with-slf4j-logback-sample</name>
 	<description>Slf4j and logback project for Spring Boot</description>
