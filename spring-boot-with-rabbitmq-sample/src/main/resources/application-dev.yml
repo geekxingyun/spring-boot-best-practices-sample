@@ -5,8 +5,6 @@ spring:
     username: guest
     password: guest
     virtual-host: /
-    publisher-returns: true
-    publisher-confirm-type: none
     template:
       exchange: spring-boot-exchange
       default-receive-queue: spring-boot-queue

@@ -1,10 +1,8 @@
 package com.xingyun.springbootwithrabbitmqsample;
 
-import com.xingyun.springbootwithrabbitmqsample.config.MyRabbitMQConfig;
 import com.xingyun.springbootwithrabbitmqsample.service.MyRabbitMqReceiver;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
