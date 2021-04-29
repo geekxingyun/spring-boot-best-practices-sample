@@ -8,6 +8,8 @@ public class SpringBootWithRabbitmqSampleApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SpringBootWithRabbitmqSampleApplication.class, args);
+        // 如果想启动后就关闭
+        //SpringApplication.run(SpringBootWithRabbitmqSampleApplication.class, args).close();
     }
 
 }
