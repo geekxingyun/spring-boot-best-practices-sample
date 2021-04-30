@@ -1,0 +1,15 @@
+spring:
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+    template:
+      default-receive-queue: default-spring-boot-queue
+    cache:
+      channel:
+        size: 50
+      connection:
+        # channel|connection
+        mode: connection

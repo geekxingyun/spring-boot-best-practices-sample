@@ -1,4 +1,5 @@
 package com.xingyun.springbootwithrabbitmqtopicpublishsubscribesample.config;
+
 import com.xingyun.springbootwithrabbitmqtopicpublishsubscribesample.service.MyRabbitMqReceiver;
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
