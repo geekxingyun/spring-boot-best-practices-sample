@@ -1,0 +1,14 @@
+spring:
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+    template:
+      exchange: my-direct-exchange
+    publisher-returns: true
+    # SIMPLE:Use RabbitTemplate#waitForConfirms() (or waitForConfirmsOrDie() within scoped operations.
+    # CORRELATED:Use with CorrelationData to correlate confirmations with sent messsages.
+    # NONE:Publisher confirms are disabled (default).
+    publisher-confirm-type: simple
