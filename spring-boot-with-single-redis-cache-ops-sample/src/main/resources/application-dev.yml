@@ -1,0 +1,19 @@
+spring:
+  redis:
+    host: 192.168.159.9
+    port: 6379
+    password: 123456
+    client-type: lettuce
+#    lettuce:
+#      pool:
+#        max-idle: 8
+#        min-idle: 0
+#        max-active: 8
+#        max-wait: -1ms
+#      cluster:
+#        refresh:
+#          adaptive: false
+#          dynamic-refresh-sources: true
+
+
+

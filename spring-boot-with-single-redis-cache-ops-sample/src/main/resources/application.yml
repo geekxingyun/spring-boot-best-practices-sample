@@ -1,0 +1,4 @@
+# config active which one profile
+spring:
+  profiles:
+    active: dev

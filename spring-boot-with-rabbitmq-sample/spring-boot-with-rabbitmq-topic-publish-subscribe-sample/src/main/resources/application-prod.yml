@@ -1,0 +1,11 @@
+spring:
+  rabbitmq:
+    host: 47.92.124.207
+    port: 5672
+    username: rabbitmq_user
+    password: user_rabbitmq_2021
+    virtual-host: /
+    template:
+      exchange: spring-boot-exchange
+      default-receive-queue: spring-boot-queue
+      routing-key: foo.bar.#
