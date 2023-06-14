@@ -31,7 +31,7 @@
         <!-- 项目所使用第三方依赖jar包的版本,建议以后都使用这种方式,方便今后维护和升级 -->
         <!-- guava 可以为我们提供缓存集合等一些方便的工具类 -->
         <maven.compiler.plugin.version>3.5.1</maven.compiler.plugin.version>
-        <guava.version>30.1.1-jre</guava.version>
+        <guava.version>32.0.0-jre</guava.version>
         <!--Swagger帮助生成Restful API文档-->
         <swagger.version>2.9.2</swagger.version>
     </properties>
